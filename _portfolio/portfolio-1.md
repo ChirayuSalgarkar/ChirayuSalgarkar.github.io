@@ -1,7 +1,8 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Low-cost pressure sensory system for prosthetists"
+excerpt: "Critical Design Review for a Sensor Array to Measure Pressure at the Socket-Stump Interface"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+Joint work with Samuel Johnson and Payton McGraw. Supervised by Dr. Ha Van Vo, all of Mercer University.
+[Download paper here](http://ChirayuSalgarkar.github.io/files/CDRJohnsonMcGrawSalgarkar.pdf)
