@@ -1,7 +1,6 @@
 ---
 title: "Notes 1"
-excerpt: "This is a notes testing." 
-collection: notes
+excerpt: "This is a notes testing."
 ---
 
 Let's see if this works.

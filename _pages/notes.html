@@ -1,12 +1,17 @@
 ---
-layout: note
+layout: default
 title: "Notes"
 permalink: /notes/
 author_profile: true
 ---
 
-
-{% include base_path %}
-{% for note in site.notes %}
-  {% include archive-single.html %}
-{% endfor %}
+<h1>{{ page.title }}</h1>
+<div class="note-entries">
+  {% for note in site.notes %}
+    <div class="note-entry">
+      <h2><a href="{{ note.url }}">{{ note.title }}</a></h2>
+      <p>{{ note.excerpt }}</p>
+      <p>{{ note.content }}</p>
+    </div>
+  {% endfor %}
+</div>
