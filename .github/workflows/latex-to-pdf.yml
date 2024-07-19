@@ -1,0 +1,28 @@
+name: LaTeX to PDF
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup LaTeX
+      uses: dante-ev/latex-action@v2
+
+    - name: Compile LaTeX documents
+      run: |
+        mkdir -p pdfs/math
+        mkdir -p pdfs/physics
+        mkdir -p pdf/computer_science
+        latexmk -pdf -output-directory=pdfs/math _notes/math/*.tex
+        latexmk -pdf -output-directory=pdfs/physics _notes/physics/*.tex
+        latexmk -pdf -output-directory-pdf/computer_science _notes/computer_science/*.tex
+
+    - name: Upload PDFs
+      uses: actions/upload-artifact@v2
+      with:
+        name: pdf-artifacts
+        path: pdfs/

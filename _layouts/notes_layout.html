@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  <h1>{{ page.title }}</h1>
+  {% for category in site.notes | group_by: "category" %}
+    <h2>{{ category.name | capitalize }}</h2>
+    <ul>
+      {% for note in category.items %}
+        <li><a href="{{ note.url }}">{{ note.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</body>
+</html>
