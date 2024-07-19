@@ -1,7 +1,7 @@
 ---
 title: "Notes 1"
 excerpt: "This is a notes testing." 
-collection: notes
+collection: archive
 ---
 
 Let's see if this works.
