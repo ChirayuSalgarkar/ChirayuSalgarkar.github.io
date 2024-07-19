@@ -190,6 +190,11 @@ collections:
   notes:
     output: true
     permalink: /:collection/:path/
+    categories:
+      - math
+      - physics
+      - computer_science
+
 
 
 # Defaults
