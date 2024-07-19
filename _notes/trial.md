@@ -1,5 +1,5 @@
 ---
-title: "Notes 1"
+title: ""
 excerpt: "This is a notes testing."
 ---
 
