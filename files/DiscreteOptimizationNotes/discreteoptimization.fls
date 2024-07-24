@@ -133,51 +133,18 @@ INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\wasy\wasy7.tfm
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\wasy\wasy5.tfm
 OUTPUT discreteoptimization.toc
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\jknappen\ec\tcrm1000.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\cm\cmbx7.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\cm\cmbx5.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\cm\cmti10.tfm
 OUTPUT discreteoptimization.pdf
 INPUT C:\Users\mihir\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\cm\cmmib10.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\amsfonts\cmextra\cmmib7.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\cm\cmbsy10.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\tfm\public\wasy\wasyb10.tfm
 INPUT discreteoptimization.aux
-INPUT C:\Users\mihir\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
-INPUT C:\Users\mihir\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmmi5.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmmi5.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmti10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\cm\cmti10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\symbols\msbm10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\symbols\msbm10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\symbols\msbm7.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\amsfonts\symbols\msbm7.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\rsfs\rsfs10.pfb
-INPUT C:\Users\mihir\Desktop\My Stuff\MikTex\fonts\type1\public\rsfs\rsfs10.pfb

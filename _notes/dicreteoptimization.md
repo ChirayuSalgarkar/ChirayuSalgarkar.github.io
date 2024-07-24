@@ -3,4 +3,4 @@ title: "Discrete Optimization"
 excerpt: "from Coursera Course, IN PROGRESS"
 ---
 
-[Download notes here](http://ChirayuSalgarkar.github.io/files/SMeynNotes\smeyn.pdf)
+[Download notes here](http://ChirayuSalgarkar.github.io/files/DiscreteOptimizationNotes\dicreteoptimization.pdf)

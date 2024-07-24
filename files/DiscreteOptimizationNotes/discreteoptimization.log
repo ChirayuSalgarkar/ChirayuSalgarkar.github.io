@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.7.19)  22 JUL 2024 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.7.19)  24 JUL 2024 17:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -265,35 +265,24 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 
 [1
 
-{C:/Users/mihir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-
-LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 76.
-
-
-LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 76.
-
-
-
-[2] (discreteoptimization.aux)
+{C:/Users/mihir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (discreteoptimization.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3603 strings out of 473904
- 53427 string characters out of 5729380
- 1935908 words of memory out of 5000000
- 26404 multiletter control sequences out of 15000+600000
- 571588 words of font info for 90 fonts, out of 8000000 for 9000
+ 3570 strings out of 473904
+ 52942 string characters out of 5729380
+ 1928908 words of memory out of 5000000
+ 26382 multiletter control sequences out of 15000+600000
+ 568238 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,492b,229s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\mihir\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on discreteoptimization.pdf (2 pages, 180289 bytes).
+ 57i,6n,65p,327b,229s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on discreteoptimization.pdf (1 page, 74103 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
+ 36 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
