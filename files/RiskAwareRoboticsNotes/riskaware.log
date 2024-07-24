@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.7.19)  19 JUL 2024 20:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.7.19)  22 JUL 2024 13:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/SMeynNotes/smeyn.tex
-(c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/SMeynNotes/smeyn.tex
+**c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/RiskAwareRoboticsNotes/riskaware.tex
+(c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/RiskAwareRoboticsNotes/riskaware.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
 (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/base\article.cls
@@ -347,8 +347,8 @@ Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count301
 )) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/l3packages/xparse\xparse.sty
 Package: xparse 2024-05-08 L3 Experimental document command parser
-) (smeyn.aux)
-\openout1 = `smeyn.aux'.
+) (riskaware.aux)
+\openout1 = `riskaware.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
 LaTeX Font Info:    ... okay on input line 88.
@@ -426,12 +426,42 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Warning: No \author given.
 
+
+Underfull \hbox (badness 4967) in paragraph at lines 95--95
+[]\OT1/cmr/m/n/10 Why is the con-sid-er-a-
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 95--95
+\OT1/cmr/m/n/10 tion of risk in-te-gral to
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 95.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 95.
 
-Overfull \hbox (37.12935pt too wide) in paragraph at lines 99--99
+Underfull \hbox (badness 6775) in paragraph at lines 100--100
+[]\OT1/cmr/m/n/10 What are the cur-rent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+\OT1/cmr/m/n/10 paradigms that ex-ist
+ []
+
+
+Underfull \hbox (badness 7397) in paragraph at lines 100--100
+\OT1/cmr/m/n/10 for an-a-lyz-ing and de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+\OT1/cmr/m/n/10 sign-ing sys-tems un-der
+ []
+
+
+Overfull \hbox (37.12935pt too wide) in paragraph at lines 101--101
 [] 
  []
 
@@ -440,30 +470,30 @@ Overfull \hbox (37.12935pt too wide) in paragraph at lines 99--99
 [1
 
 {C:/Users/mihir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (37.12935pt too wide) in paragraph at lines 105--105
+Overfull \hbox (37.12935pt too wide) in paragraph at lines 107--107
 [] 
  []
 
 
 
-[2] (smeyn.aux)
+[2] (riskaware.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16961 strings out of 473904
- 376364 string characters out of 5729380
- 1948908 words of memory out of 5000000
- 39557 multiletter control sequences out of 15000+600000
- 562310 words of font info for 50 fonts, out of 8000000 for 9000
+ 16966 strings out of 473904
+ 376595 string characters out of 5729380
+ 1945908 words of memory out of 5000000
+ 39561 multiletter control sequences out of 15000+600000
+ 562618 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,12n,107p,515b,1747s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on smeyn.pdf (2 pages, 49016 bytes).
+ 101i,12n,107p,531b,1747s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+Output written on riskaware.pdf (2 pages, 64331 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

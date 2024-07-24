@@ -1,7 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1721434089.0451 "c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/SMeynNotes/smeyn.tex" "smeyn.pdf" "smeyn" 1721434090.4136 0
-  "C:/Users/mihir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1721432237 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+["pdflatex"] 1721667645.9449 "c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/RiskAwareRoboticsNotes/riskaware.tex" "riskaware.pdf" "riskaware" 1721667647.47243 0
+  "C:/Users/mihir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1721660504 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/mihir/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1721427390 24261937 1a9b4bf5dc08d016084a40553b2d3a67 ""
+  "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -15,6 +16,7 @@
   "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
+  "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247596666 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmss17.pfb" 1247596667 24416 36515493f76659302880e2604105b074 ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb" 1247596666 28902 2f5c04fd2884d1878057baa5aad22765 ""
@@ -122,11 +124,11 @@
   "C:/Users/mihir/Desktop/My Stuff/MikTex/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/mihir/Desktop/My Stuff/MikTex/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/SMeynNotes/smeyn.tex" 1721434088 2818 f3782d97762a2d5e979022b51e4b8c24 ""
-  "smeyn.aux" 1721434090 543 e7c4c8c9896000105c6d78c1b38820ad "pdflatex"
-  "smeyn.tex" 1721434088 2818 f3782d97762a2d5e979022b51e4b8c24 ""
+  "c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/RiskAwareRoboticsNotes/riskaware.tex" 1721667642 3214 8a1f510cc254b4a9c37f2f6f76419198 ""
+  "riskaware.aux" 1721667647 543 3b4f64ad829977970ceb7d5a9f7d4746 "pdflatex"
+  "riskaware.tex" 1721667642 3214 8a1f510cc254b4a9c37f2f6f76419198 ""
   (generated)
-  "smeyn.aux"
-  "smeyn.log"
-  "smeyn.pdf"
+  "riskaware.aux"
+  "riskaware.log"
+  "riskaware.pdf"
   (rewritten before read)
