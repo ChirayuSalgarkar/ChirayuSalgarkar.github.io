@@ -3,8 +3,8 @@
 main:
   - title: "Portfolio"
     url: /work/
-  - title: "Notes"
-    url: /notes/
+  # - title: "Notes"
+  #   url: /notes/
   - title: "CV"
     url: /resume/
 
