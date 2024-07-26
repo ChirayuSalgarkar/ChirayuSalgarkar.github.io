@@ -5,6 +5,11 @@ permalink: /notes/
 author_profile: true
 ---
 
+<script src="password-protect.js"></script> <!-- Adjust the path as necessary -->
+<script>
+    passwordProtect();
+</script>
+
 <div class="note-entries">
     {% for note in site.notes %}
       {% unless note.url == page.url %}
@@ -15,15 +20,4 @@ author_profile: true
         </div>
       {% endunless %}
     {% endfor %}
-  </div>
-
-
-<!-- <div class="note-entries">
-  {% for note in site.notes %}
-    <div class="note-entry">
-      <h2><a href="{{ note.url }}">{{ note.title }}</a></h2>
-      <p>{{ note.excerpt }}</p>
-      <p>{{ note.content }}</p>
-    </div>
-  {% endfor %}
-</div> -->
+</div>
