@@ -4,4 +4,4 @@ function passwordProtect() {
     if (password !== 'qpvaj8') { 
         alert('Incorrect password. Access denied.');
         window.location.href = '/'; 
-}
+}}
