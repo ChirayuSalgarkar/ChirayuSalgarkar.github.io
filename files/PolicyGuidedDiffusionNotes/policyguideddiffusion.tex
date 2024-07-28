@@ -1,0 +1,121 @@
+\documentclass[a4paper]{article} 
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+\title{
+\vspace{-3em}
+\begin{tcolorbox}[colframe=white,opacityback=0]
+\begin{tcolorbox}
+\Huge\sffamily Policy Guided Diffusion: from Oxford, notes
+\end{tcolorbox}
+\end{tcolorbox}
+\vspace{-3em}
+}
+
+\date{}
+\usepackage{background}
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgColor{red}
+\SetBgContents{\rule[0em]{4pt}{\textheight}}
+\SetBgHshift{-2.3cm}
+\SetBgVshift{0cm}
+
+\usepackage{lipsum}% just to generate filler text for the example
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+
+\parindent=0pt
+
+\usepackage{xparse}
+\DeclareDocumentCommand\topic{ m m g g g g g}
+{
+\begin{tcolorbox}[sidebyside,sidebyside align=top,opacityframe=0,opacityback=0,opacitybacktitle=0, opacitytext=1,lefthand width=.3\textwidth]
+\begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,width=\textwidth,before skip=0pt]
+#1.\end{tcolorbox}%
+\tcblower
+\begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth,before skip=0pt]
+#2
+\end{tcolorbox}
+\IfNoValueF {#3}{
+\begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth]
+#3
+\end{tcolorbox}
+}
+\IfNoValueF {#4}{
+\begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth]
+#4
+\end{tcolorbox}
+}
+\IfNoValueF {#5}{
+\begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth]
+#5
+\end{tcolorbox}
+}
+\IfNoValueF {#6}{
+\begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth]
+#6
+\end{tcolorbox}
+}
+\IfNoValueF {#7}{
+\begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth]
+#7
+\end{tcolorbox}
+}
+\end{tcolorbox}
+}
+
+\def\summary#1{
+\begin{tikzpicture}[overlay,remember picture,inner sep=0pt, outer sep=0pt]
+\node[anchor=south,yshift=-1ex] at (current page text area.south) {% 
+\begin{minipage}{\textwidth}%%%%
+\begin{tcolorbox}[colframe=white,opacityback=0]
+\begin{tcolorbox}[enhanced,colframe=black,fonttitle=\large\bfseries\sffamily,sidebyside=true, nobeforeafter,before=\vfil,after=\vfil,colupper=black,sidebyside align=top, lefthand width=.95\textwidth,opacitybacktitle=1, opacitytext=1,
+segmentation style={black!55,solid,opacity=0,line width=3pt},
+title=Summary
+]
+#1
+\end{tcolorbox}
+\end{tcolorbox}
+\end{minipage}
+};
+\end{tikzpicture}
+}
+
+\begin{document} 
+\maketitle
+\summary{The paper comes up with the idea of \textit{policy guided diffusion}. Basically, this means that the authors used a diffusion model to determine best next steps based on probabilitstic means. Imagine a regular distribution of decisions, with both high probability decisions and also synthetic decisions. This allows you to make decisions and alternatives to offline world models. This allows us to generate synthetic training data without necessarily leading to offline datasets or biased sets.}
+\newpage
+
+
+\topic{What is a key obstacle to real-world adoption of RL?}
+{Sample Inefficiency; if data collection is slow, or data is hard to collect, you can't make strong RL decisions!}%
+{This problem is amplified if the exploration step is dangerous! Think a maze solver algorithm with traps, but if you die you can't actually start again.}%
+
+
+\topic{how does Offline RL work? Part 1}
+{If you have an offline data set, without access to the environment, you can optimize a policy just using that dataset. }%
+{Before you can even think about this, we need to ask what makes machine learning work?}%
+
+\topic{What makes modern machine learning work?}{You need large data sets that are broadly representative of the real situation that the model is meant to handle and very large and high capacity deep neural network models that can squeeze out all the knowledge contained in that data set and make accurate predictions on new unseen inputs. From UC Berkeley.
+}
+
+\topic{Offline RL, again}
+{Big models matter a lot. The larger the model, the better they work. However, dataset size may matter more! Think MNIST, ImageNet.}
+{Decision making is also harder than prediction, because a decision influences another decision! Decision making is not independent, and so you can't assume independence.}
+{This gets to the crux of the issue: Learning from data works, so can we do that in RL?}
+\topic{What is the offline RL workflow?}{\begin{enumerate}
+    \item Collect a dataset using any policy or a mixture of policies. Think humans performing the task, existing systems, random behaviours, etc.
+    \item Run offline RL on this dataset to learn a policy. A policy is just a mapping from states to actions, or just a deployment plan.
+    \item Deploy the policy in the real world. If the policy goes haywire, modify the algorithm and go back to step 2, \textit{reusing} the data! (Levine, Kumar, Tucker, Fu)
+\end{enumerate}
+}  
+\topic{Here's another question to begin the new page.}{\lipsum[3]}%
+{\lipsum[4]}%
+{\lipsum[5]}%
+
+\summary{And another summary that will float to the bottom of the next page.}
+
+\end{document}
