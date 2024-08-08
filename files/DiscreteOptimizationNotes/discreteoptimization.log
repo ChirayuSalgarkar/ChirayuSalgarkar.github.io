@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.7.19)  24 JUL 2024 18:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  8 AUG 2024 13:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/DiscreteOptimizationNotes/discreteoptimization.tex
-(c:/Users/mihir/Documents/GitHub/ChirayuSalgarkar.github.io/files/DiscreteOptimizationNotes/discreteoptimization.tex
+**"c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/DiscreteOptimizationNotes/discreteoptimization.tex"
+(c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/DiscreteOptimizationNotes/discreteoptimization.tex
 LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-05-27>
-(C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/base\article.cls
+L3 programming layer <2024-07-20>
+(C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2024/02/08 v1.4n Standard LaTeX document class
-(C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/base\size10.clo
+(C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
 File: size10.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count194
@@ -23,21 +23,21 @@ File: size10.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amsmath\amsmath.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2024/05/23 v2.17q AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amsmath\amstext.sty
+(C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amsmath\amsgen.sty
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen142
-)) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amsmath\amsbsy.sty
+)) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen143
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amsmath\amsopn.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count268
@@ -87,7 +87,7 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amscls\amsthm.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks22
 \thm@bodyfont=\toks23
@@ -98,57 +98,57 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip55
 \thm@headsep=\skip56
 \dth@everypar=\toks27
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amsfonts\amssymb.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amsfonts\amsfonts.sty
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/calrsfs\calrsfs.sty
+)) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/calrsfs\calrsfs.sty
 \symrsfscript=\mathgroup6
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/wasysym\wasysym.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\wasysym.sty
 Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 \symwasy=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/tools\verbatim.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks28
 \verbatim@line=\toks29
 \verbatim@in@stream=\read2
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/bbm\bbm.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
 LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 (Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/graphics\color.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/graphics-cfg\color.cfg
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/graphics-def\pdftex.def
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/graphics\mathcolor.ltx)) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/graphics\graphics.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/graphics\trig.sty
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/graphics-cfg\graphics.cfg
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/geometry\geometry.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/graphics\keyval.sty
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks30
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/generic/iftex\ifvtex.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/generic/iftex\iftex.sty
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count280
@@ -163,14 +163,14 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen157
 \Gm@layoutvoffset=\dimen158
 \Gm@dimlist=\toks31
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/geometry\geometry.cfg))
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 \c@thm=\count283
 \c@defn=\count284
 \c@conv=\count285
 \c@rem=\count286
 \c@lem=\count287
 \c@cor=\count288
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/l3backend\l3backend-pdftex.def
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count289
 \l__pdf_internal_box=\box54
@@ -191,7 +191,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count290
 \scratchdimen=\dimen159
@@ -204,10 +204,10 @@ LaTeX Font Info:    ... okay on input line 25.
 \MPnumerator=\count294
 \makeMPintoPDFobject=\count295
 \everyMPtoPDFconversion=\toks33
-) (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/00miktex\epstopdf-sys.cfg
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 *geometry* driver: auto-detecting
@@ -245,17 +245,17 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
-(C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amsfonts\umsa.fd
+(C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/amsfonts\umsb.fd
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OMS+rsfs on input line 27.
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/calrsfs\omsrsfs.fd)
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/calrsfs\omsrsfs.fd)
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 27.
- (C:\Users\mihir\Desktop\My Stuff\MikTex\tex/latex/wasysym\uwasy.fd
+ (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 ) (discreteoptimization.toc)
 \tf@toc=\write3
@@ -265,24 +265,24 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 
 [1
 
-{C:/Users/mihir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 [2] (discreteoptimization.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-05-27>
+L3 programming layer <2024-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3576 strings out of 473904
- 53079 string characters out of 5729380
- 1939908 words of memory out of 5000000
- 26387 multiletter control sequences out of 15000+600000
+ 3576 strings out of 473899
+ 53893 string characters out of 5724577
+ 1939960 words of memory out of 5000000
+ 26392 multiletter control sequences out of 15000+600000
  568584 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,340b,229s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mihir/Desktop/My Stuff/MikTex/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on discreteoptimization.pdf (2 pages, 139398 bytes).
+ 57i,6n,65p,338b,229s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on discreteoptimization.pdf (2 pages, 139401 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
