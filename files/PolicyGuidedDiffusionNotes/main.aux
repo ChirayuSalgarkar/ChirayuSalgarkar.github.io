@@ -1,0 +1,157 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Sutton1998}
+\citation{mopo}
+\citation{levine2020offline}
+\citation{kumar2020conservative,kostrikov2021offline,bcq}
+\citation{kumar2020conservative,an2021uncertainty}
+\citation{fujimoto2021minimalist}
+\pgfsyspdfmark {pgfid1}{17770899}{36049073}
+\pgfsyspdfmark {pgfid4}{34093331}{36041205}
+\pgfsyspdfmark {pgfid5}{34311761}{35827890}
+\newlabel{intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{mopo,kidambi2020morel,augwm}
+\citation{dhariwal2021diffusion}
+\citation{fujimoto2021minimalist}
+\citation{kostrikov2021offline}
+\citation{fu2020d4rl}
+\citation{mujoco}
+\citation{chua2018deep}
+\citation{Sutton1998}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:overview}{{1}{2}{Offline reinforcement learning with policy-guided diffusion. Offline data from a \textcolor {red}{behavior policy} is first used to train a trajectory diffusion model. Synthetic experience is then generated with diffusion, guided by the \textcolor {blue}{target policy} in order to move trajectories further on-policy. An agent is then trained for multiple steps on the synthetic dataset, before it is regenerated}{figure.caption.2}{}}
+\citation{levine2020offline}
+\citation{kostrikov2021offline}
+\citation{fujimoto2021minimalist,kumar2020conservative}
+\citation{kostrikov2021offline}
+\citation{mopo,kidambi2020morel,lu2022revisiting}
+\citation{sims2024edgeofreach}
+\citation{pmlr-v37-sohl-dickstein15,ddpm}
+\citation{karras2022elucidating}
+\citation{hyvarinen2005estimation}
+\citation{dhariwal2021diffusion}
+\newlabel{background}{{2}{3}{Background}{section.2}{}}
+\newlabel{sec:offline_rl}{{2.1}{3}{Offline Reinforcement Learning}{subsection.2.1}{}}
+\newlabel{eq:autoregressive}{{1}{3}{Formulation}{equation.2.1}{}}
+\newlabel{sec:diffusion-models}{{2.2}{3}{Diffusion Models}{subsection.2.2}{}}
+\newlabel{eq:edm_ode}{{2}{3}{Definition}{equation.2.2}{}}
+\citation{mopo,kidambi2020morel}
+\citation{lu2023synthetic}
+\citation{mopo,kidambi2020morel}
+\citation{lu2023synthetic}
+\citation{lu2023synthetic}
+\citation{janner2019mbpo,mopo}
+\newlabel{fig:teaser}{{2}{4}{Trajectories from an illustrative 2D environment, in which the start location is indicated by $\bullet $ and the goals for the behavior and target policies are indicated by \textcolor {red}{$\mathbf {\times }$} and \textcolor {blue}{$\mathbf {\times }$}. \textbf {Left:} Rollouts from the \textcolor {blue}{target policy} in the real environment. \textbf {Right:} Offline datasets gathered by the \textcolor {red}{behavior policy} suffer from distribution shift and limited sample size. Truncated world models~\citep {mopo, kidambi2020morel} previously used in offline model-based reinforcement learning offer a partial solution to this problem but suffer from bias due to short rollouts. Meanwhile, unguided diffusion~\citep {lu2023synthetic} can increase the sample size, but maintains the original distribution shift. In contrast, policy-guided diffusion samples from a regularized target distribution, generating entire trajectories with low transition error but higher likelihood under the target distribution}{figure.caption.7}{}}
+\newlabel{sec:autoregressive}{{3.1}{4}{Autoregressive Generation --- Model $\bm {\mathcal {T}}$, Sample $\bm {p(s_0)}$}{subsection.3.1}{}}
+\citation{precup2000eligibility}
+\citation{10.5555/645529.658134,levine2020offline}
+\citation{janner2022diffuser,lu2023synthetic}
+\newlabel{eq:trunc-wm}{{5}{5}{Autoregressive Generation --- Model $\bm {\mathcal {T}}$, Sample $\bm {p(s_0)}$}{equation.3.5}{}}
+\newlabel{eq:marginal-ar}{{6}{5}{Autoregressive Generation --- Model $\bm {\mathcal {T}}$, Sample $\bm {p(s_0)}$}{equation.3.6}{}}
+\newlabel{sec:joint}{{3.2}{5}{Direct Generation --- Model $\bm {p_{\mkern 1mu\text {\textbf {off}}}(\tau )}$}{subsection.3.2}{}}
+\newlabel{eq:importance}{{7}{5}{Direct Generation --- Model $\bm {p_{\mkern 1mu\text {\textbf {off}}}(\tau )}$}{equation.3.7}{}}
+\citation{karras2022elucidating}
+\citation{karras2022elucidating}
+\newlabel{sec:method}{{4}{6}{Policy-Guided Diffusion}{section.4}{}}
+\newlabel{alg:generation}{{1}{6}{Trajectory sampling via {\color {pgd}policy-guided} diffusion --- based on \citet {karras2022elucidating}}{algorithm.1}{}}
+\newlabel{sec:equi-policy}{{4.1}{6}{Behavior-Regularized Target Distribution}{subsection.4.1}{}}
+\newlabel{eq:target-denoise-score}{{8}{6}{Policy Guidance Derivation}{equation.4.8}{}}
+\citation{dhariwal2021diffusion}
+\newlabel{eq:target-score}{{9}{7}{Policy Guidance Derivation}{equation.4.9}{}}
+\newlabel{eq:pgd}{{10}{7}{Excluding Behavior Policy Guidance}{equation.4.10}{}}
+\newlabel{eq:pgd-score}{{11}{7}{Excluding State Guidance}{equation.4.11}{}}
+\newlabel{sec:stable-guidance}{{4.2}{7}{Improving Policy Guidance}{subsection.4.2}{}}
+\citation{ma2023elucidating}
+\citation{Kirk_2023}
+\citation{ma2023elucidating}
+\citation{bansal2023universal}
+\newlabel{fig:coeff-vis}{{3}{8}{\textbf {Left:} Trajectory probability distribution for an example \textcolor {red}{behavior distribution $\poff (\bm {\tau })$} and \textcolor {blue}{target policy likelihood $\qtarg (\bm {\tau })$}. \textbf {Right:} Corresponding PGD sampling distribution (\autoref {eq:pgd-dist}) computed over a range of policy-guidance coefficients $\lambda $. By increasing $\lambda $, we transform from the sampling distribution towards the regions of high target policy likelihood, making PGD an effective mechanism for controlling the level of regularization towards the behavior distribution}{figure.caption.12}{}}
+\newlabel{eq:pgd-dist}{{13}{8}{Controlling Guidance Strength}{equation.4.13}{}}
+\newlabel{tab:methods}{{1}{8}{Overview of training experience sources in offline RL---for each, we consider the sampling distribution, expected \textbf {error} in transition dynamics, \textbf {likelihood} of actions under the target policy, and state space \textbf {coverage} beyond the behavior distribution. Policy-guided diffusion provides an effective trade-off between each error, likelihood, and coverage}{table.caption.14}{}}
+\citation{fu2020d4rl,mujoco}
+\citation{chua2018deep}
+\citation{offinerlkit}
+\citation{kostrikov2021offline}
+\citation{fujimoto2021minimalist}
+\citation{jax2018github}
+\citation{fujimoto2021minimalist}
+\citation{kostrikov2021offline}
+\newlabel{sec:results}{{5}{9}{Results}{section.5}{}}
+\newlabel{sec:rl-results}{{5.2}{9}{Offline Reinforcement Learning}{subsection.5.2}{}}
+\citation{chua2018deep}
+\citation{fu2020d4rl}
+\newlabel{tab:delayed-results}{{2}{10}{Final return of IQL and TD3+BC agents trained on real, unguided ($\lambda = 0$) synthetic and policy-guided ($\lambda = 1$) synthetic data---mean and standard error over 4 seeds (diffusion models and agents) is presented, with significant improvements ($p < 0.05$) shaded}{table.caption.15}{}}
+\newlabel{sec:analysis}{{5.3}{10}{Synthetic Trajectory Analysis}{subsection.5.3}{}}
+\newlabel{fig:agg-scores}{{4}{11}{Aggregate MuJoCo performance after training on unguided or policy-guided synthetic data under continuous and periodic dataset generation, as well as on the real dataset. For each setting, mean return over TD3+BC and IQL agents is marked, with standard error over 4 seeds (diffusion models and agents) highlighted}{figure.caption.16}{}}
+\newlabel{fig:action-prob}{{5}{11}{Action probability of synthetic trajectories generated by diffusion and PETS models trained on halfcheetah-medium. Target policies are trained on halfcheetah-random, halfcheetah-medium, and halfcheetah-expert datasets, demonstrating robustness to OOD actions. Standard error over 4 diffusion model seeds is shaded (but negligible), with mean computed over 2048 synthetic trajectories}{figure.caption.18}{}}
+\citation{mopo,kidambi2020morel,rambo,lu2022revisiting}
+\citation{janner2019mbpo}
+\citation{kumar2020conservative}
+\citation{an2021uncertainty}
+\citation{bcq}
+\citation{lu2023synthetic}
+\citation{he2023diffusion}
+\citation{zhang2023learning}
+\citation{alonso2023diffusion}
+\citation{rigter2023world}
+\citation{janner2022diffuser}
+\citation{ajay2023is}
+\citation{wang2023diffusion}
+\newlabel{fig:traj-mse}{{6}{12}{Dynamics mean squared error of synthetic trajectories generated by diffusion and PETS models trained on halfcheetah-medium. Standard error over 4 diffusion model seeds and 3 PETS seeds (via OfflineRL-Kit) is shaded, with each generating 2048 synthetic trajectories for analysis}{figure.caption.20}{}}
+\newlabel{sec:related_work}{{6}{12}{Related Work}{section.6}{}}
+\bibdata{main}
+\bibcite{ajay2023is}{{1}{2023}{{Ajay et~al.}}{{Ajay, Du, Gupta, Tenenbaum, Jaakkola, and Agrawal}}}
+\bibcite{alonso2023diffusion}{{2}{2023}{{Alonso et~al.}}{{Alonso, Jelley, Kanervisto, and Pearce}}}
+\bibcite{an2021uncertainty}{{3}{2021}{{An et~al.}}{{An, Moon, Kim, and Song}}}
+\bibcite{augwm}{{4}{2021}{{Ball et~al.}}{{Ball, Lu, Parker-Holder, and Roberts}}}
+\bibcite{bansal2023universal}{{5}{2023}{{Bansal et~al.}}{{Bansal, Chu, Schwarzschild, Sengupta, Goldblum, Geiping, and Goldstein}}}
+\bibcite{jax2018github}{{6}{2018}{{Bradbury et~al.}}{{Bradbury, Frostig, Hawkins, Johnson, Leary, Maclaurin, Necula, Paszke, Vander{P}las, Wanderman-{M}ilne, and Zhang}}}
+\newlabel{conclusion}{{7}{13}{Conclusion}{section.7}{}}
+\newlabel{sec:ack}{{7}{13}{Acknowledgments}{section*.24}{}}
+\bibcite{chua2018deep}{{7}{2018}{{Chua et~al.}}{{Chua, Calandra, McAllister, and Levine}}}
+\bibcite{dhariwal2021diffusion}{{8}{2021}{{Dhariwal \& Nichol}}{{Dhariwal and Nichol}}}
+\bibcite{fu2020d4rl}{{9}{2020}{{Fu et~al.}}{{Fu, Kumar, Nachum, Tucker, and Levine}}}
+\bibcite{fujimoto2021minimalist}{{10}{2021}{{Fujimoto \& Gu}}{{Fujimoto and Gu}}}
+\bibcite{bcq}{{11}{2019}{{Fujimoto et~al.}}{{Fujimoto, Meger, and Precup}}}
+\bibcite{he2023diffusion}{{12}{2023}{{He et~al.}}{{He, Bai, Xu, Yang, Zhang, Wang, Zhao, and Li}}}
+\bibcite{ddpm}{{13}{2020}{{Ho et~al.}}{{Ho, Jain, and Abbeel}}}
+\bibcite{hyvarinen2005estimation}{{14}{2005}{{Hyv{\"a}rinen \& Dayan}}{{Hyv{\"a}rinen and Dayan}}}
+\bibcite{janner2019mbpo}{{15}{2019}{{Janner et~al.}}{{Janner, Fu, Zhang, and Levine}}}
+\bibcite{janner2022diffuser}{{16}{2022}{{Janner et~al.}}{{Janner, Du, Tenenbaum, and Levine}}}
+\bibcite{karras2022elucidating}{{17}{2022}{{Karras et~al.}}{{Karras, Aittala, Aila, and Laine}}}
+\bibcite{kidambi2020morel}{{18}{2020}{{Kidambi et~al.}}{{Kidambi, Rajeswaran, Netrapalli, and Joachims}}}
+\bibcite{Kirk_2023}{{19}{2023}{{Kirk et~al.}}{{Kirk, Zhang, Grefenstette, and Rocktäschel}}}
+\bibcite{kostrikov2021offline}{{20}{2021}{{Kostrikov et~al.}}{{Kostrikov, Nair, and Levine}}}
+\bibcite{kumar2020conservative}{{21}{2020}{{Kumar et~al.}}{{Kumar, Zhou, Tucker, and Levine}}}
+\bibcite{levine2020offline}{{22}{2020}{{Levine et~al.}}{{Levine, Kumar, Tucker, and Fu}}}
+\bibcite{lu2022revisiting}{{23}{2022}{{Lu et~al.}}{{Lu, Ball, Parker-Holder, Osborne, and Roberts}}}
+\bibcite{lu2023synthetic}{{24}{2023}{{Lu et~al.}}{{Lu, Ball, Teh, and Parker-Holder}}}
+\bibcite{ma2023elucidating}{{25}{2023}{{Ma et~al.}}{{Ma, Hu, Wang, and Sun}}}
+\bibcite{precup2000eligibility}{{26}{2000}{{Precup}}{{}}}
+\bibcite{10.5555/645529.658134}{{27}{2000}{{Precup et~al.}}{{Precup, Sutton, and Singh}}}
+\bibcite{rambo}{{28}{2022}{{Rigter et~al.}}{{Rigter, Lacerda, and Hawes}}}
+\bibcite{rigter2023world}{{29}{2023}{{Rigter et~al.}}{{Rigter, Yamada, and Posner}}}
+\bibcite{ronneberger2015u}{{30}{2015}{{Ronneberger et~al.}}{{Ronneberger, Fischer, and Brox}}}
+\bibcite{sims2024edgeofreach}{{31}{2024}{{Sims et~al.}}{{Sims, Lu, and Teh}}}
+\bibcite{pmlr-v37-sohl-dickstein15}{{32}{2015}{{Sohl-Dickstein et~al.}}{{Sohl-Dickstein, Weiss, Maheswaranathan, and Ganguli}}}
+\bibcite{offinerlkit}{{33}{2023}{{Sun}}{{}}}
+\bibcite{Sutton1998}{{34}{2018}{{Sutton \& Barto}}{{Sutton and Barto}}}
+\bibcite{mujoco}{{35}{2012}{{Todorov et~al.}}{{Todorov, Erez, and Tassa}}}
+\bibcite{wang2023diffusion}{{36}{2023}{{Wang et~al.}}{{Wang, Hunt, and Zhou}}}
+\bibcite{mopo}{{37}{2020}{{Yu et~al.}}{{Yu, Thomas, Yu, Ermon, Zou, Levine, Finn, and Ma}}}
+\bibcite{zhang2023learning}{{38}{2023}{{Zhang et~al.}}{{Zhang, Xiong, Yang, Casas, Hu, and Urtasun}}}
+\bibstyle{rlc}
+\citation{ronneberger2015u}
+\citation{karras2022elucidating}
+\citation{lu2023synthetic}
+\newlabel{sec:all-hypers}{{A}{17}{Hyperparameters}{appendix.A}{}}
+\newlabel{tab:unet_hyp}{{3}{17}{U-Net hyperparameters}{table.caption.27}{}}
+\newlabel{tab:edm_hyp}{{4}{17}{EDM hyperparameters}{table.caption.28}{}}
+\citation{kumar2020conservative,fujimoto2021minimalist,bcq}
+\citation{mopo,kidambi2020morel,lu2022revisiting}
+\newlabel{sec:noised-target}{{B}{18}{Noised Target Distribution}{appendix.B}{}}
+\newlabel{sec:dist-motiv}{{C}{18}{Behavior-Regularized Target Distribution}{appendix.C}{}}
+\newlabel{alg:training}{{2}{18}{Agent training via {\color {pgd}policy-guided} diffusion}{algorithm.2}{}}
+\gdef \@abspage@last{18}

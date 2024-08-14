@@ -1,0 +1,277 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ajay et~al.(2023)Ajay, Du, Gupta, Tenenbaum, Jaakkola, and
+  Agrawal]{ajay2023is}
+Anurag Ajay, Yilun Du, Abhi Gupta, Joshua~B. Tenenbaum, Tommi~S. Jaakkola, and
+  Pulkit Agrawal.
+\newblock Is conditional generative modeling all you need for decision making?
+\newblock In \emph{The Eleventh International Conference on Learning
+  Representations}, 2023.
+\newblock URL \url{https://openreview.net/forum?id=sP1fo2K9DFG}.
+
+\bibitem[Alonso et~al.(2023)Alonso, Jelley, Kanervisto, and
+  Pearce]{alonso2023diffusion}
+Eloi Alonso, Adam Jelley, Anssi Kanervisto, and Tim Pearce.
+\newblock Diffusion world models.
+\newblock 2023.
+
+\bibitem[An et~al.(2021)An, Moon, Kim, and Song]{an2021uncertainty}
+Gaon An, Seungyong Moon, Jang-Hyun Kim, and Hyun~Oh Song.
+\newblock Uncertainty-based offline reinforcement learning with diversified
+  q-ensemble.
+\newblock \emph{Advances in neural information processing systems},
+  34:\penalty0 7436--7447, 2021.
+
+\bibitem[Ball et~al.(2021)Ball, Lu, Parker-Holder, and Roberts]{augwm}
+Philip~J Ball, Cong Lu, Jack Parker-Holder, and Stephen Roberts.
+\newblock Augmented world models facilitate zero-shot dynamics generalization
+  from a single offline environment.
+\newblock In Marina Meila and Tong Zhang (eds.), \emph{Proceedings of the 38th
+  International Conference on Machine Learning}, volume 139 of
+  \emph{Proceedings of Machine Learning Research}, pp.\  619--629. PMLR, 18--24
+  Jul 2021.
+
+\bibitem[Bansal et~al.(2023)Bansal, Chu, Schwarzschild, Sengupta, Goldblum,
+  Geiping, and Goldstein]{bansal2023universal}
+Arpit Bansal, Hong-Min Chu, Avi Schwarzschild, Soumyadip Sengupta, Micah
+  Goldblum, Jonas Geiping, and Tom Goldstein.
+\newblock Universal guidance for diffusion models.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition}, pp.\  843--852, 2023.
+
+\bibitem[Bradbury et~al.(2018)Bradbury, Frostig, Hawkins, Johnson, Leary,
+  Maclaurin, Necula, Paszke, Vander{P}las, Wanderman-{M}ilne, and
+  Zhang]{jax2018github}
+James Bradbury, Roy Frostig, Peter Hawkins, Matthew~James Johnson, Chris Leary,
+  Dougal Maclaurin, George Necula, Adam Paszke, Jake Vander{P}las, Skye
+  Wanderman-{M}ilne, and Qiao Zhang.
+\newblock {JAX}: composable transformations of {P}ython+{N}um{P}y programs,
+  2018.
+\newblock URL \url{http://github.com/google/jax}.
+
+\bibitem[Chua et~al.(2018)Chua, Calandra, McAllister, and Levine]{chua2018deep}
+Kurtland Chua, Roberto Calandra, Rowan McAllister, and Sergey Levine.
+\newblock Deep reinforcement learning in a handful of trials using
+  probabilistic dynamics models, 2018.
+
+\bibitem[Dhariwal \& Nichol(2021)Dhariwal and Nichol]{dhariwal2021diffusion}
+Prafulla Dhariwal and Alexander Nichol.
+\newblock Diffusion models beat gans on image synthesis.
+\newblock \emph{Advances in neural information processing systems},
+  34:\penalty0 8780--8794, 2021.
+
+\bibitem[Fu et~al.(2020)Fu, Kumar, Nachum, Tucker, and Levine]{fu2020d4rl}
+Justin Fu, Aviral Kumar, Ofir Nachum, George Tucker, and Sergey Levine.
+\newblock D4rl: Datasets for deep data-driven reinforcement learning.
+\newblock \emph{arXiv preprint arXiv:2004.07219}, 2020.
+
+\bibitem[Fujimoto \& Gu(2021)Fujimoto and Gu]{fujimoto2021minimalist}
+Scott Fujimoto and Shixiang~Shane Gu.
+\newblock A minimalist approach to offline reinforcement learning.
+\newblock In \emph{Thirty-Fifth Conference on Neural Information Processing
+  Systems}, 2021.
+
+\bibitem[Fujimoto et~al.(2019)Fujimoto, Meger, and Precup]{bcq}
+Scott Fujimoto, David Meger, and Doina Precup.
+\newblock Off-policy deep reinforcement learning without exploration.
+\newblock In Kamalika Chaudhuri and Ruslan Salakhutdinov (eds.),
+  \emph{Proceedings of the 36th International Conference on Machine Learning},
+  volume~97 of \emph{Proceedings of Machine Learning Research}, pp.\
+  2052--2062. PMLR, 09--15 Jun 2019.
+\newblock URL \url{https://proceedings.mlr.press/v97/fujimoto19a.html}.
+
+\bibitem[He et~al.(2023)He, Bai, Xu, Yang, Zhang, Wang, Zhao, and
+  Li]{he2023diffusion}
+Haoran He, Chenjia Bai, Kang Xu, Zhuoran Yang, Weinan Zhang, Dong Wang, Bin
+  Zhao, and Xuelong Li.
+\newblock Diffusion model is an effective planner and data synthesizer for
+  multi-task reinforcement learning.
+\newblock \emph{arXiv preprint arXiv:2305.18459}, 2023.
+
+\bibitem[Ho et~al.(2020)Ho, Jain, and Abbeel]{ddpm}
+Jonathan Ho, Ajay Jain, and Pieter Abbeel.
+\newblock Denoising diffusion probabilistic models.
+\newblock In H.~Larochelle, M.~Ranzato, R.~Hadsell, M.F. Balcan, and H.~Lin
+  (eds.), \emph{Advances in Neural Information Processing Systems}, volume~33,
+  pp.\  6840--6851. Curran Associates, Inc., 2020.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2020/file/4c5bcfec8584af0d967f1ab10179ca4b-Paper.pdf}.
+
+\bibitem[Hyv{\"a}rinen \& Dayan(2005)Hyv{\"a}rinen and
+  Dayan]{hyvarinen2005estimation}
+Aapo Hyv{\"a}rinen and Peter Dayan.
+\newblock Estimation of non-normalized statistical models by score matching.
+\newblock \emph{Journal of Machine Learning Research}, 6\penalty0 (4), 2005.
+
+\bibitem[Janner et~al.(2019)Janner, Fu, Zhang, and Levine]{janner2019mbpo}
+Michael Janner, Justin Fu, Marvin Zhang, and Sergey Levine.
+\newblock When to trust your model: Model-based policy optimization.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2019.
+
+\bibitem[Janner et~al.(2022)Janner, Du, Tenenbaum, and
+  Levine]{janner2022diffuser}
+Michael Janner, Yilun Du, Joshua Tenenbaum, and Sergey Levine.
+\newblock Planning with diffusion for flexible behavior synthesis.
+\newblock In \emph{International Conference on Machine Learning}, 2022.
+
+\bibitem[Karras et~al.(2022)Karras, Aittala, Aila, and
+  Laine]{karras2022elucidating}
+Tero Karras, Miika Aittala, Timo Aila, and Samuli Laine.
+\newblock Elucidating the design space of diffusion-based generative models.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  35:\penalty0 26565--26577, 2022.
+
+\bibitem[Kidambi et~al.(2020)Kidambi, Rajeswaran, Netrapalli, and
+  Joachims]{kidambi2020morel}
+Rahul Kidambi, Aravind Rajeswaran, Praneeth Netrapalli, and Thorsten Joachims.
+\newblock Morel: Model-based offline reinforcement learning.
+\newblock \emph{Advances in neural information processing systems},
+  33:\penalty0 21810--21823, 2020.
+
+\bibitem[Kirk et~al.(2023)Kirk, Zhang, Grefenstette, and
+  Rocktäschel]{Kirk_2023}
+Robert Kirk, Amy Zhang, Edward Grefenstette, and Tim Rocktäschel.
+\newblock A survey of zero-shot generalisation in deep reinforcement learning.
+\newblock \emph{Journal of Artificial Intelligence Research}, 76:\penalty0
+  201–264, January 2023.
+\newblock ISSN 1076-9757.
+\newblock \doi{10.1613/jair.1.14174}.
+\newblock URL \url{http://dx.doi.org/10.1613/jair.1.14174}.
+
+\bibitem[Kostrikov et~al.(2021)Kostrikov, Nair, and
+  Levine]{kostrikov2021offline}
+Ilya Kostrikov, Ashvin Nair, and Sergey Levine.
+\newblock Offline reinforcement learning with implicit q-learning.
+\newblock \emph{arXiv preprint arXiv:2110.06169}, 2021.
+
+\bibitem[Kumar et~al.(2020)Kumar, Zhou, Tucker, and
+  Levine]{kumar2020conservative}
+Aviral Kumar, Aurick Zhou, George Tucker, and Sergey Levine.
+\newblock Conservative q-learning for offline reinforcement learning.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  33:\penalty0 1179--1191, 2020.
+
+\bibitem[Levine et~al.(2020)Levine, Kumar, Tucker, and Fu]{levine2020offline}
+Sergey Levine, Aviral Kumar, George Tucker, and Justin Fu.
+\newblock Offline reinforcement learning: Tutorial, review, and perspectives on
+  open problems.
+\newblock \emph{arXiv preprint arXiv:2005.01643}, 2020.
+
+\bibitem[Lu et~al.(2022)Lu, Ball, Parker-Holder, Osborne, and
+  Roberts]{lu2022revisiting}
+Cong Lu, Philip Ball, Jack Parker-Holder, Michael Osborne, and Stephen~J.
+  Roberts.
+\newblock Revisiting design choices in offline model based reinforcement
+  learning.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+\newblock URL \url{https://openreview.net/forum?id=zz9hXVhf40}.
+
+\bibitem[Lu et~al.(2023)Lu, Ball, Teh, and Parker-Holder]{lu2023synthetic}
+Cong Lu, Philip~J. Ball, Yee~Whye Teh, and Jack Parker-Holder.
+\newblock Synthetic experience replay.
+\newblock In \emph{Thirty-seventh Conference on Neural Information Processing
+  Systems}, 2023.
+\newblock URL \url{https://openreview.net/forum?id=6jNQ1AY1Uf}.
+
+\bibitem[Ma et~al.(2023)Ma, Hu, Wang, and Sun]{ma2023elucidating}
+Jiajun Ma, Tianyang Hu, Wenjia Wang, and Jiacheng Sun.
+\newblock Elucidating the design space of classifier-guided diffusion
+  generation.
+\newblock \emph{arXiv preprint arXiv:2310.11311}, 2023.
+
+\bibitem[Precup(2000)]{precup2000eligibility}
+Doina Precup.
+\newblock Eligibility traces for off-policy policy evaluation.
+\newblock \emph{Computer Science Department Faculty Publication Series}, pp.\
+  ~80, 2000.
+
+\bibitem[Precup et~al.(2000)Precup, Sutton, and Singh]{10.5555/645529.658134}
+Doina Precup, Richard~S. Sutton, and Satinder~P. Singh.
+\newblock Eligibility traces for off-policy policy evaluation.
+\newblock In \emph{Proceedings of the Seventeenth International Conference on
+  Machine Learning}, ICML '00, pp.\  759–766, San Francisco, CA, USA, 2000.
+  Morgan Kaufmann Publishers Inc.
+\newblock ISBN 1558607072.
+
+\bibitem[Rigter et~al.(2022)Rigter, Lacerda, and Hawes]{rambo}
+Marc Rigter, Bruno Lacerda, and Nick Hawes.
+\newblock {RAMBO}-{RL}: Robust adversarial model-based offline reinforcement
+  learning.
+\newblock In Alice~H. Oh, Alekh Agarwal, Danielle Belgrave, and Kyunghyun Cho
+  (eds.), \emph{Advances in Neural Information Processing Systems}, 2022.
+\newblock URL \url{https://openreview.net/forum?id=nrksGSRT7kX}.
+
+\bibitem[Rigter et~al.(2023)Rigter, Yamada, and Posner]{rigter2023world}
+Marc Rigter, Jun Yamada, and Ingmar Posner.
+\newblock World models via policy-guided trajectory diffusion, 2023.
+
+\bibitem[Ronneberger et~al.(2015)Ronneberger, Fischer, and
+  Brox]{ronneberger2015u}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock In \emph{Medical Image Computing and Computer-Assisted
+  Intervention--MICCAI 2015: 18th International Conference, Munich, Germany,
+  October 5-9, 2015, Proceedings, Part III 18}, pp.\  234--241. Springer, 2015.
+
+\bibitem[Sims et~al.(2024)Sims, Lu, and Teh]{sims2024edgeofreach}
+Anya Sims, Cong Lu, and Yee~Whye Teh.
+\newblock The edge-of-reach problem in offline model-based reinforcement
+  learning, 2024.
+
+\bibitem[Sohl-Dickstein et~al.(2015)Sohl-Dickstein, Weiss, Maheswaranathan, and
+  Ganguli]{pmlr-v37-sohl-dickstein15}
+Jascha Sohl-Dickstein, Eric Weiss, Niru Maheswaranathan, and Surya Ganguli.
+\newblock Deep unsupervised learning using nonequilibrium thermodynamics.
+\newblock In Francis Bach and David Blei (eds.), \emph{Proceedings of the 32nd
+  International Conference on Machine Learning}, volume~37 of \emph{Proceedings
+  of Machine Learning Research}, pp.\  2256--2265, Lille, France, 07--09 Jul
+  2015. PMLR.
+\newblock URL \url{https://proceedings.mlr.press/v37/sohl-dickstein15.html}.
+
+\bibitem[Sun(2023)]{offinerlkit}
+Yihao Sun.
+\newblock Offlinerl-kit: An elegant pytorch offline reinforcement learning
+  library.
+\newblock \url{https://github.com/yihaosun1124/OfflineRL-Kit}, 2023.
+
+\bibitem[Sutton \& Barto(2018)Sutton and Barto]{Sutton1998}
+Richard~S. Sutton and Andrew~G. Barto.
+\newblock \emph{Reinforcement Learning: An Introduction}.
+\newblock The MIT Press, second edition, 2018.
+\newblock URL \url{http://incompleteideas.net/book/the-book-2nd.html}.
+
+\bibitem[Todorov et~al.(2012)Todorov, Erez, and Tassa]{mujoco}
+Emanuel Todorov, Tom Erez, and Yuval Tassa.
+\newblock Mujoco: A physics engine for model-based control.
+\newblock \emph{IEEE}, pp.\  5026--5033, 2012.
+\newblock URL
+  \url{http://dblp.uni-trier.de/db/conf/iros/iros2012.html#TodorovET12}.
+
+\bibitem[Wang et~al.(2023)Wang, Hunt, and Zhou]{wang2023diffusion}
+Zhendong Wang, Jonathan~J Hunt, and Mingyuan Zhou.
+\newblock Diffusion policies as an expressive policy class for offline
+  reinforcement learning, 2023.
+
+\bibitem[Yu et~al.(2020)Yu, Thomas, Yu, Ermon, Zou, Levine, Finn, and Ma]{mopo}
+Tianhe Yu, Garrett Thomas, Lantao Yu, Stefano Ermon, James~Y Zou, Sergey
+  Levine, Chelsea Finn, and Tengyu Ma.
+\newblock Mopo: Model-based offline policy optimization.
+\newblock In H.~Larochelle, M.~Ranzato, R.~Hadsell, M.F. Balcan, and H.~Lin
+  (eds.), \emph{Advances in Neural Information Processing Systems}, volume~33,
+  pp.\  14129--14142. Curran Associates, Inc., 2020.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2020/file/a322852ce0df73e204b7e67cbbef0d0a-Paper.pdf}.
+
+\bibitem[Zhang et~al.(2023)Zhang, Xiong, Yang, Casas, Hu, and
+  Urtasun]{zhang2023learning}
+Lunjun Zhang, Yuwen Xiong, Ze~Yang, Sergio Casas, Rui Hu, and Raquel Urtasun.
+\newblock Learning unsupervised world models for autonomous driving via
+  discrete diffusion.
+\newblock \emph{arXiv preprint arXiv:2311.01017}, 2023.
+
+\end{thebibliography}
