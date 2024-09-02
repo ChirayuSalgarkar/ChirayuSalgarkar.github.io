@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}27-AUG-24}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Miscellaneous}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Faculty Intro}{1}{}%
+\contentsline {subsection}{\numberline {1.3}Syllabus}{1}{}%
+\contentsline {subsection}{\numberline {1.4}Scientific vs Engineering Research}{1}{}%

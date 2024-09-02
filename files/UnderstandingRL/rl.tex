@@ -1,0 +1,77 @@
+\documentclass[10pt, oneside]{article} 
+\usepackage{amsmath, amsthm, amssymb, calrsfs, wasysym, verbatim, bbm, color, graphics, geometry}
+
+
+\geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}  
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Cdot}{\boldsymbol{\cdot}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{conv}{Convention}
+\newtheorem{rem}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+
+
+\title{Running Lecture Outline: Understanding RL}
+\author{[Chirayu Salgarkar]}
+\date{Fall 2024}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\vspace{.25in}
+\section{26-AUG-24}
+\subsection{Order, Linear, and PDE vs ODE}
+\section{28-AUG-24}
+
+\subsection{Motvation}
+Decision making is hard. How we tractably reason over a sequence of decisions is a subject for much research. One potential mechanism for modeling sequential decision making is a \textit{Markov Decision Process}. 
+\subsection{MDP}
+MDPS consist of a state $S$, action $A$, cost $C$, and transition$\mathcal{T}$.
+\subsubsection{What is a state?}
+A state refers to the sufficient statistic of the system to predict the future disregarding the past. This definition is not really precise. More generally, the state is the status of the world. That's a definition. Not the definition. 
+We show state as $s \in S$.
+\subsubsection{Action}
+Action refers to the decisions or, more basically, the act of doing something, or the control action. 
+\subsubsection{Cost}
+The cost, or rewardd, is the instantaneous cost of an individual action within a state. This is denoted $c(s,a)$. Sometimes, we see $c(s,a,t)$ (time-dependence). Sometime, we even have $c(s,a,s',t)$ indicating previous state matters too. 
+Dr. Baheri uses cost and reward interchangaby here. 
+\subsubsection{Transition}
+Insert Anthony Fantano joke here. The transition refers to the next state given the state and action. In a deterministic world, $s' = \mathcal{T}(s,a)$, but stochastic worlds are more of $s' \cong \mathcal{T}(s,a)$.
+
+Quiz: Given a system, whate are the components of the MDP and how do you formulate them?
+
+Let's identify the MDP components of Tetris.
+
+State: Board configuration. 
+Action: $4 * 10$
+Cost: Userdefined. 
+Transition: rule of game. Update of board game + random selection of next piece. 
+
+
+For a self-driving car, what are the MDP components?
+
+We now move to a Markov Decision Problem. This includes the things to define an optimization problem.
+\subsection{MDP, continued}
+We first describe the Horizon, and discount. 
+\subsubsection{Horizon}
+Simply when to make decision.
+\subsubsection{Discount Factor}
+Reward is more valuable at the current moment as opposed to the future! (Costs are more valuable when they happen soon.) They are represented as a $r \in \mathbb{R}$, $0 \leq r \leq 1$. Think of it this like 
+\[c_0 + rc_1 + ... + r^{t-1}c_{t-1}\]
+
+The final goal of RL is to find a $\textit{policy}$, essentially given state, what action do we have. We sek to find a policy that minimizes the sum of discounted future costs. 
+
+\end{document}
