@@ -155,8 +155,59 @@ y = \frac{\frac{1}{4}e^{4x} + C}{e^{x}}
 \]
 or:
 \end{example}
+\section{04-SEP-24}
+We have a quiz lol. Three questions, about 20-25 minutes. 
+\subsection{Separation of Variables}
+\begin{defn}[separable]
+A differential equation is separable if you can put it into the form  $\frac{dy}{dx} = f(x)h(y)$, where $f$ $h$ are functions. 
+\end{defn}
+The steps to solving them are as follows:
+\[ 
+    \frac{dy}{dx} = f(x)h(y)
+\]
 
+\[ 
+    \frac{dy}{h(y)} = f(x)dx
+\]
+\[ 
+    \int{\frac{dy}{h(y)}} = \int{f(x)dx}
+\]
+then, solve. 
+Let's check for separability of some cases:
+\begin{example}
+   \[\frac{dy}{dx} - y = \cos{x}\]
+   \[\frac{dy}{dx} = \cos{x} + y\]
+   This does not satisfy the form specified in the definition, so it is \textit{not separable}.
+\end{example}
+\begin{example}
+    \[\frac{dy}{dx} = x^2y^4e^{5x-3y}\]
+    We can rewrite as:
+    \[\frac{dy}{dx} = (x^2e^{5x})(y^4e^{-3y})\]
+    This is separable, as it satisfies the above form. 
+ \end{example}
+Now, let's solve one: 
+\begin{example}
+    \[(1-x)dy = -ydx \]
+where $y(0) = 5$
 
+Rewriting, we get:
+\[\frac{1}{1-x}dx = \frac{-1}{y}dy \]
+Integrating, we get:
+\[ - \ln{1-x} = - ln{y} + C\]
+When $y(0) = 5$, we have $0 = - \ln{5} + C$, so $C = \ln{5}$
+So, \[ - \ln{1-x} = - ln{y} + \ln{5}\]
+and then:
+\[ln{y} = \ln{1-x} + \ln{5}\] 
+Exponentiating, 
+\[e^{\ln{y}} = e^{\ln{1-x} + \ln{5}} \]
 
+\[y = 5(1-x) \]
+\end{example}
+
+\begin{example}
+    \[\frac{1}{y}\frac{dy}{dx} = 1-x\]
+    where $y(0) = 2$
+The joke is you don't actually need to use separation to do this. But you can. 
+\end{example}
 
 \end{document}
