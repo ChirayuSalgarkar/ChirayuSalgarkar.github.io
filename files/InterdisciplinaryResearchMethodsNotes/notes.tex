@@ -1,6 +1,6 @@
 \documentclass[10pt, oneside]{article} 
 \usepackage{amsmath, amsthm, amssymb, calrsfs, wasysym, verbatim, bbm, color, graphics, geometry}
-
+\usepackage[]{hyperref}
 
 \geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}  
 
@@ -109,7 +109,7 @@ Industrial research is done by companies. We think big companies (see NVIDIA, Te
 \subsection{Academic research}
 We begin with four questions:
 \begin{rem}[Question]
-    What are the purpose and goals
+    What are the purpose and goals?
 \end{rem}
 \begin{rem}[Question]
     Is it important or necessary?
@@ -128,5 +128,104 @@ Who does academic research? You, me ``Prof referring to themselves'', postdocs. 
 
 Funding varies. There are generally proposals, which vary significantly even within one funding agency, each having many different types of grants ranging from 10k to over 10M, sometimes requiring multiple PIs at multiple institutions. These grant proposals are often reviewed by both peers as well as agency program officers and managers. 
 
+\section{3-SEP-24}
+\subsection{Critical Analysis of Papers}
+
+There are some pragmatic reasons to learn how to better analyze papers. One, this will be on your qualifying exam. But on a more personal level, it makes you a better reviewer. It also makes you more \textit{able to learn}. The courses you are going to be taking will always be one step behind your actual research. Therefore, you need to do a critical analysis of recent papers to make decisions. There exists a duality between ability to better analyse papers and ability to better write papers. You have to learn from others, and you have to better communicate. 
+
+Writing paper is \textit{not creative literature}. (Personal opinion: it should be). But the way you communicate research should stay in the lane of established good papers, recognizing the structure of good papers, and ultimately fundamentally writing like the greats. 
+
+You also get critical analysis skills. Critical has a different connotation here than in standard language. Here, \textit{critical} means an act of objective judgment - that is, understanding both the strengths and weaknesses of a subject, including the justification of such in an objective manner.
+
+There is fundamentally one question to answer when performing critical analysis:
+\textbf{What is the main contribution of the paper and how is this contribution justified and validated}? That is, what is the new knowledge generated from the paper? And how do you know whether or not it is accurate?
+
+Critical comes from Greek \textit{kritikós}, ``of or for judging, able to discern''. There are various levels of analysis you can do, but not all are equally important, meaning that you should avoid superficiality. For instance, if a citation is old, that may be a reason to be critical, but not as strong as seeing a major issue of the paper itself. 
+Obviously, you need to check for rigor and correctness, and that the paper ties up loose ends and gets rid of handwaving. 
+
+You should instead look for innovative and significant contribution, including looking for something new. You should make sure the contribution is not trivial. (The definition of ``trivial'' is hotly contested, though). 
+You want to maybe stop and think if the triviality and obviousness of this claim is true. First of all, the paper was published. Therefore, they didn't think it was trivial. You may be missing something. 
+
+You also need to validate such claims and contributions. No justification is no contributions at all. This is the \href{https://en.wikipedia.org/wiki/Extraordinary_claims_require_extraordinary_evidence}{Sagan Standard}. 
+When looking for a good presentation, make sure that it includes items made in the major community. It needs to be succinct, clear to read, with \textit{good style}, which means that there needs to be concrete and clear cause-and-effect chain reasoning. We minimize superlatives, because we're technical, and trying to communicate new knowledge. We're not marketing experts. We also want to have a good choice of notation and no unnecessary buzzwords. We also generally want to be self-contained and not rushed. I guess that means don't procrastinate. Ha. 
+
+\subsection{Assessing Contributions}
+To assess contributions, \textit{State of the Art should not be the only criteria}. Just because research is not state-of-the-art, that does not make it bad! This is the equivalent of low-hanging fruit argument. There are different aspects that make new research valuable. But that is not the only criteria! For instance, does the approach show promise? Does the research help you better understand some phenomenon? Does this help develop new research that can be built further on? Is there a mathematical contribution that can support further scientific and engineering research?
+
+Professor then goes into a small diatribe regarding his time at TI. 
+
+The anatomy of a technical article varies by disciplines, but generally the include Titles, Abstracts, Intro, Problem Description, Set of Claims, Methodologies, Description of data, Set of Result, and Conclusions. 
+
+There is not a fool-proof method, but papers should generally take this path. 
+
+Now, there is now people trying to discuss negative results. TLDR: it is hard.
+\subsection{Reading a paper}
+If you want to critical analysis of a paper, it's not really done sequentially! You start off by reading a title. You make a mental note of how the title conveys information on the subject of the paper, and then read the abstract and perhaps the conclusion. There should be:
+\begin{itemize}
+    \item One to two sentences as motivation
+    \item One to two sentences defining the Problem
+    \item One to two sentences discussing main contribution
+    \item One to two sentences giving evidence validating the claim
+    \item Are there unsubstantiateed claims?
+\end{itemize}
+I did parliamentary debate, I'm actually going to use parli debate flow. 
+
+Then, you go to the introductory section. Start by checking the motivation: Why do we care? The professor spends time looking at references to prior works in the paper, checking for thoroughness, currency, relevancy, and to check details of claimed contributions. 
+
+Next, look at assumptions and conditions. Are they valid? Are they realistic? Do they narrow the scope of the research? Are they justified?
+
+Then, check if the research problem is set up well. Is there ambiguity when analyzing the research elements?
+
+Then, read the method and results. Obviously, check for how warranted the method is and if it is correct. THen, check if the results actually validate the claimed contributions, and whether or not those comparisons are fair. Then, we check if the results analyzed and discussed are done in depth, and if they are fair. Finally, we check if correct methods used in collecting, presenting, and analyzing results, and if sufficient information presented to independently reproduce these results. 
+
+Now, we look at a couple of graphs and whether or not there is validity in them. This is present in the powerpoint, so I am omitting the discussion here. Also, check for consistency of units. 
+
+\section{05-SEP-24}
+\subsection{Miscellaneous}
+Just reiterating what has happened in the email, the quick message is don't use electronics. Don't use electronics in class. Unless you're peer notetaker. I'm peer notetaker, so it's fine. 
+\subsection{Critical Analysis of Papers, continued}
+Using a quad chart is a helpful way of presenting information! A quad chart organizes and presents information in the most essential form. It is also something you can use to organize your own thoughts. This method of organizing is direct and clear, which is very helpful. In fact, DoD basically requires it for research proposals. Think of it like an executive summary. 
+It's called a \textit{quad chart} because text is divided into four quadrants. An example is now shown. It is in the PPT, so I am not including it here. 
+
+Notably, there is four quadrants. This example shows objectvie, approach, key milestones, and graphical infromation in the top right. This forces you to be smart about what you include, as well as conciseness. Be reasonable with font sizes. 
+
+Another method is by splitting objective and motivation, contributions, methodology, and results. 
+
+\begin{rem}
+    We will have an assignment soon concerning literature review, but as mentioned previously in this part of the course, will be incremental practice for the mock qualifying exam. This will discuss the qualifying exam. There will also be a quad chart on such.
+\end{rem}
+
+\subsection{Research Dissemination}
+Research dissemination, in short, is how to publish your research. 
+There are conference presentations as well as journal presentations. Every reference as of now is for peer-reviewed publications. (The implication is that it's actually vetted by experts in the field). Conference publications are generally considered as a venue for disseminating the latest research, including works-in-progress. This has a less careful refereeing process, and means that the manuscript cannot be revised and resubmitted, which means that there is immediate accept/reject based on reviewer scores as opposed to the other way round. 
+
+On the other hand, Journal publications are seen more as an archival medium, which implies research maturity, and generally has more details than a conference paper. 
+
+Note that this is \textbf{very} dependent on discipline. Prestige matters on discipline. For instance, publications to Systems and Control may be useful, but IROS conference papers may be sexier. 
+
+At the end of the day, acceptance is often made by score. They accept up to some percent of the top scorers. Typically, this is unfair. 
+
+There are also journal versions of a conference paper. This exists. Lol. This is a conversation that happens at the editorial world. When presented with a work of good quality, should we say this is unacceptable? We want to communicate the desemination of this knowledge 
+
+There are different classifications of journal papers, here's a general jist:
+\begin{itemize}
+    \item Transactions Paper, which is the typical full-length paper, which can either submitted through an open call, or a call for special issues.
+    \item Letters are same in the concept to a journal, but they are generally shorter, with a quicker review process. 
+    \item Review Articles, which are a comprehensive summary of some topic with commentary added. I'm controls guy, so I think of the Ames paper on Control Theory and Applications.
+    \item Tutorials, which are also a way to teach a somewhat new area to the research community. Think review articles that can become textbooks. 
+    \item There's also edited book chapters. Think a textbook, but each chapter is written by a leader in the field. This is closer to a chapter in the textbook than a paper. 
+    \item There are textbooks. 
+\end{itemize}
+
+Now, conference papers are different. Here's some examples, roughly delineated by size (smallest to largest):
+\begin{itemize}
+    \item Workshops are generally very focused on a topic, which are typically half-day or full day. There is usually only one concurrent session.
+    \item Symposiums are focused on an area of research, distributed over a few days, which may have morethan one concurrent session.
+    \item Conferences are focused on a broad are of research, or maybe, even a whole discipline. This is essentially equivalent to multiple concurrent symposia. This is like a ``track''.
+\end{itemize}
+
+There is also Open-Access repositories of preprints, meaning they haven't been peer-reviewed yet. They are generally in the arXiv. We love the arXiv. Obviously, if you're citing something from the arXiv, make sure there exists a peer-reviewed version of such. 
+
+Now he's comparing publishing on arXiv to taking steroids in baseball. What. This class is hilarious. 
 
 \end{document}

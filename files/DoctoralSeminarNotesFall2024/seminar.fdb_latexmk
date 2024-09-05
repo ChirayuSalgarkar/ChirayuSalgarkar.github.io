@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1724856218.49716 "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/DoctoralSeminarNotesFall2024/seminar.tex" "seminar.pdf" "seminar" 1724856219.68132 0
+["pdflatex"] 1725382591.58733 "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/DoctoralSeminarNotesFall2024/seminar.tex" "seminar.pdf" "seminar" 1725382592.35087 0
   "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1724766540 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1723137950 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1723137956 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -74,10 +74,10 @@
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1718356376 7532 d2e1111e17bfebb1607d8ffa779705ec ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/uwasy.fd" 1579693002 2296 c50bf1089c7a46a0d4e9a119e980be4e ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/wasysym.sty" 1579693002 11252 7fbfbe7bbcbe1f73acbe32ae2f10c666 ""
-  "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/DoctoralSeminarNotesFall2024/seminar.tex" 1724856216 2656 72ef41b85041cae39d29a4e1c993a703 ""
-  "seminar.aux" 1724856219 569 158d626b902cf079aa00804e916d0867 "pdflatex"
-  "seminar.tex" 1724856216 2656 72ef41b85041cae39d29a4e1c993a703 ""
-  "seminar.toc" 1724856219 332 56473a6522d2d5dc68a7f441ab549feb "pdflatex"
+  "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/DoctoralSeminarNotesFall2024/seminar.tex" 1725382590 3976 a0d5f6db15bb0a019cad70d687a1472a ""
+  "seminar.aux" 1725382592 930 498750d3b662488d77a363d0c119917e "pdflatex"
+  "seminar.tex" 1725382590 3976 a0d5f6db15bb0a019cad70d687a1472a ""
+  "seminar.toc" 1725382592 570 de21d173c408eace4047c3327ba9677c "pdflatex"
   (generated)
   "seminar.aux"
   "seminar.log"
