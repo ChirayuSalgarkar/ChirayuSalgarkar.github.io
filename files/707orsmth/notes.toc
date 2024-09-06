@@ -9,3 +9,5 @@
 \contentsline {subsection}{\numberline {3.1}Integrating Factor}{3}{}%
 \contentsline {section}{\numberline {4}04-SEP-24}{3}{}%
 \contentsline {subsection}{\numberline {4.1}Separation of Variables}{4}{}%
+\contentsline {section}{\numberline {5}06-SEP-24}{5}{}%
+\contentsline {subsection}{\numberline {5.1}Exact Equations}{5}{}%

@@ -210,4 +210,55 @@ Exponentiating,
 The joke is you don't actually need to use separation to do this. But you can. 
 \end{example}
 
+\section{06-SEP-24}
+\subsection{Exact Equations}
+Exact equations are a specific form of differential equation. 
+\begin{defn}
+For $f(x,y) = k$, where $k$ is a constant, then $df = \frac{df}{dx}dx + \frac{df}{dy}dy = 0$.
+\end{defn}
+
+Then, let us define $M(x,y) = \frac{df}{dx}$ and $N(x,y) = \frac{df}{dy}$. So, $M(x,y)dx + N(x,y)dy = 0$. 
+Differentiating, we get:
+\[\frac{dm}{dy} = \frac{d^2f}{dxdy} = \frac{dN}{dx}\]
+
+\begin{defn}
+If $M(x,y)dx + N(x,y)dy = 0$ and $\frac{dm}{dy} = \frac{d^2f}{dxdy} = \frac{dN}{dx}$, then $\frac{df}{dx} = M$ and $\frac{df}{dy} = N$.
+\end{defn}
+
+This gives us a general algorithm for solving differential equations of some classes: 
+\begin{enumerate}
+    \item Put the DE into form $M(x,y)dx + N(x,y)dy = 0$
+    \item Then, identify $M(x,y)$ and $N(x,y)$
+    \item Then, test for exactness: that is, $\frac{dM}{dy} = \frac{dN}{dx}$. If true, we have an exact equation. 
+    \item From $\frac{df}{dx} = M$, we have $df = M dx$, which, when integrating, gets $f(x,y) = g(x,y) + h(y)$.
+    \item Similarly, from $\frac{df}{dy} = N$, we have $\frac{df}{dy} = \frac{dg}{dy} + \frac{dh}{dy} = N$, which, when integrating, gets $f(x,y) = g(x,y) + h(y)$. Think of $h(y)$ as a constant term.
+    \item This gets us $h(y) = \int{N - \frac{dg}{dy}}dy$. Then we substitute $h(y)$ into $f(x,y)$ and set $f(x,y) = C$.
+\end{enumerate}
+
+I think an example may help more.
+\begin{example}
+    $-2xy dx = (x^2-1)dy$. Set up involves rewriting into the form, which gives us:
+    \[2xy dx + (x^2-1)dy = 0\] where $M = 2xy$, $N = x^2 -1$. Then, we check if the equation is exact, which requires us to take the partials of both sides, that is $\frac{dM}{dy}$ and $\frac{dN}{dx}$. Since they are both $2x$, we're good to continue. 
+    Now, $\frac{df}{dx} = 2xy$, and then $f(x,y) = \int{2xy}dx$. We get $f(x,y) = x^2y + h(y)$. We now do the same thing for $\frac{df}{dy} = N$. That is, $\frac{df}{dy} = N$. That is, \[x^2 + \frac{dh}{dy} = x^2 - 1\], and so $\frac{dh}{dy} = -1$. Then, $\int{dh} = -\int{dy}$, and so $h(y) = -y + C$. Setting $f(x,y) = C$, we have $x^2y - y = C$. 
+\end{example}
+Another example. 
+\begin{example}
+    $(x^2 + 2xy + y^2)dx + (2xy+x^2-1)dy = 0$
+    There's a cheeky sum of squares method for this. 
+    $M = (x^2 + 2xy + y^2)$ and $N = (2xy+x^2-1)$. Doing the test, we get $\frac{dM}{dy} = 2x + 2y = \frac{dN}{dx}$. This is true, by the wonders of the commutative property. Then, $\frac{df}{dx} = M = x^2 + 2xy + y^2$. Integrating, we get some silly little equation:
+    \[f(x,y) = \frac{1}{3}x^3 + x^2y + xy^2 + h(y) \]. Then, if $\frac{df}{dy} = N$, we can solve for $h(y)$, as then $\frac{d}{dy}{f(x,y)} = x^2y + 2xy + - 1$, and so $\frac{dh}{dy} = -1$, and then $h(y) = -y + C$. And then we set $f(x,y) = C$. 
+\end{example}
+Another one. Cue DJ Khaled. 
+\begin{example}
+    $(x^3 + \cos{y} + \frac{1}{x})dy = (\frac{y}{x^2}-3x^2y)dx$. Initially, $N$ is on the left, $M$ is on the right.
+    More accurately, 
+    \[
+        (\frac{y}{x^2}-3x^2y)dx - (x^3 + \cos{y} + \frac{1}{x})dy = 0
+    \]
+    $\frac{dM}{dy} = \frac{1}{x^2} - 3x^2$. This is the same as $\frac{dN}{dx}$. Practice these differentiations, kids. Therefore, this is an exact equation. 
+
+    $\frac{df}{dx} = M \implies f(x,y) = \frac{-y}{x} - x^3y + h(y)$. Similarly, $\frac{df}{dy} = N$ and $\frac{df}{dy} = \frac{-1}{x} - x^3 + \frac{dh}{dy} = - (x^3 + \cos{y} + \frac{1}{x})$. Then, solve for $h(y)$ and continue, and you're done. 
+
+\end{example}
+
 \end{document}

@@ -74,4 +74,22 @@ Reward is more valuable at the current moment as opposed to the future! (Costs a
 
 The final goal of RL is to find a $\textit{policy}$, essentially given state, what action do we have. We sek to find a policy that minimizes the sum of discounted future costs. 
 
+\section{06-SEP-2024}
+\subsection{Solving Markov Decision processes}
+Solving an MDP, in general means to find a \textit{policy}. Recall the definition of policy. Then a MDP is a function map mapping decision to reward.  
+
+But a better question is finding \textit{optimal policy}. What makes an optimal policy? The ultimate goal is to search over a family of policies in order to find the sequence of actions that maximizes (or sometimes minimize) the notion of the reward. That is, we seek to search over policies. Our goal in the slide is to minimize the Expected value. We then discuss discount factor. The sooner that we get the reward is generally a better choice. Discount value implies that future rewards mean that costs tend to matter less, as seen in previous slides. Therefore, in a case where we find optimal policies, we tend to work in the discounted version of the equation - that is we search over the poliies that maxes or mins the total sum of the cost.
+
+So, how do we solve?
+First, how NOT to solve: brute force. It simply takes far too long. We aren't doing bruteforce, because it takes far too long. 
+
+We use the \textit{Bellman equation}.
+\begin{defn}
+    The Bellman equation is defined as:
+    \[V^{\pi}(s_t) = \min_{a_t}(c(s_t, \pi(s_t)) + \gamma \mathbb{E}_{s_{t+1}} V^\pi(s_{t+1}))\]
+    
+\end{defn}
+Dr. Baheri wants us to recognize how gorgeous this equation is. Next, we discuss value iteraion and policy iteration.
+
+
 \end{document}
