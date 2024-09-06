@@ -1,0 +1,6 @@
+\frametitle{Summary - Section 1}
+    \begin{itemize}
+    \item Large-scale engineered systems should be designed as safe.
+   \item One way to formally guarantee safety in control systems is through the implementation of a control barrier function. However, this is a very conservative guarantee.
+    \item The relaxation of one of the conditions of the CBF, that being continuous differentiability, allows for more control inputs and states to be used, while guaranteeing that such conditions are still safe.
+    \end{itemize}
