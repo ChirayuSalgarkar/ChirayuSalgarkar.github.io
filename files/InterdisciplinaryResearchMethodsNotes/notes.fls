@@ -196,8 +196,8 @@ INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\was
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy5.tfm
 OUTPUT notes.toc
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT notes.aux
