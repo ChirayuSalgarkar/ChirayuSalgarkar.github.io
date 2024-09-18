@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1726152474.91207 "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/InterdisciplinaryResearchMethodsNotes/notes.tex" "notes.pdf" "notes" 1726152476.00848 0
-  "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1725580286 82686 2381c3433487640bf26aa76a10db7eb2 ""
+["pdflatex"] 1726583772.69362 "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/InterdisciplinaryResearchMethodsNotes/notes.tex" "notes.pdf" "notes" 1726583773.75729 0
+  "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1726420044 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1724765697 11548 4ef387d46e402f6e789b939855d9c407 ""
   "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1723137950 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1723137956 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -38,6 +38,7 @@
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247596666 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1247596667 36554 b67dc2cfa451409e100b3fcf5f506509 ""
+  "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
@@ -104,11 +105,11 @@
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/uwasy.fd" 1579693002 2296 c50bf1089c7a46a0d4e9a119e980be4e ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/wasysym.sty" 1579693002 11252 7fbfbe7bbcbe1f73acbe32ae2f10c666 ""
-  "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/InterdisciplinaryResearchMethodsNotes/notes.tex" 1726152474 30242 4514eee22abf3370e55746158f7edd30 ""
-  "notes.aux" 1726152475 3772 5e0a4f944e730b84f7c352f2c1728f74 "pdflatex"
-  "notes.out" 1726152475 4541 57a866153b72bc69a86e89ec84fda55c "pdflatex"
-  "notes.tex" 1726152474 30242 4514eee22abf3370e55746158f7edd30 ""
-  "notes.toc" 1726152475 2421 1e18a9951eb986b13debfd82c6d48ce7 "pdflatex"
+  "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/InterdisciplinaryResearchMethodsNotes/notes.tex" 1726583772 31274 d0bc19bf0dffb1399d8ab5287d0a5b7a ""
+  "notes.aux" 1726583773 4009 016dbcacd59922bbc9c88f0261c2ea1a "pdflatex"
+  "notes.out" 1726583773 4814 ed2148fed2c7dc9f1dbfc51e05824836 "pdflatex"
+  "notes.tex" 1726583772 31274 d0bc19bf0dffb1399d8ab5287d0a5b7a ""
+  "notes.toc" 1726583773 2576 b274a315420f62e0c415cdd068d631bc "pdflatex"
   (generated)
   "notes.aux"
   "notes.log"

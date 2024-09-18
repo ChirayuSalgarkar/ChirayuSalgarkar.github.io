@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  16 SEP 2024 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  18 SEP 2024 13:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -409,27 +409,215 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 [8]
 
 [9]
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Undefined control sequence.
+l.574     $k$ (constant) & $A$ & \multirow
+                                          {8}{*}{\makecell{For $g(x) = g_1(x...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[10] (notes.aux)
- ***********
-LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-07-20>
- ***********
-Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: EA21C205E4110C6BB4BEB19EE808FDB8;3125.
- ) 
-Here is how much of TeX's memory you used:
- 11222 strings out of 473899
- 172676 string characters out of 5724577
- 1946960 words of memory out of 5000000
- 33843 multiletter control sequences out of 15000+600000
- 568584 words of font info for 80 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 75i,8n,79p,615b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on notes.pdf (10 pages, 257278 bytes).
-PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Undefined control sequence.
+l.574 ...nstant) & $A$ & \multirow{8}{*}{\makecell
+                                                  {For $g(x) = g_1(x) + g_2(...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Missing } inserted.
+<inserted text> 
+                }
+l.574 ...kecell{For $g(x) = g_1(x) + g_2(x)$, \\ $
+                                                  y_p = y_{p1} + y_{p2}$ \\ ...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Missing } inserted.
+<inserted text> 
+                }
+l.574 ...kecell{For $g(x) = g_1(x) + g_2(x)$, \\ $
+                                                  y_p = y_{p1} + y_{p2}$ \\ ...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.574 ... $g_1(x)$ and $g_2(x)$ \\ respectively.}}
+                                                   & \multirow{8}{*}{\makece...
+I'm guessing that you meant to end an alignment here.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Missing { inserted.
+<inserted text> 
+                {
+l.574 ... $g_1(x)$ and $g_2(x)$ \\ respectively.}}
+                                                   & \multirow{8}{*}{\makece...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced alignment tab character &.
+l.574 ...g_1(x)$ and $g_2(x)$ \\ respectively.}} &
+                                                   \multirow{8}{*}{\makecell...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Undefined control sequence.
+l.574 ...d $g_2(x)$ \\ respectively.}} & \multirow
+                                                  {8}{*}{\makecell{For $g(x)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Undefined control sequence.
+l.574 ...spectively.}} & \multirow{8}{*}{\makecell
+                                                  {For $g(x) = g_1(x) \cdot ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.574 ...ll{For $g(x) = g_1(x) \cdot g_2(x)$, \\ $
+                                                  y_p = y_{p1} \cdot y_{p2}$...
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.574 ...(x)$, \\ $y_p = y_{p1} \cdot y_{p2}$ \\ w
+                                                  here $y_{p1}$ and $y_{p2}$...
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.574 ...{p2}$ \\ where $y_{p1}$ and $y_{p2}$ \\ a
+                                                  re trial solutions \\ for ...
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.574 ... and $y_{p2}$ \\ are trial solutions \\ f
+                                                  or $g_1(x)$ and $g_2(x)$ \...
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.574 ...lutions \\ for $g_1(x)$ and $g_2(x)$ \\ r
+                                                  espectively. \\ Multiply t...
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.574 ..._1(x)$ and $g_2(x)$ \\ respectively. \\ M
+                                                  ultiply the terms \\ and s...
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.574 ... respectively. \\ Multiply the terms \\ a
+                                                  nd simplify.}} \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.575     \cline
+                {1-2}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \omit.
+\@cline #1-#2\@nil ->\omit 
+                           \@multicnt #1\advance \@multispan \m@ne \ifnum \@...
+l.575     \cline{1-2}
+                     
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.575     \cline{1-2}
+                     
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.575     \cline{1-2}
+                     
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \cr.
+\@cline ...le \@height \arrayrulewidth \hfill \cr 
+                                                  \noalign {\vskip -\arrayru...
+l.575     \cline{1-2}
+                     
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \noalign.
+\@cline ...ht \arrayrulewidth \hfill \cr \noalign 
+                                                  {\vskip -\arrayrulewidth }
+l.575     \cline{1-2}
+                     
+I expect to s
