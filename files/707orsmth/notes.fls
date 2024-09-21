@@ -23,14 +23,10 @@ INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssym
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
-INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\calrsfs\calrsfs.sty
-INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\calrsfs\calrsfs.sty
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\wasysym\wasysym.sty
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\wasysym\wasysym.sty
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\tools\verbatim.sty
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\tools\verbatim.sty
-INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\bbm\bbm.sty
-INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\bbm\bbm.sty
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
@@ -168,12 +164,6 @@ INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.f
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\calrsfs\omsrsfs.fd
-INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\calrsfs\omsrsfs.fd
-INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\calrsfs\omsrsfs.fd
-INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\wasysym\uwasy.fd
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\wasysym\uwasy.fd
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex\latex\wasysym\uwasy.fd
@@ -194,9 +184,6 @@ INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
-INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy10.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy7.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy5.tfm
@@ -204,9 +191,12 @@ OUTPUT notes.toc
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT notes.aux
 INPUT .\notes.out
 INPUT .\notes.out
+INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb

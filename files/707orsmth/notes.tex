@@ -563,10 +563,228 @@ Here's some basic steps:
     \item $y = y_h + y_p$
 \end{enumerate}
 
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{g(x)} & \textbf{Trial solution $y_p$} \\
+    \hline
+    $k$ (constant) & $A$ \\
+    $x$ & $Ax$ \\
+    $x^n$ & $Ax^n + Bx^{n-1} + Cx^{n-2} + \cdots$ \\
+    $e^{\alpha x}$ & $Ae^{\alpha x}$ \\
+    $\sin(\beta x)$ or $\cos(\beta x)$ & $A\sin(\beta x) + B\cos(\beta x)$ \\
+    $x\sin(\beta x)$ or $x\cos(\beta x)$ & $x(A\sin(\beta x) + B\cos(\beta x))$ \\
+    $e^{\alpha x}\sin(\beta x)$ or $e^{\alpha x}\cos(\beta x)$ & $e^{\alpha x}(A\sin(\beta x) + B\cos(\beta x))$ \\
+    $x^n e^{\alpha x}$ & $(Ax^n + Bx^{n-1} + Cx^{n-2} + \cdots)e^{\alpha x}$ \\
+    \hline
+    \end{tabular}
+    \caption{Common forms of g(x) and their corresponding trial solutions $y_p$}
+    \label{tab:trial_solutions}
+    \end{table}
+    
+    \textbf{Additional Rules:}
+    \begin{itemize}
+        \item For $g(x) = g_1(x) + g_2(x)$, use $y_p = y_{p1} + y_{p2}$
+        \item For $g(x) = g_1(x) \cdot g_2(x)$, use $y_p = y_{p1} \cdot y_{p2}$
+    \end{itemize}
+    where $y_{p1}$ and $y_{p2}$ are trial solutions for $g_1(x)$ and $g_2(x)$ respectively.
 Here's some more stuff. 
 \begin{example}
     $y'' + 3y' + 2y = 6$. Roots of this is $-1$ and $-2$. That means that: 
     \[ y_h = C_1 e^{-x} + C_2e^{-2x} \]
 Let's try $y_p = k$. Substituting, we have: $y_p = a$, $y'_p = 0$ and $y''_p = 0$, and so $2A = 6 \implies A = 3$. So $y_p = 3$ We end with $y = C_1 e^{-x} + C_2e^{-2x} + 3$. 
 \end{example}
+
+\begin{example}
+    Solve the non-homogeneous 2nd order ODE: $y'' + y' - 6y = 2x$
+    
+    \textbf{Step 1:} Find the complementary solution $y_h$
+    
+    The characteristic equation is:
+    \[ m^2 + m - 6 = 0 \]
+    
+    Factoring this equation:
+    \[ (m+3)(m-2) = 0 \]
+    
+    Solving for m:
+    \[ m_1 = -3, \quad m_2 = 2 \]
+    
+    Therefore, the complementary solution is:
+    \[ y_h = C_1e^{-3x} + C_2e^{2x} \]
+    
+    \textbf{Step 2:} Find the particular solution $y_p$
+    
+    From the given table, since $g(x) = 2x$, we use the trial solution:
+    \[ y_p = Ax + B \]
+    
+    Calculating derivatives:
+    \[ y'_p = A \]
+    \[ y''_p = 0 \]
+    
+    Substituting into the original ODE:
+    \[ 0 + A - 6(Ax + B) = 2x \]
+    
+    Simplifying:
+    \[ A - 6Ax - 6B = 2x \]
+    
+    Equating coefficients:
+    \begin{align*}
+    x: & \quad -6A = 2 \quad \Rightarrow \quad A = -\frac{1}{3} \\
+    \text{constant}: & \quad A - 6B = 0 \quad \Rightarrow \quad -\frac{1}{3} - 6B = 0 \quad \Rightarrow \quad B = -\frac{1}{18}
+    \end{align*}
+    
+    Therefore, the particular solution is:
+    \[ y_p = -\frac{1}{3}x - \frac{1}{18} \]
+    
+    \textbf{Step 3:} Combine $y_h$ and $y_p$ for the general solution
+    
+    \[ y = y_h + y_p = C_1e^{-3x} + C_2e^{2x} - \frac{1}{3}x - \frac{1}{18} \]
+    
+    This is the complete general solution to the given ODE.
+    \end{example}
+    
+    \begin{example}
+    Solve the non-homogeneous 2nd order ODE: $y'' + 4y' + 2y = 2x^2 - 3x + 6$
+    
+    \textbf{Step 1:} Find the complementary solution $y_h$
+    
+    The characteristic equation is:
+    \[ m^2 + 4m + 2 = 0 \]
+    
+    Using the quadratic formula:
+    \[ m = \frac{-4 \pm \sqrt{16 - 8}}{2} = -2 \pm \sqrt{2} \]
+    
+    Therefore:
+    \[ m_1 = -2 + \sqrt{2}, \quad m_2 = -2 - \sqrt{2} \]
+    
+    The complementary solution is:
+    \[ y_h = C_1e^{(-2+\sqrt{2})x} + C_2e^{(-2-\sqrt{2})x} \]
+    
+    \textbf{Step 2:} Find the particular solution $y_p$
+    
+    From the given table, since $g(x) = 2x^2 - 3x + 6$, we use the trial solution:
+    \[ y_p = Ax^2 + Bx + C \]
+    
+    Calculating derivatives:
+    \[ y'_p = 2Ax + B \]
+    \[ y''_p = 2A \]
+    
+    Substituting into the original ODE:
+    \[ 2A + 4(2Ax + B) + 2(Ax^2 + Bx + C) = 2x^2 - 3x + 6 \]
+    
+    Expanding and grouping terms:
+    \[ 2Ax^2 + (8A + 2B)x + (2A + 4B + 2C) = 2x^2 - 3x + 6 \]
+    
+    Equating coefficients:
+    \begin{align*}
+    x^2: & \quad 2A = 2 \quad \Rightarrow \quad A = 1 \\
+    x: & \quad 8A + 2B = -3 \quad \Rightarrow \quad 8 + 2B = -3 \quad \Rightarrow \quad B = -\frac{11}{2} \\
+    \text{constant}: & \quad 2A + 4B + 2C = 6 \quad \Rightarrow \quad 2 + 4(-\frac{11}{2}) + 2C = 6 \quad \Rightarrow \quad C = 13
+    \end{align*}
+    
+    Therefore, the particular solution is:
+    \[ y_p = x^2 - \frac{11}{2}x + 13 \]
+    
+    \textbf{Step 3:} Combine $y_h$ and $y_p$ for the general solution
+    
+    \[ y = y_h + y_p = C_1e^{(-2+\sqrt{2})x} + C_2e^{(-2-\sqrt{2})x} + x^2 - \frac{11}{2}x + 13 \]
+    
+    This is the complete general solution to the given ODE.
+    \end{example}
+
+\section{20-SEP-2024}
+\subsection{Homogeneous Cauchy-Euler Equation}
+
+Recall the form of a homogeneous second order ODE solutions with constant coefficients, as discussed last week. This is basically the same thing. 
+
+THe Cauchy-Euler equation is of the form:
+\[ ax^2y'' + bxy' + cy = 0 \]. Therefore, the characteristic equation is:
+\[am^2 + (b-a)m + c = 0 \]
+
+The solution then depends on the roots. 
+\begin{thm} \label{real distinct cauchyeuler}
+    If $m_1, m_2 \in \mathbb{R}$ and $m_1 \neq m_2$, then the solution becomes 
+    \[ 
+    y = C_1x^{m_1}+C_2x^{m_2}
+    \]
+    \end{thm}
+    
+\begin{thm} \label{real repeated cauchyeuler}
+    If $m_1, m_2 \in \mathbb{R}$ and $m_1 = m_2$, then the solution becomes 
+        \[ 
+            y = C_1x^{m_1}+C_2x^{m_2}\ln{\vert x \vert}
+        \]
+\end{thm}
+    
+\begin{thm} \label{complex cauchyeuler}
+        If $m_1, m_2 = \alpha \pm i\beta$, then the solution becomes 
+            \[ 
+            y = x^{\alpha}(C_1\cos{\beta \ln{\vert x \vert}} + C_2\sin{\beta \ln{\vert x \vert}})
+            \]
+\end{thm}
+Here are the general steps: 
+\begin{enumerate}
+    \item Put the DE in the form $ax^2y'' + bxy' + cy = 0$.
+    \item Find $a, b, c$.
+    \item Then, find the roots of the characteristic equation $am^2 + (b-a)m + c = 0$.
+    \item Find solution based on roots. 
+\end{enumerate}
+
+\begin{example}
+    Solve: \[x^2y''-3xy' + 3y = 0\]
+    It's already in the form, which is nice. $a = 1, b = -3, c = 3$.
+    This gives us: \[m^2 - 4m + 3 = 0\]
+    \[(m-3)(m-1)= 0 \implies m = 1, 3\]
+    By Theorem \ref{real distinct cauchyeuler}, $y = C_1x+C_2x^{3}$.
+\end{example}
+
+\begin{example}
+    Solve: \[4x^2y'' + y = -8xy'\]
+    This is just: \[4x^2y'' + 8xy' + y = 0'\]
+    Then, $a = 4, b = 8, c = 1$. So, the form of the characteristic equation is  \[4m^2 + 4m + 1 = 0\]
+    \[(2m + 1)(2m + 1)= 0 \implies m = \frac{-1}{2}\]
+    By Theorem \ref{real repeated cauchyeuler}, $y = C_1x^{\frac{-1}{2}}+C_2x^{\frac{-1}{2}}\ln{\vert x \vert}$.
+\end{example}
+
+\begin{example}
+    Solve: \[4x^2y'' + 17y = 0'\]
+    Then, $a = 4, b = 0, c = 17$. So, the form of the characteristic equation is  \[4m^2 - 4m + 17 = 0\]
+    By the quadratic formula, 
+    $m = \frac{1}{2} \pm i2$
+    By Theorem \ref{complex cauchyeuler}, $ y = x^{\frac{1}{2}}(C_1\cos{2 \ln{\vert x \vert}} + C_2\sin{2 \ln{\vert x \vert}})$.
+\end{example}
+
+\begin{example}
+    Solve: \[x^2y'' + xy' + 4y = 0'\]
+    Then, $a = 1, b = 1, c = 4$. So, the form of the characteristic equation is  \[m^2 + 4 = 0\]
+    By the quadratic formula, 
+    $m = 0 \pm i2$
+    By Theorem \ref{complex cauchyeuler}, $ y = (C_1\cos{2 \ln{\vert x \vert}} + C_2\sin{2 \ln{\vert x \vert}})$.
+\end{example}
+
+\begin{example}
+    Solve: \[x^2y'' - 2xy' - 4y = 0'\]
+    Then, $a = 1, b = -2, c = -4$. So, the form of the characteristic equation is  \[m^2 -3m - 4 = 0\]
+    $(m-4)(m+1) = 0 \implies m = -1, 4$.
+    By Theorem \ref{real distinct cauchyeuler}, $y = C_1x^{-1} + C_2x^{4}$.
+\end{example}
+
+\begin{example}
+    Solve: \[x^2y'' + 5xy' + 4y = 0'\]
+    Then, $a = 1, b = 5, c = 4$. So, the form of the characteristic equation is  \[m^2 + 4m + 4 = 0\]
+    $(m+2)(m+2) = 0 \implies m = -2$
+    By Theorem \ref{real repeated cauchyeuler}, $y = C_1x^{-2}+C_2x^{-2}\ln{\vert x \vert}$.
+\end{example}
+
+\begin{example}
+    Solve: \[4x^2y'' + y = 0'\]
+    Then, $a = 4, b = 0, c = 1$. So, the form of the characteristic equation is  \[m^2 - 4m + 1 = 0\]
+    Using the quadratic formula, 
+    $m = \frac{16 \pm \sqrt{16-4}}{8}$ or $m = \frac{1}{2}$.
+    By Theorem \ref{real repeated cauchyeuler}, $y = C_1x^{\frac{1}{2}}+C_2x^{\frac{1}{2}}\ln{\vert x \vert}$.
+\end{example}
+
+
+
 \end{document}

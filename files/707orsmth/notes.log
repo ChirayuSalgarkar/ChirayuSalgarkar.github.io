@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  18 SEP 2024 13:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  20 SEP 2024 13:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -107,11 +107,9 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/calrsfs\calrsfs.sty
-\symrsfscript=\mathgroup6
-) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\wasysym.sty
+)) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\wasysym.sty
 Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
-\symwasy=\mathgroup7
+\symwasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
 ) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
@@ -119,12 +117,6 @@ Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks28
 \verbatim@line=\toks29
 \verbatim@in@stream=\read2
-) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty
-Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
-LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
-(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
-(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 ) (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
  (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -295,24 +287,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (notes.aux)
 \openout1 = `notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
  (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count306
@@ -366,22 +358,20 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 28.
 (notes.out) (notes.out)
 \@outlinefile=\write3
 \openout3 = `notes.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
  (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
  (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OMS+rsfs on input line 32.
- (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/calrsfs\omsrsfs.fd)
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 32.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 31.
  (C:\Users\Chirayu S\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 ) (notes.toc)
@@ -409,215 +399,39 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 [8]
 
 [9]
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Undefined control sequence.
-l.574     $k$ (constant) & $A$ & \multirow
-                                          {8}{*}{\makecell{For $g(x) = g_1(x...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Undefined control sequence.
-l.574 ...nstant) & $A$ & \multirow{8}{*}{\makecell
-                                                  {For $g(x) = g_1(x) + g_2(...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Missing } inserted.
-<inserted text> 
-                }
-l.574 ...kecell{For $g(x) = g_1(x) + g_2(x)$, \\ $
-                                                  y_p = y_{p1} + y_{p2}$ \\ ...
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
 
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Missing } inserted.
-<inserted text> 
-                }
-l.574 ...kecell{For $g(x) = g_1(x) + g_2(x)$, \\ $
-                                                  y_p = y_{p1} + y_{p2}$ \\ ...
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
 
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.574 ... $g_1(x)$ and $g_2(x)$ \\ respectively.}}
-                                                   & \multirow{8}{*}{\makece...
-I'm guessing that you meant to end an alignment here.
+[10]
 
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Missing { inserted.
-<inserted text> 
-                {
-l.574 ... $g_1(x)$ and $g_2(x)$ \\ respectively.}}
-                                                   & \multirow{8}{*}{\makece...
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
+[11]
 
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced alignment tab character &.
-l.574 ...g_1(x)$ and $g_2(x)$ \\ respectively.}} &
-                                                   \multirow{8}{*}{\makecell...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[12]
 
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Undefined control sequence.
-l.574 ...d $g_2(x)$ \\ respectively.}} & \multirow
-                                                  {8}{*}{\makecell{For $g(x)...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[13]
 
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Undefined control sequence.
-l.574 ...spectively.}} & \multirow{8}{*}{\makecell
-                                                  {For $g(x) = g_1(x) \cdot ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[14] (notes.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+ ***********
+Package rerunfilecheck Info: File `notes.out' has not changed.
+(rerunfilecheck)             Checksum: 47CF9BD257A27D4A702522CF7BDCCB64;3914.
+ ) 
+Here is how much of TeX's memory you used:
+ 11198 strings out of 473899
+ 171616 string characters out of 5724577
+ 1946960 words of memory out of 5000000
+ 33801 multiletter control sequences out of 15000+600000
+ 567928 words of font info for 75 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,10n,79p,615b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on notes.pdf (14 pages, 280173 bytes).
+PDF statistics:
+ 393 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{\fi }\cr 
-                                  
-l.574 ...ll{For $g(x) = g_1(x) \cdot g_2(x)$, \\ $
-                                                  y_p = y_{p1} \cdot y_{p2}$...
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{\fi }\cr 
-                                  
-l.574 ...(x)$, \\ $y_p = y_{p1} \cdot y_{p2}$ \\ w
-                                                  here $y_{p1}$ and $y_{p2}$...
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{\fi }\cr 
-                                  
-l.574 ...{p2}$ \\ where $y_{p1}$ and $y_{p2}$ \\ a
-                                                  re trial solutions \\ for ...
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{\fi }\cr 
-                                  
-l.574 ... and $y_{p2}$ \\ are trial solutions \\ f
-                                                  or $g_1(x)$ and $g_2(x)$ \...
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{\fi }\cr 
-                                  
-l.574 ...lutions \\ for $g_1(x)$ and $g_2(x)$ \\ r
-                                                  espectively. \\ Multiply t...
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{\fi }\cr 
-                                  
-l.574 ..._1(x)$ and $g_2(x)$ \\ respectively. \\ M
-                                                  ultiply the terms \\ and s...
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:574: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{\fi }\cr 
-                                  
-l.574 ... respectively. \\ Multiply the terms \\ a
-                                                  nd simplify.}} \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{\fi }\cr 
-                                  
-l.575     \cline
-                {1-2}
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \omit.
-\@cline #1-#2\@nil ->\omit 
-                           \@multicnt #1\advance \@multispan \m@ne \ifnum \@...
-l.575     \cline{1-2}
-                     
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \span.
-\sp@n ->\span 
-              \omit \advance \@multicnt \m@ne 
-l.575     \cline{1-2}
-                     
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \omit.
-\sp@n ->\span \omit 
-                    \advance \@multicnt \m@ne 
-l.575     \cline{1-2}
-                     
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \cr.
-\@cline ...le \@height \arrayrulewidth \hfill \cr 
-                                                  \noalign {\vskip -\arrayru...
-l.575     \cline{1-2}
-                     
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex:575: Misplaced \noalign.
-\@cline ...ht \arrayrulewidth \hfill \cr \noalign 
-                                                  {\vskip -\arrayrulewidth }
-l.575     \cline{1-2}
-                     
-I expect to s

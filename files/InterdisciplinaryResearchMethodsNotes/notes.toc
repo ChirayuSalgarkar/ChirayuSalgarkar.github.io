@@ -18,14 +18,26 @@
 \contentsline {subsection}{\numberline {4.3}Research Dissemination}{5}{subsection.4.3}%
 \contentsline {section}{\numberline {5}10-SEP-24}{6}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Open access preprints}{6}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Predatory Journals and Conferences}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}Predatory Journals and Conferences}{7}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Nonscholarly technical documents}{7}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Journal Bibliometrics}{7}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}How are journals and conferences organized?}{7}{subsection.5.5}%
 \contentsline {subsection}{\numberline {5.6}Types of review}{7}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Literature Review}{7}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.7}Literature Review}{8}{subsection.5.7}%
 \contentsline {section}{\numberline {6}12-SEP-24}{8}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Literature Review and Presentations}{8}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Generative AI}{9}{subsection.6.2}%
 \contentsline {section}{\numberline {7}17-SEP-24}{9}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Generative AI, Continued}{9}{subsection.7.1}%
+\contentsline {section}{\numberline {8}19-SEP-24}{9}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Presentation Skills}{9}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Technical Writing}{10}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Title}{10}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Abstract}{10}{section.9}%
+\contentsline {section}{\numberline {10}Introduction}{10}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Main Body}{10}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Conclusion}{10}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Bibliography}{10}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Paragraphs}{10}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Flow of text}{11}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Proofreading}{11}{subsection.10.6}%

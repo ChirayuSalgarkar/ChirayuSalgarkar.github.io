@@ -1,0 +1,173 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Cohen%
+\ \BBA {} Belta%
+}{%
+Cohen%
+\ \BBA {} Belta%
+}{%
+{\protect \APACyear {2023}}%
+}]{%
+cohen2023safe}
+\APACinsertmetastar {%
+cohen2023safe}%
+\begin{APACrefauthors}%
+Cohen, M\BPBI H.%
+\BCBT {}\ \BBA {} Belta, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Safe exploration in model-based reinforcement learning
+  using control barrier functions} {Safe exploration in model-based
+  reinforcement learning using control barrier functions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Automatica}{147}{}{110684}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cousins%
+, Asadi%
+\BCBL {}\ \BBA {} Littman%
+}{%
+Cousins%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+cousins2022fair}
+\APACinsertmetastar {%
+cousins2022fair}%
+\begin{APACrefauthors}%
+Cousins, C.%
+, Asadi, K.%
+\BCBL {}\ \BBA {} Littman, M\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Fair E3: Efficient welfare-centric fair reinforcement
+  learning} {Fair e3: Efficient welfare-centric fair reinforcement
+  learning}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {5th Multidisciplinary Conference on Reinforcement
+  Learning and Decision Making. RLDM.} {5th multidisciplinary conference on
+  reinforcement learning and decision making. rldm.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ganai%
+, Gao%
+\BCBL {}\ \BBA {} Herbert%
+}{%
+Ganai%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+ganai2024hamilton}
+\APACinsertmetastar {%
+ganai2024hamilton}%
+\begin{APACrefauthors}%
+Ganai, M.%
+, Gao, S.%
+\BCBL {}\ \BBA {} Herbert, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Hamilton-jacobi reachability in reinforcement learning:
+  A survey} {Hamilton-jacobi reachability in reinforcement learning: A
+  survey}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Open Journal of Control Systems}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Jackson%
+\ \protect \BOthers {.}}{%
+Jackson%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+jackson2024policy}
+\APACinsertmetastar {%
+jackson2024policy}%
+\begin{APACrefauthors}%
+Jackson, M\BPBI T.%
+, Matthews, M\BPBI T.%
+, Lu, C.%
+, Ellis, B.%
+, Whiteson, S.%
+\BCBL {}\ \BBA {} Foerster, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Policy-guided diffusion} {Policy-guided
+  diffusion}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:2404.06356}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Shi%
+\ \protect \BOthers {.}}{%
+Shi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2025}}%
+}]{%
+shi2025reinforcement}
+\APACinsertmetastar {%
+shi2025reinforcement}%
+\begin{APACrefauthors}%
+Shi, X.%
+, Li, Y.%
+, Du, C.%
+, Chen, C.%
+, Zong, G.%
+\BCBL {}\ \BBA {} Gui, W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2025}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reinforcement learning-based optimal control for Markov
+  jump systems with completely unknown dynamics} {Reinforcement learning-based
+  optimal control for markov jump systems with completely unknown
+  dynamics}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Automatica}{171}{}{111886}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Yan%
+, Zhao%
+\BCBL {}\ \BBA {} Zhou%
+}{%
+Yan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2023}}%
+}]{%
+yan2023online}
+\APACinsertmetastar {%
+yan2023online}%
+\begin{APACrefauthors}%
+Yan, Y\BHBI H.%
+, Zhao, P.%
+\BCBL {}\ \BBA {} Zhou, Z\BHBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Online non-stochastic control with partial feedback}
+  {Online non-stochastic control with partial feedback}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Machine Learning Research}{24}{273}{1--50}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
