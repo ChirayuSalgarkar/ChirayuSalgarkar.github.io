@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1726854246.59186 "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex" "notes.pdf" "notes" 1726854247.83685 0
+["pdflatex"] 1727112595.63646 "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex" "notes.pdf" "notes" 1727112596.71906 0
   "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1726800490 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/Chirayu S/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1724765697 11548 4ef387d46e402f6e789b939855d9c407 ""
   "C:/Users/Chirayu S/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1723137337 24267256 870d63224d893a99f2c4132f483c0892 ""
@@ -110,11 +110,11 @@
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/uwasy.fd" 1579693002 2296 c50bf1089c7a46a0d4e9a119e980be4e ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/wasysym.sty" 1579693002 11252 7fbfbe7bbcbe1f73acbe32ae2f10c666 ""
   "C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex" 1726854243 28619 26d34d0cb1b943c871901f1f21a39f50 ""
-  "notes.aux" 1726854247 3926 0131646fb2458a814470c6f30a89c94b "pdflatex"
-  "notes.out" 1726854247 3914 47cf9bd257a27d4a702522cf7bdccb64 "pdflatex"
-  "notes.tex" 1726854243 28619 26d34d0cb1b943c871901f1f21a39f50 ""
-  "notes.toc" 1726854247 2111 288e8d552b527686629fff2a55fad3ae "pdflatex"
+  "c:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/707orsmth/notes.tex" 1727112594 31131 c7bdcb1d39559357d3a9556c7bb4cf7b ""
+  "notes.aux" 1727112596 4073 b4fa6df876765bf077796f0f45312764 "pdflatex"
+  "notes.out" 1727112596 4187 6cb9832ff4615d87946f0a51e1a25c15 "pdflatex"
+  "notes.tex" 1727112594 31131 c7bdcb1d39559357d3a9556c7bb4cf7b ""
+  "notes.toc" 1727112596 2217 ebecaabd857503de1edb083fe5a32aa6 "pdflatex"
   (generated)
   "notes.aux"
   "notes.log"

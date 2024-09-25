@@ -33,13 +33,12 @@
 \vspace{.25in}
 \section{26-AUG-24}
 \subsection{Order, Linear, and PDE vs ODE}
+Not notated. Will add when I have time. 
 \section{28-AUG-24}
 
 \subsection{Miscellaneous}
-I'm doing this to not fall asleep in class. Prof is Phillip Hutton. There are several ways to take the quiz. Quiz, office hours, etc. you can also take it in class. All quiz get one page cheat sheet. 
+Prof is Phillip Hutton. There are several ways to take the quiz. Quiz, office hours, etc. you can also take it in class. All quiz get one page cheat sheet. 
 
-\subsection{More miscellany}
-Prof is doing some incredible projector gymnastics. He should record balance beam events.
 \subsection{Verifying solutions using initial conditions}
 To verify potential solutions, plug into the original diffeq. Use algebra (ha!) to make LHS = RHS. On the other hand, we can simply plug in various numbers for $x$ and check for equivalency. Obviously, check for domains. 
 \begin{example}
@@ -698,7 +697,7 @@ Let's try $y_p = k$. Substituting, we have: $y_p = a$, $y'_p = 0$ and $y''_p = 0
 
 Recall the form of a homogeneous second order ODE solutions with constant coefficients, as discussed last week. This is basically the same thing. 
 
-THe Cauchy-Euler equation is of the form:
+The Cauchy-Euler equation is of the form:
 \[ ax^2y'' + bxy' + cy = 0 \]. Therefore, the characteristic equation is:
 \[am^2 + (b-a)m + c = 0 \]
 
@@ -785,6 +784,131 @@ Here are the general steps:
     By Theorem \ref{real repeated cauchyeuler}, $y = C_1x^{\frac{1}{2}}+C_2x^{\frac{1}{2}}\ln{\vert x \vert}$.
 \end{example}
 
+\section{23-SEP-24}
+\subsection{Non-homogeneous Cauchy-Euler differential equation}
+Recall the definition of a homogeneous Cauchy-Euler differential equation.
+\begin{defn}
+    The homogeneous Cauchy-Euler equation is of the form:
+    \[ ax^2y'' + bxy' + cy = 0 \]. 
+\end{defn}
 
+Then, non-homogeneity just adds the $g(x)$.
+\begin{defn}
+    The non-homogeneous Cauchy-Euler equation is of the form:
+    \[ ax^2y'' + bxy' + cy = g(x) \]. 
+\end{defn}
+
+We start by finding the homogeneous solution of the following equation:
+
+\[
+ax^2 y'' + bxy' + cy = 0
+\]
+
+This is explained in the notes for \textit{20-SEP-2024}. We call the homogeneous solution \( Y_h \). Next, we rewrite \( Y_h \) as:
+
+\[
+Y_h = C_1 y_1 + C_2 y_2
+\]
+
+In the case of Theorem \ref{real distinct cauchyeuler}, the functions \( y_1 \) and \( y_2 \) are given by:
+
+\[
+y_1 = x^{m_1}, \quad y_2 = x^{m_2}
+\]
+
+In the case of Theorem \ref{real repeated cauchyeuler}, they are:
+
+\[
+y_1 = x^{m_1}, \quad y_2 = x^{m_2} \ln{x}
+\]
+
+In the case of Theorem \ref{complex cauchyeuler}, the solutions are:
+
+\[
+y_1 = x^\alpha \cos{\beta \ln{x}}, \quad y_2 = x^\alpha \sin{\beta \ln{x}}
+\]
+
+Next, let \( f(x) = \frac{g(x)}{ax^2} \). Now, we calculate the Wronskian of \( y_1 \) and \( y_2 \).
+
+The Wronskian of \( y_1 \) and \( y_2 \) is given by:
+
+\[
+W(y_1, y_2) =
+\begin{vmatrix}
+y_1 & y_2 \\
+y_1' & y_2'
+\end{vmatrix}
+= y_1 y_2' - y_2 y_1'
+\]
+
+We then solve for \( u_1 \) and \( u_2 \) using the formulas:
+
+\[
+u_1 = \int \frac{-y_2 f(x)}{W} \, dx
+\]
+\[
+u_2 = \int \frac{y_1 f(x)}{W} \, dx
+\]
+
+After dropping the constants, we find the particular solution \( y_p \), which is:
+
+\[
+y_p = u_1 y_1 + u_2 y_2
+\]
+
+Thus, the general solution is:
+
+\[
+y = C_1 y_1 + C_2 y_2 + u_1 y_1 + u_2 y_2
+\]
+
+Now, consider the following example:
+
+\begin{example}
+Solve the equation:
+\[
+y'' - \frac{4}{x}y' = x^2
+\]
+
+The homogeneous solution is obtained by solving the associated equation:
+
+\[
+y'' - \frac{4}{x}y' = 0
+\]
+
+The solution is:
+
+\[
+Y_h = C_1 x^0 + C_2 x^{5}
+\]
+
+Now, we compute the Wronskian of \( y_1 = 1 \) and \( y_2 = x^{5} \):
+
+\[
+W(y_1, y_2) = 
+\begin{vmatrix}
+1 & x^{5} \\
+0 & 5x^4
+\end{vmatrix}
+= 5x^4
+\]
+
+Next, we define \( f(x) = \frac{x^4}{ax^2} = x^2 \), and solve for \( u_1 \) and \( u_2 \):
+
+\[
+u_1 = \int \frac{-x^{5} x^2}{5x^2} \, dx = -\frac{1}{20}x^4
+\]
+\[
+u_2 = \int \frac{x^2}{5x^4} \, dx = -\frac{1}{5}x^{-1}
+\]
+
+Thus, the particular solution is:
+
+\[
+    -\frac{1}{20}x^4(1) - -\frac{1}{5}x^{-1}(x^5)
+\]
+
+And then it is easy to finish. 
+\end{example}
 
 \end{document}
