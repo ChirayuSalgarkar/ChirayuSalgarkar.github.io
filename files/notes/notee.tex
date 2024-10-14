@@ -1,0 +1,162 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Comprehensive Notes on Policy Gradient Methods}
+\author{Claude AI}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction to Policy-Based Reinforcement Learning}
+
+Policy-based reinforcement learning (RL) is an approach where we directly optimize the policy $\pi(a|s)$ that maps states to actions, instead of learning a value function and deriving a policy from it. This method has several advantages:
+
+\begin{itemize}
+    \item It can learn stochastic policies
+    \item It can handle continuous action spaces naturally
+    \item It can solve problems with perceptual aliasing
+\end{itemize}
+
+\section{Policy Objective Functions}
+
+In policy-based RL, we define an objective function $J(\theta)$ that we aim to maximize. Common choices include:
+
+\begin{enumerate}
+    \item Start value: $J_1(\theta) = V^\pi(s_1)$
+    \item Average value: $J_{avV}(\theta) = \sum_s d^\pi(s)V^\pi(s)$
+    \item Average reward per time-step: $J_{avR}(\theta) = \sum_s d^\pi(s)\sum_a \pi(a|s)R(s,a)$
+\end{enumerate}
+
+where $d^\pi(s)$ is the stationary distribution of Markov chain for $\pi$.
+
+\section{Policy Gradient Theorem}
+
+The policy gradient theorem states that for any differentiable policy $\pi(\theta)$ and for any policy objective function $J(\theta)$, the policy gradient is:
+
+\begin{equation}
+    \nabla_\theta J(\theta) = \mathbb{E}_\pi[\nabla_\theta \log \pi(a|s) Q^\pi(s,a)]
+\end{equation}
+
+\textbf{Proof:}
+
+We'll prove this for the start state objective $J_1(\theta) = V^\pi(s_1)$. Let's start with the definition of the value function:
+
+\begin{equation}
+    V^\pi(s) = \mathbb{E}_\pi[r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + ... | s_t = s]
+\end{equation}
+
+Taking the gradient with respect to $\theta$:
+
+\begin{align}
+    \nabla_\theta V^\pi(s) &= \nabla_\theta \mathbb{E}_\pi[r_t + \gamma V^\pi(s_{t+1}) | s_t = s] \\
+    &= \sum_a \nabla_\theta \pi(a|s)Q^\pi(s,a) + \sum_a \pi(a|s)\sum_{s'} P(s'|s,a)\nabla_\theta V^\pi(s')
+\end{align}
+
+Let $x(s) = \nabla_\theta V^\pi(s)$. Then we can write:
+
+\begin{equation}
+    x(s) = \sum_a \nabla_\theta \pi(a|s)Q^\pi(s,a) + \gamma\sum_a \pi(a|s)\sum_{s'} P(s'|s,a)x(s')
+\end{equation}
+
+This is a linear system of equations. We can solve it as:
+
+\begin{equation}
+    x = b + \gamma Px
+\end{equation}
+
+where $b(s) = \sum_a \nabla_\theta \pi(a|s)Q^\pi(s,a)$ and $P$ is the transition matrix under $\pi$.
+
+The solution to this system is:
+
+\begin{equation}
+    x = (I - \gamma P)^{-1}b
+\end{equation}
+
+Now, let $d^\pi(s)$ be the stationary distribution of $P$. Multiplying both sides by $d^\pi(s)^T$:
+
+\begin{equation}
+    d^\pi(s)^T x = d^\pi(s)^T (I - \gamma P)^{-1}b
+\end{equation}
+
+The left side is what we want: $\nabla_\theta J(\theta)$. For the right side:
+
+\begin{align}
+    d^\pi(s)^T(I - \gamma P)^{-1} &= d^\pi(s)^T(I + \gamma P + \gamma^2 P^2 + ...) \\
+    &= d^\pi(s)^T + \gamma d^\pi(s)^T + \gamma^2 d^\pi(s)^T + ... \\
+    &= \frac{1}{1-\gamma}d^\pi(s)^T
+\end{align}
+
+Therefore:
+
+\begin{align}
+    \nabla_\theta J(\theta) &= \frac{1}{1-\gamma}d^\pi(s)^T b \\
+    &= \frac{1}{1-\gamma}\sum_s d^\pi(s)\sum_a \nabla_\theta \pi(a|s)Q^\pi(s,a) \\
+    &= \frac{1}{1-\gamma}\sum_s d^\pi(s)\sum_a \pi(a|s)\frac{\nabla_\theta \pi(a|s)}{\pi(a|s)}Q^\pi(s,a) \\
+    &= \frac{1}{1-\gamma}\mathbb{E}_\pi[\nabla_\theta \log \pi(a|s) Q^\pi(s,a)]
+\end{align}
+
+This completes the proof of the policy gradient theorem.
+
+\section{REINFORCE Algorithm}
+
+The REINFORCE algorithm is a Monte Carlo policy gradient method:
+
+\begin{enumerate}
+    \item Generate an episode $S_0, A_0, R_1, ..., S_{T-1}, A_{T-1}, R_T$ following $\pi$
+    \item For each step $t = 0, ..., T-1$:
+        \begin{itemize}
+            \item $G_t \leftarrow$ return from step $t$
+            \item $\theta \leftarrow \theta + \alpha \nabla_\theta \log \pi(A_t|S_t) G_t$
+        \end{itemize}
+\end{enumerate}
+
+\section{Reducing Variance with a Baseline}
+
+We can reduce the variance of policy gradient estimates by subtracting a baseline:
+
+\begin{equation}
+    \nabla_\theta J(\theta) = \mathbb{E}_\pi[\nabla_\theta \log \pi(a|s) (Q^\pi(s,a) - b(s))]
+\end{equation}
+
+A good choice for the baseline is the state value function $V^\pi(s)$.
+
+\section{Actor-Critic Methods}
+
+Actor-Critic methods combine policy-based and value-based learning. The actor (policy) is updated according to the critic's (value function) evaluation.
+
+A simple actor-critic algorithm:
+
+\begin{enumerate}
+    \item Initialize $s, \theta, w$
+    \item Sample $a \sim \pi(a|s)$
+    \item Take action $a$, observe $r, s'$
+    \item $\delta = r + \gamma V_w(s') - V_w(s)$  % TD error
+    \item $w \leftarrow w + \beta \delta \nabla_w V_w(s)$  % Update critic
+    \item $\theta \leftarrow \theta + \alpha \nabla_\theta \log \pi(a|s) \delta$  % Update actor
+    \item $s \leftarrow s'$
+    \item Go to 2
+\end{enumerate}
+
+\section{Advantage Actor-Critic (A2C)}
+
+A2C uses the advantage function $A(s,a) = Q(s,a) - V(s)$ instead of just $Q(s,a)$:
+
+\begin{equation}
+    \nabla_\theta J(\theta) = \mathbb{E}_\pi[\nabla_\theta \log \pi(a|s) A^\pi(s,a)]
+\end{equation}
+
+We can estimate the advantage function using TD error:
+
+\begin{equation}
+    A(s_t, a_t) \approx r_t + \gamma V(s_{t+1}) - V(s_t)
+\end{equation}
+
+\section{Conclusion}
+
+Policy gradient methods offer a powerful approach to reinforcement learning, especially in domains with continuous action spaces or partial observability. While they can suffer from high variance, techniques like baselines and actor-critic methods help mitigate this issue. Advanced algorithms like A2C, which we've discussed, form the foundation for many state-of-the-art RL algorithms.
+
+\end{document}
