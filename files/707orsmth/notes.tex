@@ -1,6 +1,23 @@
 \documentclass{article}
 \usepackage{amsmath, amsthm, amssymb, wasysym, verbatim, color, graphics, geometry, systeme}
 \usepackage[]{hyperref}
+\usepackage{tikz}
+
+\usepackage{mathrsfs,scalerel}
+\newsavebox\foobox
+\newlength{\foodim}
+\newcommand{\slantbox}[2][0]{\mbox{%
+        \sbox{\foobox}{#2}%
+        \foodim=#1\wd\foobox
+        \hskip \wd\foobox
+        \hskip -0.5\foodim
+        \pdfsave
+        \pdfsetmatrix{1 0 #1 1}%
+        \llap{\usebox{\foobox}}%
+        \pdfrestore
+        \hskip 0.5\foodim
+}}
+\def\Laplace{\ThisStyle{\slantbox[-.45]{$\SavedStyle\mathscr{L}$}}}
 
 \geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}  
 
@@ -911,4 +928,379 @@ Thus, the particular solution is:
 And then it is easy to finish. 
 \end{example}
 
+\section{27-SEP-24}
+\subsection{Variation of Parameters}
+Recall the definition of a homogeneous Cauchy-Euler differential equation.
+\begin{defn}
+    The homogeneous Cauchy-Euler equation is of the form:
+    \[ ax^2y'' + bxy' + cy = 0 \]. 
+\end{defn}
+
+Then, non-homogeneity just adds the $g(x)$.
+\begin{defn}
+    The non-homogeneous Cauchy-Euler equation is of the form:
+    \[ ax^2y'' + bxy' + cy = g(x) \]. 
+\end{defn}
+
+For Variation of parameters for 2nd order ODE, there is only one change: $f(x) = \frac{g(x)}{a}$, not $\frac{g(x)}{ax^2}$.
+
+We start by finding the homogeneous solution of the following equation:
+
+\[
+ax^2 y'' + bxy' + cy = 0
+\]
+
+This is explained in the notes for \textit{20-SEP-2024}. We call the homogeneous solution \( Y_h \). Next, we rewrite \( Y_h \) as:
+
+\[
+Y_h = C_1 y_1 + C_2 y_2
+\]
+
+In the case of Theorem \ref{real distinct cauchyeuler}, the functions \( y_1 \) and \( y_2 \) are given by:
+
+\[
+y_1 = x^{m_1}, \quad y_2 = x^{m_2}
+\]
+
+In the case of Theorem \ref{real repeated cauchyeuler}, they are:
+
+\[
+y_1 = x^{m_1}, \quad y_2 = x^{m_2} \ln{x}
+\]
+
+In the case of Theorem \ref{complex cauchyeuler}, the solutions are:
+
+\[
+y_1 = x^\alpha \cos{\beta \ln{x}}, \quad y_2 = x^\alpha \sin{\beta \ln{x}}
+\]
+
+Next, let \( f(x) = \frac{g(x)}{ax^2} \). Now, we calculate the Wronskian of \( y_1 \) and \( y_2 \).
+
+The Wronskian of \( y_1 \) and \( y_2 \) is given by:
+
+\[
+W(y_1, y_2) =
+\begin{vmatrix}
+y_1 & y_2 \\
+y_1' & y_2'
+\end{vmatrix}
+= y_1 y_2' - y_2 y_1'
+\]
+
+We then solve for \( u_1 \) and \( u_2 \) using the formulas:
+
+\[
+u_1 = \int \frac{-y_2 f(x)}{W} \, dx
+\]
+\[
+u_2 = \int \frac{y_1 f(x)}{W} \, dx
+\]
+
+After dropping the constants, we find the particular solution \( y_p \), which is:
+
+\[
+y_p = u_1 y_1 + u_2 y_2
+\]
+
+Thus, the general solution is:
+
+\[
+y = C_1 y_1 + C_2 y_2 + u_1 y_1 + u_2 y_2
+\]
+
+\section{30-SEP-2024}
+\subsection{Laplace Transform Fundamentals}
+We have a differential equation. We then transform the differential equation into Laplace Space, as follows:
+
+\[ \Laplace({f(t)})\rightarrow F(s) \]
+We then use algebra to solve for $Y(s)$.
+We then take the inverse transform: that is:
+\[ \Laplace({Y(s)})^{-1} \rightarrow y(t) \]
+
+The transform is defined as follows:
+
+\begin{defn}
+    $F(s) = \int_{0}^{\infty}e^{-st}f(t)dt$
+\end{defn}
+\begin{example}
+    If $f(t)=1$, find $F(s)$.
+    
+    Clearly, $F(s) = \int_{0}^{\infty}e^{-st}(1)dt$. This evaluates to $\frac{1}{s}$, with some introductory calculus.
+\end{example}
+
+\begin{example}
+    If $f(t)=e^{at}$, find $F(s)$.
+    
+    Clearly, $F(s) = \int_{0}^{\infty}e^{-st}(e^{at})dt$. This evaluates to $\int_{0}^{\infty}e^{-(s-a)t}dt$. We get $\frac{1}{s-a}$, for $s>a$.
+\end{example}
+People have done this work for us for a lot of functions, so we're going to steal their efforts, in the form of a nice little table. 
+
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Function} & \textbf{Laplace Transform} \\ \hline
+    $f(t) = 1$ & $F(s) = \frac{1}{s}$ \\ \hline
+    $f(t) = t^n$ & $F(s) = \frac{n!}{s^{n+1}}$ \\ \hline
+    $f(t) = e^{at}$ & $F(s) = \frac{1}{s - a}$ \\ \hline
+    $f(t) = \sin(bt)$ & $F(s) = \frac{b}{s^2 + b^2}$ \\ \hline
+    $f(t) = \cos(bt)$ & $F(s) = \frac{s}{s^2 + b^2}$ \\ \hline
+    $f(t) = \sinh(bt)$ & $F(s) = \frac{b}{s^2 - b^2}$ \\ \hline
+    $f(t) = \cosh(bt)$ & $F(s) = \frac{s}{s^2 - b^2}$ \\ \hline
+    $f(t) = t e^{at}$ & $F(s) = \frac{1}{(s - a)^2}$ \\ \hline
+    $f(t) = u(t - a)$ & $F(s) = \frac{e^{-as}}{s}$ \\ \hline
+    $f(t) = \delta(t - a)$ & $F(s) = e^{-as}$ \\ \hline
+    $y(t)$ & $Y(s)$ \\ \hline
+    $\frac{dy}{dt}$ & $sY(s) - y(0)$ \\ \hline
+    $\frac{d^2y}{dt^2}$ & $s^2Y(s) - s y(0) - \frac{dy}{dt}(0)$ \\ \hline
+    $\int_0^t y(\tau) d\tau$ & $\frac{Y(s)}{s}$ \\ \hline
+    $f(t) = e^{at} \sin(bt)$ & $F(s) = \frac{b}{(s-a)^2 + b^2}$ \\ \hline
+    $f(t) = e^{at} \cos(bt)$ & $F(s) = \frac{s - a}{(s-a)^2 + b^2}$ \\ \hline
+    \end{tabular}
+    \caption{Laplace Transform Table}
+    \label{tab:laplace}
+    \end{table}
+Let's do some more examples.
+
+\begin{example}
+    Find the Laplace transform of $f(t)= t^3 + 3t^2 + 2$.
+    Using \ref{tab:laplace}, we can split up the three terms into:
+    \[\frac{3!}{s^{3+1}} + 3\frac{2!}{s^{2+1}} + \frac{2}{s}\]
+    So, $F(s) = \frac{6}{s^4} + \frac{6}{s^3} + \frac{2}{s}$.
+\end{example}
+
+\begin{example}
+    Find the Laplace transform of $f(t)= 4t^2 - 5 \sin{3t}$
+    Using \ref{tab:laplace}, we can split up the two terms into:
+    \[4\frac{2!}{s^{2+1}} + -5\frac{3}{s^2+3^2}\]
+    So, $F(s) = \frac{8}{s^3} - \frac{15}{s^2+9}$.
+\end{example}
+
+\section{02-OCT-2024}
+\subsection{Partial Fraction Expansion}
+
+Recall the Laplace Table \ref{tab:laplace}. 
+
+We begin with an example. 
+\begin{example}
+    \[ f(t) = 4 \sin{2t} + 3 \cos{6t} + 4 e^{2t}  \]
+Using \ref{tab:laplace}, we have \[F(s) = 4 \cdot \frac{2}{s^2+4} +  3 \cdot \frac{s}{s^2+36} + 4 \cdot \frac{1}{s-2}\]. 
+\end{example}
+Another example:
+
+\begin{example}
+    \[ f(t) = 10 + 2t^4  \]
+Using \ref{tab:laplace}, we have \[F(s) = 10 \cdot \frac{1}{s} +  2 \cdot \frac{4!}{s^5} = \frac{10}{s} + \frac{48}{s^5}\]. 
+\end{example}
+
+Now, let's take the inverse!
+\begin{example}
+    \[ F(s) = \frac{5s}{s^2+25} + \frac{8}{s^2+4}  \]
+This is the same as:
+\[
+    5\frac{s}{s^2+25} + 4\frac{2}{s^2+4}
+\]
+which evaluates to $f(t) = 5\cos{5t} + 4\sin{2t}$.
+\end{example}
+
+\begin{example}
+    \[ F(s) = \frac{2}{s^3} + \frac{1}{s+9} + \frac{5}{s}  \]
+This is $f(t) = t^2 - e^{-9t} + 5$.
+\end{example}
+Now, let's talk about examples with multiple terms multiplied by each other in the denominator. This requires Partial Fraction Expansion. You may remember similar things in Calculus. 
+Note that fractions of the form:
+\[F(s) = \frac{N(s)}{(s+a)(s+b)^n(s^2+c)} \] 
+evaluate to:
+\[\frac{A}{s+a} + \frac{B_1}{s+b} + \frac{B_2}{(s+b)^2} + \dots + \frac{B_n}{(s+b)^n} + \frac{D_1s + D_2}{s^2+c}\]  
+So, we have a somewhat decent method to evaluate Partial Fraction Expansion.
+\begin{enumerate}
+    \item Multiply both sides by the denominator
+    \item Next, solve by either substitution or equating coefficients
+    \item Then, use the Laplace Transform to find the inverse of components. 
+\end{enumerate}
+
+\begin{example}
+    \[ F(s) = \frac{6s^2+50}{(s+3)(s^2+4)}  \]
+
+    Using Partial Fraction Expansion, this is of the form:
+    \[\frac{A}{s+3} + \frac{Bs + C}{s^2 + 4} \]
+    Next, we need to find $A, B, C$! Let's use substitution.
+    \[6s^2 + 50 = A(s^2 + 4) + (Bs + C)(s + 3)\]
+Evaluating at $s = -3$, which is one of the zeros, we find that $A = \frac{104}{13} = 8$. You can verify it for yourself!
+
+How can we find $B$ and $C$? Let's just use equating coefficients, what we should have done at the start.
+
+\[6s^2 + 50 = As^2 + 4A + Bs^2 + Cs + 3Bs + 3C\]
+Note that this means:
+\[6 = A + B \]
+\[0 = 3B + C \]
+\[5 = 4A + 3C \]
+This can just be reducing the matrix:
+\[ \left( \begin{array}{rrr|r} 1 &1 &0 &6 \\ 0 &3 &1 &0 \\4 &0 &3 &5 \end{array} \right) \]
+\[ \left( \begin{array}{rrr|r} 1 &0 &0 &8 \\ 0 &1 &0 &-2 \\0 &0 &1 &6 \end{array} \right) \]
+
+Or $A = 8$, $B = -2$, $C = 6$. So,
+\[\frac{8}{s+3} + \frac{-2s}{s^2 + 4} + \frac{6}{s^2 + 4} \]
+
+Taking the inverse Laplace Transform,
+\[f(t) = 8e^{-3t} - 2\cos{2t} + 3\sin{2t}\]
+
+\end{example}
+\section{07-OCT-2024}
+
+\section{09-OCT-2024}
+\subsection{Translation on the t-axis}
+Recall the \textit{unit step function}.
+\begin{defn}[Unit step function]
+The unit step function $u(t)$ is defined as:
+\[
+u(t) =
+\begin{cases} 
+0 & \text{if } t < 0, \\
+1 & \text{if } t \geq 0.
+\end{cases}
+\]
+\end{defn}
+
+% TikZ diagram for the unit step function
+\begin{tikzpicture}[domain=-2:2, scale=1.2]
+    \draw[very thin,color=gray] (-2.1,-0.1) grid (2.1,1.1);
+    \draw[->] (-2,0) -- (2.2,0) node[right] {$t$};
+    \draw[->] (0,-0.2) -- (0,1.2) node[above] {$u(t)$};
+
+    \draw[red,thick] (-2,0) -- (0,0);
+    \draw[red,thick] (0,1) -- (2,1);
+    \draw[red,fill=white] (0,1) circle (2pt); % Open circle
+    \draw[red,fill=red] (0,0) circle (2pt);   % Filled circle
+
+    \node[red] at (1.5, 1.2) {1};
+    \node[red] at (-1.5, -0.2) {0};
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% Definition for f(t) = g(t)u(t-a)
+Now consider the case where $f(t) = g(t)u(t-a)$, where $u(t-a)$ is the shifted unit step function. The Laplace transform of $f(t)$ is:
+\[
+F(s) = e^{-as} + \mathcal{L}\{g(t-a)\}.
+\]
+
+% TikZ diagram for f(t) = g(t)u(t-a)
+% \begin{tikzpicture}[domain=-2:4, scale=1.2]
+%     \draw[very thin,color=gray] (-2.1,-0.1) grid (4.1,1.1);
+%     \draw[->] (-2,0) -- (4.2,0) node[right] {$t$};
+%     \draw[->] (0,-0.2) -- (0,1.2) node[above] {$f(t)$};
+
+%     % Step function u(t-a), with g(t) = 1 for simplicity
+%     \draw[red,thick] (-2,0) -- (1,0);
+%     \draw[red,thick] (1,1) -- (4,1);
+%     \draw[red,fill=white] (1,1) circle (2pt); % Open circle
+%     \draw[red,fill=red] (1,0) circle (2pt);   % Filled circle
+
+%     \node[red] at (2.5, 1.2) {$g(t)$};
+%     \node[red] at (-1.5, -0.2) {0};
+%     \node[red] at (1, -0.3) {$t=a$};
+% \end{tikzpicture}
+
+The steps to evaluate this are as follows:
+\begin{enumerate}
+    \item Identify $g(t)$ and $a$
+    \item Replace $t$ with $t-a$ to get $g(t-a)$.
+    \item Expand $g(t-a)$
+    \item Take the Laplace transform. That is, $\Laplace\{g(t-a)\}$
+    \item $F(s) = e^{-as}\Laplace\{g(t-a)\}$
+\end{enumerate}
+\begin{example}
+    Evaluate $f(t) = u(t-2)$.
+
+
+    Note that $g(t) = 1$, and $a=2$. Then, $g(t-2) = 1$. We get $\Laplace\{1\} = \frac{1}{s}$, or $F(s) = e^{-2s}\frac{1}{s}$.
+\end{example}
+
+\begin{example}
+    Evaluate $f(t) = t^2u(t-2)$.
+
+
+    Note that $g(t) = t^2$, and $a=2$. Then, $g(t-2) = (t-2)^2$.
+    Evaluating, $g(t-2) = t^2-4t+4$. So, Taking the Laplace Transform, we have $\Laplace\{t^2-4t+4\} = \frac{2}{s^3} - \frac{4}{s^2} + \frac{4}{s}$, or $F(s) = e^{-2s}[\frac{2}{s^3} - \frac{4}{s^2} + \frac{4}{s}]$.
+\end{example}
+
+\begin{example}
+    Evaluate $f(t) = 2 - 3u(t-2) + u(t-3)$.
+
+    We get $F(s) = 2(\frac{1}{s}) - 3 \frac{e^{-2s}}{s} + \frac{e^{-3s}}{s}$.
+\end{example}
+
+\begin{example}
+    Evaluate $f(t) = 4\cos{t}u(t - \pi)$.
+
+    Recall that $\cos{t-\pi} = -\cos{t}$. This will help us a lot in the future.
+    
+    Now, we have $a = \pi$, $g(t) = 4\cos{t}$. Then, $g(t-\pi) = 4\cos(t-\pi) = -4\cos{t}$.
+    Knowing that $\Laplace\{-4\cos{t}\} = \frac{4s}{s^2+1}$, we get $F(s) = -e^{-\pi s}\frac{4s}{s^2+1}$.
+\end{example}
+
+\begin{example}
+    Evaluate for $Y(s)$: $y' + y = 4 \cos{t}u(t-\pi)$, given initial conditions $y(0) = 0$.
+    \[sY - 0  + Y = e^{-\pi s}\frac{4s}{s^2+1}\]
+    \[Y(s+1) = -e^{-\pi s}\frac{4s}{s^2+1} \]
+    \[Y(s) = \frac{-e^{-\pi s}\frac{4s}{s^2+1}}{s+1} \]  
+\end{example}
+But how do we find $Y(t)$? We use the \textit{Second Translation Theorem}.
+
+\begin{defn}
+    The \textbf{Second Translation Theorem} in Laplace Transforms is as follows:
+
+    If
+    \[
+    \mathcal{L}\{f(t)\} = F(s),
+    \]
+    then
+    \[
+    \mathcal{L}\{f(t-a)u(t-a)\} = e^{-as}F(s),
+    \]
+    where $u(t-a)$ is the unit step function that shifts the function by $a$ units in time.
+\end{defn}
+
+    % TikZ diagram sketch for the time-shifted function
+    \begin{tikzpicture}[domain=-2:5, scale=1.2]
+        \draw[very thin,color=gray] (-2.1,-0.1) grid (5.1,1.1);
+        \draw[->] (-2,0) -- (5.5,0) node[right] {$t$};
+        \draw[->] (0,-0.2) -- (0,1.5) node[above] {$f(t)$};
+    
+        % Original function f(t)
+        \draw[blue,thick] (-2,0) -- (0,0);
+        \draw[blue,thick] (0,1) -- (2,1);
+        \draw[blue,thick] (2,0.5) -- (3,0.5);
+        \draw[blue,thick] (3,0) -- (5,0);
+        \node[blue] at (2.5, 0.7) {$f(t)$};
+    
+        % Shifted function f(t-a)
+        \draw[red,thick, dashed] (-2,0) -- (1,0);
+        \draw[red,thick, dashed] (1,1) -- (3,1);
+        \draw[red,thick, dashed] (3,0.5) -- (4,0.5);
+        \draw[red,thick, dashed] (4,0) -- (5,0);
+        \node[red] at (3.5, 0.7) {$f(t-a)$};
+    
+        % Step at t = a
+        \draw[red,thick] (1,0) -- (1,1);
+        \draw[red,fill=red] (1,0) circle (2pt);   % Filled circle
+        \draw[red,fill=white] (1,1) circle (2pt); % Open circle
+        \node[red] at (1, -0.3) {$t = a$};
+    
+        % Labels
+        \node[blue] at (2, 1.2) {Original $f(t)$};
+        \node[red] at (4, 1.2) {Shifted $f(t-a)$};
+        \node at (-1, -0.2) {0};
+    \end{tikzpicture}
+
+    \begin{example}
+        $f(t) = (t-1)u(t-1)$. Find $F(s)$. 
+        Through some standard malarkey, $F(s) = e^{-s}\frac{1}{s^2}$.
+    \end{example}
+
+    \begin{example}
+        $F(s) = e^{-2s}\frac{1}{s^3}
+    \end{example}
 \end{document}

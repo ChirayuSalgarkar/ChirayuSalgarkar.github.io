@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  24 SEP 2024 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  10 OCT 2024 10:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -406,26 +406,32 @@ LaTeX Warning: No \author given.
 
 [11]
 
-[12] (notes.aux)
+[12]
+
+[13]
+
+[14]
+
+[15] (notes.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 583A2367750B2AF1075E8A86A78829A0;7454.
+(rerunfilecheck)             Checksum: D10DF2CCAEFA3F1796D73EC22CE94A48;10242.
  ) 
 Here is how much of TeX's memory you used:
- 10801 strings out of 473899
- 166251 string characters out of 5724577
+ 10839 strings out of 473899
+ 166755 string characters out of 5724577
  1947960 words of memory out of 5000000
- 33420 multiletter control sequences out of 15000+600000
+ 33436 multiletter control sequences out of 15000+600000
  569278 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,712b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,712b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Chirayu S\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Chirayu S/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on notes.pdf (12 pages, 216722 bytes).
+Output written on notes.pdf (15 pages, 239177 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 417 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 520 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
+ 545 words of extra memory for PDF output out of 10000 (max. 10000000)
 
