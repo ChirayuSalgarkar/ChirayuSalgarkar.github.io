@@ -1301,6 +1301,47 @@ But how do we find $Y(t)$? We use the \textit{Second Translation Theorem}.
     \end{example}
 
     \begin{example}
-        $F(s) = e^{-2s}\frac{1}{s^3}
+        $F(s) = e^{-2s}\frac{1}{s^3}$
     \end{example}
+
+\section{23-OCT-24}
+\subsection{Dirac Delta Function examples}
+\begin{example}
+    Solve the differential equation with initial conditions \( y(0) = 0 \) and \( y'(0) = 0 \):
+    \[
+    y'' + 16y = \delta(t - 2\pi)
+    \]
+    where \(\delta(t - 2\pi)\) is the Dirac delta function centered at \( t = 2\pi \).
+
+    \textbf{Solution:}
+
+    The differential equation is a second-order linear equation with constant coefficients, and the non-homogeneous term is the Dirac delta function. The general solution can be found using the Laplace transform method. 
+
+    First, take the Laplace transform of both sides:
+    \[
+    \mathcal{L}\{y'' + 16y\} = \mathcal{L}\{\delta(t - 2\pi)\}
+    \]
+    Using the Laplace transform properties:
+    \[
+    s^2Y(s) + 16Y(s) = e^{-2\pi s}
+    \]
+    Solving for \( Y(s) \):
+    \[
+    Y(s) = \frac{e^{-2\pi s}}{s^2 + 16}
+    \]
+    Taking the inverse Laplace transform:
+    \[
+    y(t) = \frac{1}{4}\sin(4(t - 2\pi))u(t - 2\pi)
+    \]
+    where \( u(t - 2\pi) \) is the unit step function that shifts the response to start at \( t = 2\pi \).
+\end{example}
+\begin{example}
+    Solve the differential equation with initial conditions \( y(0) = 0 \) and \( y'(0) = 0 \):
+    \[
+    y'' + y = \delta(t - 2\pi) + \delta(t + 4\pi)
+    \]
+    
+\end{example}
+
+
 \end{document}
