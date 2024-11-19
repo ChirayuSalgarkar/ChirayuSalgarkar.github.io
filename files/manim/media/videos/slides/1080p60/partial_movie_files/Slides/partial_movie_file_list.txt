@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/manim/media/videos/slides/1080p60/partial_movie_files/Slides/3529212410_2820455925_223132457.mp4'
+file 'file:C:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/manim/media/videos/slides/1080p60/partial_movie_files/Slides/3040924799_3547517599_668437085.mp4'
+file 'file:C:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/manim/media/videos/slides/1080p60/partial_movie_files/Slides/3040924799_607302138_3826189480.mp4'
+file 'file:C:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/manim/media/videos/slides/1080p60/partial_movie_files/Slides/3040924799_1159669550_223132457.mp4'
+file 'file:C:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/manim/media/videos/slides/1080p60/partial_movie_files/Slides/3040924799_2374734652_3256495558.mp4'
+file 'file:C:/Users/Chirayu S/Githubio/ChirayuSalgarkar.github.io/files/manim/media/videos/slides/1080p60/partial_movie_files/Slides/3040924799_208288666_3256495558.mp4'
