@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: robustcbf.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 5 items.
+Database file #1: main.bib
+Warning--empty journal in rachev1990duality
+You've used 28 entries,
+            2118 wiz_defined-function locations,
+            780 strings with 12970 characters,
+and the built_in function-call counts, 10915 in all, are:
+= -- 1106
+> -- 535
+< -- 8
++ -- 214
+- -- 182
+* -- 787
+:= -- 1776
+add.period$ -- 91
+call.type$ -- 28
+change.case$ -- 174
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 399
+empty$ -- 804
+format.name$ -- 182
+if$ -- 2297
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 28
+newline$ -- 143
+num.names$ -- 56
+pop$ -- 165
+preamble$ -- 1
+purify$ -- 146
+quote$ -- 0
+skip$ -- 298
+stack$ -- 0
+substring$ -- 760
+swap$ -- 110
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 112
+warning$ -- 1
+while$ -- 105
+width$ -- 30
+write$ -- 312
+(There was 1 warning)

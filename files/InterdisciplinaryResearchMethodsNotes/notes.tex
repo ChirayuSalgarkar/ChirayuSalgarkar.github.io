@@ -1,0 +1,582 @@
+\documentclass[10pt, oneside]{article} 
+\usepackage{amsmath, amsthm, amssymb, calrsfs, wasysym, verbatim, bbm, color, graphics, geometry}
+\usepackage[]{hyperref}
+
+\geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}  
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Cdot}{\boldsymbol{\cdot}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{conv}{Convention}
+\newtheorem{rem}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+
+
+\title{Running Lecture Outline: Interdisciplinary Research Methods}
+%\author{[Chirayu Salgarkar]}
+\date{Fall 2024}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\vspace{.25in}
+
+\section{27-AUG-24}
+
+\subsection{Miscellaneous}
+
+This class is in Gleason, starts at 9:30 AM Tuesdays and Thursdays.
+
+
+No idea who the prof is. He looks cool though. Makes a parallax error joke with the clock. Quite funny, tbh.
+
+
+This is a skill-building course. For BME+ChemE, MIE, and ECE. This is mainly for understanding what it takes to understand how to do things for academia. 
+
+\subsection{Faculty Intro}
+There's Dr. Vinay Abhyankar (BME), Dr Andres Kwsasinki (ECE), and Dr. Risa Robinson (MIE). 
+\subsection{Syllabus}
+Syllabus is in myCourses. Highlights include:
+\begin{itemize}
+    \item Goals are to make them strong Engineering researchers, focus on Interdisciplinary and trans-disciplinary research skills, with \textbf{three themes}: research methods, statistics, and conducting ethical research.
+    \item Interdisciplinary STEM research needs communication skills, lit review, and critical evaluation of research, publication process, research proposals and funding, and to prep for quals. 
+    \item Research stats involves how to use data well, and analyze data well. This looks like good AP stat. Also how to recognize cherrypicked data. 
+\end{itemize}
+Grading wise, attendance counts for 10\%, Interdisciplinary Research Methods is 40\%, and Research Stats and Conducting Ethical Research are both 25\%. COME ON TIME. Check myCourses for Assignments. For weeks $1-5$, we have mock quals, that are graded. This will be hard. But it's very valuable. 
+
+There's also the CITI modules stuff. That's the ethics. We have a statistics exam on November 26th. 
+
+\subsection{Scientific vs Engineering Research}
+So, what exactly is research?
+
+    
+\begin{defn}[Research]
+    \textbf{Research} is the intellectual \underline{process} to create new knowledge. 
+\end{defn}
+This is essentially language building. Measurements prove or disprove our understanding of such theory or data. 
+\begin{defn}[Inductive inference]
+Inductive inference moves from observations to a more general conclusion or hypothesis.
+\end{defn}
+This is the scientific method/research.
+\begin{defn}[Deductive inference]
+    Deductive inference is more specific knowledge derived from more general principles.
+\end{defn}
+On the other hand, engineering research is new knowledge in the form of a new entity of tangible existence. 
+
+So, ultimately, what is scientific method/research?
+\begin{defn}(Scientific Method)
+    The Scientific method is the principles and procedures for the systematic pursuit of knowledge involving recogntion and formulation of a proven collection of data through observation and experiment, and the formulation and testing of hypothesis. 
+\end{defn}
+Only a sith (or a mathematician) deals with absolutes. For that reason, we use statistics, because we're not sure. 
+
+Engineering research contrasts from this philosophy because it deems to \textit{create something new.}
+
+\section{29-AUG-24}
+\subsection{Miscellaneous}
+Generally, don't use ChatGPT to write a paper, obviously. He doesn't dispute that they are important tools, so the use is fine, but the intellectual generation of content is still your brain. Also, disclose how you are using those tools. If you are using AI to do some code debugging, for instance, please let them know. 
+
+There is now a five minute discussion on the validity of this argument. I am not notating it, because I find it more of a diatribe than actual course content. 
+\subsection{Research, Proposals, Funding}
+There are three major questions in this lecture:
+\begin{rem}[Question]
+    Where is research conducted in the US?
+\end{rem}
+\begin{rem}[Question]
+    What is a research grant proposal?
+\end{rem}
+\begin{rem}[Question]
+How are research grants funded?
+\end{rem}
+Research in the US is in government, academia, and industry. Mainly industry, because of size. 
+There are three major Research and development categories: Basic Research, which exists to acquire more research on underlying foundations of phenomena and facts, with no immediate application, applied research, which is primarily towareds a specific, practical aim, and experimental development, which draws on knowledge gained from research, and is directed to producing new products and processes or improving existing products and processes. 
+
+Another way of categorizing this is by the \textit{Technology Readiness Levels}. THey are a set of nine levels that define the level of maturity of the research is. Level 1 is basic research level, whicle Level 9 shows ``Actual system flight proven through successful mission operations", while the other ones are somewhere in between. The full set of levels are in the PPT. It was originally conceptualized by NASA, which explains why it says ``flight". You can make the list analogously based on your own research. 
+
+Governmental research is conducted in a myriad of loci. They include national laboratories, which are ``federally funded research and development centers''. There is also National Institutes, (think NIH, NIST, USDA, DoD, etc.). TLDR: Government is large. 
+
+\subsection{Industrial research}
+Industrial research is done by companies. We think big companies (see NVIDIA, Tesla, Google), but small companies do a lot too. Some industries form consortia to collaborate when conducting research, as well as develop roadmaps and standards. This includes semiconductor device fabrication, telecommunication standards, and airlines. 
+
+\subsection{Academic research}
+We begin with four questions:
+\begin{rem}[Question]
+    What are the purpose and goals?
+\end{rem}
+\begin{rem}[Question]
+    Is it important or necessary?
+\end{rem}
+\begin{rem}[Question]
+Who does academic research?
+\end{rem}
+\begin{rem}[Question]
+    Who or what funds academic research?
+\end{rem}
+The primary use of universities is to educated. The goals for PhDs are to educate the next generation of researchers. There are differences in basic, applied, and experimental research. But why are PhDs necessary? 
+
+Professor goes into a diatribe of Bell Labs prof discussing how industry focuses on applied research, and unbalancing the ``three legs'' of research. 
+
+Who does academic research? You, me ``Prof referring to themselves'', postdocs. Who are we funded by? Obviously by university endowments, gifts, foundations, industry contracts, and government contracts. 
+
+Funding varies. There are generally proposals, which vary significantly even within one funding agency, each having many different types of grants ranging from 10k to over 10M, sometimes requiring multiple PIs at multiple institutions. These grant proposals are often reviewed by both peers as well as agency program officers and managers. 
+
+\section{3-SEP-24}
+\subsection{Critical Analysis of Papers}
+
+There are some pragmatic reasons to learn how to better analyze papers. One, this will be on your qualifying exam. But on a more personal level, it makes you a better reviewer. It also makes you more \textit{able to learn}. The courses you are going to be taking will always be one step behind your actual research. Therefore, you need to do a critical analysis of recent papers to make decisions. There exists a duality between ability to better analyse papers and ability to better write papers. You have to learn from others, and you have to better communicate. 
+
+Writing paper is \textit{not creative literature}. (Personal opinion: it should be). But the way you communicate research should stay in the lane of established good papers, recognizing the structure of good papers, and ultimately fundamentally writing like the greats. 
+
+You also get critical analysis skills. Critical has a different connotation here than in standard language. Here, \textit{critical} means an act of objective judgment - that is, understanding both the strengths and weaknesses of a subject, including the justification of such in an objective manner.
+
+There is fundamentally one question to answer when performing critical analysis:
+\textbf{What is the main contribution of the paper and how is this contribution justified and validated}? That is, what is the new knowledge generated from the paper? And how do you know whether or not it is accurate?
+
+Critical comes from Greek \textit{kritikós}, ``of or for judging, able to discern''. There are various levels of analysis you can do, but not all are equally important, meaning that you should avoid superficiality. For instance, if a citation is old, that may be a reason to be critical, but not as strong as seeing a major issue of the paper itself. 
+Obviously, you need to check for rigor and correctness, and that the paper ties up loose ends and gets rid of handwaving. 
+
+You should instead look for innovative and significant contribution, including looking for something new. You should make sure the contribution is not trivial. (The definition of ``trivial'' is hotly contested, though). 
+You want to maybe stop and think if the triviality and obviousness of this claim is true. First of all, the paper was published. Therefore, they didn't think it was trivial. You may be missing something. 
+
+You also need to validate such claims and contributions. No justification is no contributions at all. This is the \href{https://en.wikipedia.org/wiki/Extraordinary_claims_require_extraordinary_evidence}{Sagan Standard}. 
+When looking for a good presentation, make sure that it includes items made in the major community. It needs to be succinct, clear to read, with \textit{good style}, which means that there needs to be concrete and clear cause-and-effect chain reasoning. We minimize superlatives, because we're technical, and trying to communicate new knowledge. We're not marketing experts. We also want to have a good choice of notation and no unnecessary buzzwords. We also generally want to be self-contained and not rushed. I guess that means don't procrastinate. Ha. 
+
+\subsection{Assessing Contributions}
+To assess contributions, \textit{State of the Art should not be the only criteria}. Just because research is not state-of-the-art, that does not make it bad! This is the equivalent of low-hanging fruit argument. There are different aspects that make new research valuable. But that is not the only criteria! For instance, does the approach show promise? Does the research help you better understand some phenomenon? Does this help develop new research that can be built further on? Is there a mathematical contribution that can support further scientific and engineering research?
+
+Professor then goes into a small diatribe regarding his time at TI. 
+
+The anatomy of a technical article varies by disciplines, but generally the include Titles, Abstracts, Intro, Problem Description, Set of Claims, Methodologies, Description of data, Set of Result, and Conclusions. 
+
+There is not a fool-proof method, but papers should generally take this path. 
+
+Now, there is now people trying to discuss negative results. TLDR: it is hard.
+\subsection{Reading a paper}
+If you want to critical analysis of a paper, it's not really done sequentially! You start off by reading a title. You make a mental note of how the title conveys information on the subject of the paper, and then read the abstract and perhaps the conclusion. There should be:
+\begin{itemize}
+    \item One to two sentences as motivation
+    \item One to two sentences defining the Problem
+    \item One to two sentences discussing main contribution
+    \item One to two sentences giving evidence validating the claim
+    \item Are there unsubstantiateed claims?
+\end{itemize}
+I did parliamentary debate, I'm actually going to use parli debate flow. 
+
+Then, you go to the introductory section. Start by checking the motivation: Why do we care? The professor spends time looking at references to prior works in the paper, checking for thoroughness, currency, relevancy, and to check details of claimed contributions. 
+
+Next, look at assumptions and conditions. Are they valid? Are they realistic? Do they narrow the scope of the research? Are they justified?
+
+Then, check if the research problem is set up well. Is there ambiguity when analyzing the research elements?
+
+Then, read the method and results. Obviously, check for how warranted the method is and if it is correct. THen, check if the results actually validate the claimed contributions, and whether or not those comparisons are fair. Then, we check if the results analyzed and discussed are done in depth, and if they are fair. Finally, we check if correct methods used in collecting, presenting, and analyzing results, and if sufficient information presented to independently reproduce these results. 
+
+Now, we look at a couple of graphs and whether or not there is validity in them. This is present in the powerpoint, so I am omitting the discussion here. Also, check for consistency of units. 
+
+\section{05-SEP-24}
+\subsection{Miscellaneous}
+Just reiterating what has happened in the email, the quick message is don't use electronics. Don't use electronics in class. Unless you're peer notetaker. I'm peer notetaker, so it's fine. 
+\subsection{Critical Analysis of Papers, continued}
+Using a quad chart is a helpful way of presenting information! A quad chart organizes and presents information in the most essential form. It is also something you can use to organize your own thoughts. This method of organizing is direct and clear, which is very helpful. In fact, DoD basically requires it for research proposals. Think of it like an executive summary. 
+It's called a \textit{quad chart} because text is divided into four quadrants. An example is now shown. It is in the PPT, so I am not including it here. 
+
+Notably, there is four quadrants. This example shows objectvie, approach, key milestones, and graphical infromation in the top right. This forces you to be smart about what you include, as well as conciseness. Be reasonable with font sizes. 
+
+Another method is by splitting objective and motivation, contributions, methodology, and results. 
+
+\begin{rem}
+    We will have an assignment soon concerning literature review, but as mentioned previously in this part of the course, will be incremental practice for the mock qualifying exam. This will discuss the qualifying exam. There will also be a quad chart on such.
+\end{rem}
+
+\subsection{Research Dissemination}
+Research dissemination, in short, is how to publish your research. 
+There are conference presentations as well as journal presentations. Every reference as of now is for peer-reviewed publications. (The implication is that it's actually vetted by experts in the field). Conference publications are generally considered as a venue for disseminating the latest research, including works-in-progress. This has a less careful refereeing process, and means that the manuscript cannot be revised and resubmitted, which means that there is immediate accept/reject based on reviewer scores as opposed to the other way round. 
+
+On the other hand, Journal publications are seen more as an archival medium, which implies research maturity, and generally has more details than a conference paper. 
+
+Note that this is \textbf{very} dependent on discipline. Prestige matters on discipline. For instance, publications to Systems and Control may be useful, but IROS conference papers may be sexier. 
+
+At the end of the day, acceptance is often made by score. They accept up to some percent of the top scorers. Typically, this is unfair. 
+
+There are also journal versions of a conference paper. This exists. Lol. This is a conversation that happens at the editorial world. When presented with a work of good quality, should we say this is unacceptable? We want to communicate the desemination of this knowledge 
+
+There are different classifications of journal papers, here's a general jist:
+\begin{itemize}
+    \item Transactions Paper, which is the typical full-length paper, which can either submitted through an open call, or a call for special issues.
+    \item Letters are same in the concept to a journal, but they are generally shorter, with a quicker review process. 
+    \item Review Articles, which are a comprehensive summary of some topic with commentary added. I'm controls guy, so I think of the Ames paper on Control Theory and Applications.
+    \item Tutorials, which are also a way to teach a somewhat new area to the research community. Think review articles that can become textbooks. 
+    \item There's also edited book chapters. Think a textbook, but each chapter is written by a leader in the field. This is closer to a chapter in the textbook than a paper. 
+    \item There are textbooks. 
+\end{itemize}
+
+Now, conference papers are different. Here's some examples, roughly delineated by size (smallest to largest):
+\begin{itemize}
+    \item Workshops are generally very focused on a topic, which are typically half-day or full day. There is usually only one concurrent session.
+    \item Symposiums are focused on an area of research, distributed over a few days, which may have morethan one concurrent session.
+    \item Conferences are focused on a broad are of research, or maybe, even a whole discipline. This is essentially equivalent to multiple concurrent symposia. This is like a ``track''.
+\end{itemize}
+
+There is also Open-Access repositories of preprints, meaning they haven't been peer-reviewed yet. They are generally in the arXiv. We love the arXiv. Obviously, if you're citing something from the arXiv, make sure there exists a peer-reviewed version of such. 
+\section{10-SEP-24}
+\subsection{Open access preprints}
+We continue our discussion with talking about open-access preprints, which include arXiv and bioRxiv. Now, the professor shows an example of a paper: \textit{GPT-fabricated scientific papers on Google Scholar} to argue that a lot of AI papers do make it through peer review! This includes at indexed journals, but often in non-indexed journals as well. He then argues:
+\begin{enumerate}
+    \item Be careful. Papers appearing in arXiv need not be perfect, and that peer review is still a decent stopgap, but not infallible.
+\end{enumerate}
+
+Also, when publishing in peer-reviewed journals, you sign off copyright. This means that you pay a higher publication fee. There are two sides to this: one, does there exist scientific vetting of the information? Also, do the publishers profit? There are a majority of cases that even when you publish, the information is still paywalled. At RIT, this is transparent, because the library pays for these fees. But if you are at home and accessing papers, it may be more difficult. 
+
+This is obviously not a good thing for broad dissemination of ideas. Now, there is a push for making federally funded research freely funded without delay. Note that the Biden Administration has made policy guidelines to do this in August 2022, which at the time of writing is 2 years ago. The professor is a big proponent of open-access publications.
+\subsection{Predatory Journals and Conferences}
+\begin{defn}
+    Predatory journals and publishers are entities that prioritize self interest at the expense of scholarship (Nature)
+\end{defn}
+These are scams. The interest is collecting publication fees from the authors, with a fake review process. These are increasingly common. The professor stated that has been receiving these claims to move conference publications to extended journals at their ``reputable'' journal, and then ask for publication fees. They are not that easy to identify. Check the editorial board, track record, where papers are published, and the sponsoring organization. Do you recognize the people involved? Are they well-regarded in the broad context?
+\subsection{Nonscholarly technical documents}
+There are white papers, technical reports, standards, and patents. You will learn a lot more about patents and standards in ENGR-702. They often provide good information for research, but they are not really peer-reviewed, but there is implicit evaluation of content. Standards are often competed by universities and companies, which require performance results, but you should consider to be peer-reviewed. 
+\subsection{Journal Bibliometrics}
+The most famous information is defined by Clarivate (formerly Thomson-Reuters) called the \textit{Journal Citation Report}. 
+
+There is the \textbf{Journal Impact Factor}. This is calculated as follows:
+\[2021\text{JIF} = \frac{2021\text{citations from journals, proceedings, and books to a journal in 2019 and 2020}}{\text{Number of articles and reviews(citable items published in 2019 and 2020)}}\]
+
+This is ripe for abuse. There are very reputable journals that ask you to cite $3-4$ papers from the same journal in the paper to be accepted, which games the IF higher. There is also the Eigenfactor Score, which is not influenced by journal self-citation. This is a bit better. 
+
+Eitherways, take these measures with a big grain of salt. You cannot take it as an absolute for what good research is, and specifically based on the research you are doing. IF is dependent on practices within discipline. Citations are a game that you play. In ECE, there is a discipline called information theory, which may have 10 citations. ML may have 5 to 6 times that. And they are technically the same discipline. 
+
+Now, a quick discussion on how citations in papers themselves could be unethically sourced. 
+
+Metrics should be then evaluated critically, and don't necessarily represent the whole picture. They should be relative to a discipline. But what is a ``good score?'' JCR basically does a web scrape of all journals and compiles a list for ranking. In ECE, a really good score is like $8$-ish but it is super discipline dependent. 
+
+For conferences, acceptance ratio is generally used as a metric, which also needs to be used with care, and can be skeped by number of submissions. This is also skewed a lot because of COVID.
+
+\subsection{How are journals and conferences organized?}
+There is an editor-in-chief, which selects editors, makes policy, and chooses special issues. They also assign accepted papers to issues, and acts as the arbiter for disputes between authors, reviewers, editors, and does initial filtering of submissions, and assigns papers to area editors or to editors. 
+
+The area editor is generally a more narow EiC, while Editors are assigned reviewers and makes accept/reject decisions. No one is compensated for this. 
+
+There is now a powerpoint slide (page 19) that diagramatically goes through the review process. 
+
+\subsection{Types of review}
+There is either single-blind or double-blind review. In single-blind review, author identity is known but reviewer identity is not known. Double-blind review has both the author and reviewer identity unknown. Open peer review is what the presenter prefers. Everyone knows everybody, and everyone roasts everyone. This is preferable because conscious decision-making need not be defined by who you are! 
+
+Reviewers are expected to demonstrate expertise and objectivity, and to behave as a peer of the authors. They are also expected to behave professionally, to provide specific criticism, constructive criticism and act in representation of future readers. 
+
+Communication etiquette: give a cover letter for journal submission, and explain the rationale for actions taken to address comments and clearly describe major changes made. Similarly, for reviewers, communicate promptly if issues arise, and be professional. You want to to treat others the way you want to be treated. 
+
+The last discussion is on anatomy of conferences. The powerpoint slide (slide 23) covers all relevant information. 
+
+The next section is on with Literature Review and Presentations.
+
+\subsection{Literature Review}
+\begin{quote}
+    If I have seen farther, it is by standing on the shoulders of giants. (Isaac Newton)
+\end{quote}
+So what is a literature review? Lit review is a really important part of the research workflow, and new knowledge is created from existing knowledge.
+There are some preliminary goals of literature review. One is to find the state of the art of what is already done. This also allows you to identify a research gap, including simplifying assumptions, why the study is needed, and what general study is needed. simplifying assumptions are useful, because it allows us to see what areas need further complexity, and what we need to work on in the future. 
+
+The literature review process is a 9-step program :). There are a good number of stages, and we generally start by identifying the research question. But we'll talk about that on Thursday. 
+\section{12-SEP-24}
+\subsection{Literature Review and Presentations}
+\begin{rem}[Homework Reminder]
+    We have an assignment for Literature Review. Due next week. Check myCourses for details. 
+\end{rem}
+
+As I stated earlier, it is a 9 step process. Here are the steps:
+\begin{enumerate}
+    \item Identify Research Question
+    \item Keyword Expansion
+    \item Search 
+    \item Review Findings
+    \item Categorize/Tag 
+    \item Refine Search Terms 
+    \item Thoroughly Digest Important Articles 
+    \item Synthesize/Outline 
+    \item Write
+\end{enumerate}
+However, this process is cyclic! You revise and repeat, and you take notes on your own. However, it shouldn't be a simplified table of oversimplified contributions and how those papers seem to relate to each other. 
+
+It is also the addition of commentary, the synthesis of ideas that needs to be present.
+
+
+You start with a research question. What do you want to learn more about? I encourage you to actually write that question down.
+
+Then we do keyword expansion, in order to search, and to narrow/broaden the scope of the paper, as well as provide search term synonyms/antonyms, which makes the literary information somewhat unclear in the future. The ultimate goal is \textit{identification}. That is, what are the search terms necessary to find relevant papers? 
+
+Next, use that key word to actually search. Then, you seek to find the ``citation train'', or a list of papers that contribute into the list of papers in the list. 
+
+In that citation train, you want to find the article you found, go forward in time, and then find what cited it? We then want you to go backward in time to find the \textit{seminal paper}, or the paper that inspired this inquiry.
+
+\begin{rem}
+Citation train is a bit of a misnomer. It's more of a food web than a food chain.
+\end{rem}
+
+Both the RIT website and Google Scholar work well for such searching. You can view citation path. This is very useful. 
+
+\begin{rem}
+Creating a citation manager account is so valuable! One example of such a citation manager is Zotero, Mendeley, EndNote. RIT library has a webpage dedicated to this. LaTeX uses bibTex for all of this. I enjoy using ancient technology, so I also use LaTeX. Add sources as you go. 
+\end{rem}
+
+Then, you review your findings. To do so, you create a bullet list of main points. 
+\begin{rem}
+However, DO NOT BE DISTRACTED BY INTERESTING CITATIONS. YOU ARE NOT A RABBIT. DON'T GO DOWN RABBITHOLES. 
+\end{rem}
+This should be a quick process - one hour per paper. Then, you organize your papers. This is generally a personal path. The best way to categorize papers is the best way that works best for you! Adding keywords makes your life easier. Don't tag everything as miscellaneous, though. That's quite cringe. 
+
+Then, you should refine the search term to be more specific on what you are looking for. Remember how I said thi process is iterative? That also means you iterate/refine your search terms. I would also suggest to set up google scholar alerts to continue searches as time goes on. 
+
+You then outline/synthesize all of these sources, and find how these sources necessarily relate to each other, including finding the consensus and disagreements in a topic. This means that you also have a lot of the writing already done in the long run. 
+
+Now, Prof shows Overleaf, and .bibTex. Love it. 
+
+\subsection{Generative AI}
+GEN AI is the technology behind tools like ChatGPT, Gemini, claude.ai, and various others. 
+For LLMs, words in a text are represented as vectors so that words with similar meaning are vectors close to each other. These are then input into an ANN engineered and trained for pattern recognition in input text, with the pattern generating text mimicing text in natural language, following the input text. Essentially, they are ANNs trained to mimic human conversation. 
+
+We engineer these neural networks so that they can learn by recognizing patterns in text. This can lead to \textit{hallucinations}. 
+
+His opinion on how this works: this landscape feels like the Internet Search Engine Boom. 
+
+Here are some you should look at:
+
+elicit.org does GEN AI specialized for literature review. However, it cannot search behind paywalls! They are generally trying to search behind paywalls. 
+
+There is also researchrabbit.ai. It seems to be an AI assisted tool to add papers, explore similar papers, and various other information systems. 
+
+Claude.ai is also a group he recommends. You also need peripheral skills, figure interpreters, etc. Also, consider looking at Illuminate. The key point is: they are all \textit{new}. 
+\section{17-SEP-24}
+\subsection{Generative AI, Continued}
+We continue a quick debrief on AI. Use them with extreme caution. We are young. We can't catch nuisances in previous answers by agents. Generally, avoid the path of least effort, and don't let use of tools impede learning. The only way to learn is through hard work. It's still good to experiment, but run those conversations with your advisor. 
+
+Now, he talks about the paper: \textit{The AI Scientist}. There have been other items, like OpenAI $o1$. There's another one, called SciAgents. I'm tired of AI. The prof sees GenAI more like a personal assistant, which we already have in writing and coding. He sees the next step to be an interlocutor, or an AI collaborator to generate technical, practical ideas. This would be called a ``cognitor'' according to ChatGPT which is hilarious. 
+
+The next $20-30$ minutes shows a conversation between the professor and Claude regarding contributions. Note that AI systems are still quite mid-tier at working with figures. 
+
+\section{19-SEP-24}
+\subsection{Presentation Skills}
+Watch Dr. Simone Silvestri's video. It's pretty good. 
+\subsection{Technical Writing}
+\begin{defn}
+    Technical writing is a form of communiation that follows a particular structure and conventions, as set by each research community, with the ultimate goal of informing research results.
+\end{defn}
+This means that it is \textbf{not} a novel or creative writing, meaning that:
+\begin{enumerate}
+    \item There are no surprises
+    \item No build up to a conclusion
+\end{enumerate}
+In fact, you \textit{start} with the reveal of the conclusion, and then prove how you did so. 
+
+One way to do so is by starting with an idea on the message of the paper, such as:
+\begin{itemize}
+    \item What would a journal want to see?
+    \item Thinking of a title of such a paper can help. It may not end up being the final title, but thinking in this way can help make the main message concrete. 
+\end{itemize}
+Therefore, all content of the paper should be in support of that main message of the paper, and anything not in support should be removed. If your introduction is as long as the main body, we have problems! We don't want flowy, grandiose writing. Succinct. Low-words. That's it. 
+This is just TCO review. 
+
+Anatomy wise, it should have a title, abstract, introduction, main body, conclusion, and bibliography. But this is by convention. Depending on your research area, this will/can change. 
+
+\subsection{Title}
+Make it clear. Make it concise. Show the novel contribution as well. 
+No formulas. 
+\section{Abstract}
+Should give main contributions, paper results, that facilitates an informed decision of the interested reader. Should be short $250$ words. Write in passive voice. Do not included background info relevant unless very needed. 
+
+\section{Introduction}
+We need motivation, research problem, contributions, and results. We also include some background. This is also where previous literature is discussed. 
+\subsection{Main Body}
+This is divided over multiple sections covered \textit{in detail}, with a Problem setup, research question statement, methods, analysis, solutions, methodology, and justify decisions and assumptions. Then, explain the methodology to collect the results, as well as reproducibility of such results, and then validate claimed contributions. Provide some insights to the decisions and results in the end. 
+\subsection{Conclusion}
+This is not necessarily present in all disciplines, and summarizes contributions, and succinctly discusses results, closes the loop, and is memoraable (somewhat).
+\subsection{Bibliography}
+It's a bibliography. Should be up-to-date, with recent works, and be relevant to discussed research. Self-citation is somewhat unethical. But, all papers in the bibliography should be referred somewhere in the text and what is said of the paper to be correct. Do not play hearsay. 
+\subsection{Paragraphs}
+A paragraph should be about a single topic. At the start have a topic sentence, and then following that, develop the topic and then state a consequence about this topic. 
+\subsection{Flow of text}
+Thoughts should be linear, with cause and effect chain reasoning. 
+\subsection{Proofreading}
+Proofreading is \textbf{hard}. But it is incredibly necessary, and you have to make a conscious and sustained effort of reading, requiring an intense, focused, attention. As you proofread, check that your reading is not speeding up, and that you are fully focused on your role of ``external reader''. Place yourself in the shoes of an ``external reader'', and give yourself ample time.
+Avoid tautologies, and write straight to the point. 
+
+You can also be concise, by not overusing circumlocutions, which are common figures of speech that can be made more succinct. Visualize. 
+
+\section{24-SEP-2024}
+\subsection{Visualization}
+Pictures are worth a thousand words. Use diagrams, pictures whenever needed, to validate the main contribution of the paper. We prefer graphs to tables (but the professor generally prefers tables to bar charts), keep in mind significant figures. All figures that are in the paper should be referenced in the text.  
+
+We generally like color, but assume printing in gray tones. First of all, color-printers are not prevalent everywhere, and Also, red-green colorblindness! Make sure your work is distinguishable. 
+
+Professor, interestingly, generally doesn't like plot titles. 
+\subsection{Equations and Grammar}
+There are two ways to include equations and formulas in paper. There is \textit{inline mode}, which is just equations in text. On the other hand, there is \textit{display-style mode}, which is by itself. You generally ue display-style mode for presentation clarity and labeling equations with numbers. Grammatically, there is no difference between display style and inline modes, so follow grammar rules. 
+
+\subsection{General things to remember}
+Don't start sentences with acronyms, and don't start sentences with math. Be succinct. Write simple sentences. Use active voice, except in abstract. Use ``we''. and know your abbreviations in Latin and use them correctly. 
+
+\subsection{Capitalization}
+It is easy to do, but no one does it right. Capitalize the first word in a sentence, capitalize names and proper nouns. 
+\subsection{Hyphens}
+Use hyphens to join two words that act together as a single adjective before a noun (aka compound modifiers), or to resolve an odd combination of letters. Use a hyphen with prefixes ``ex-'', ``self-'', `all-', between a prefix and a capitalized worlds. 
+
+\subsection{Words people do wrong}
+its versus it's. effect vs affect (except when you effect change), there, their, and they're. principle and principal. accept and except. us and as. 
+
+
+\subsection{Using GenAI}
+He starts with his own writing, asks claude.ai to polish his writing, critically evaluate the answer from the genAI tool and then use it to provide feedback, continually iterate. 
+
+\subsection{Discussion with Kevin}
+Applications of AI. LLMs, generative AI in healthcare. National Academy of Engineering.
+
+\section{26-Sep-24}
+\subsection{Quad Chart}
+We have a quad chart assignment to explain how to do critical analysis. Due OCT-3, and can help you practice for your qualifying exam. 
+
+You are forced in your quad chart to go to the most important information in the document, as well as the most important result.
+\subsection{Ethics}
+About a week from today, we will start the ethics section of our infoirmation. The format of the class will be different. There needs to be more participation. Dr. Risa Robinson will be leading the ethics information. 
+Complete CITI RCR ASAP. (It involves responsible conduct of research), and other similar modules. By next Thursday, finish the first two modules. There is a pdf called rcr citiprogram instructions 3 (or something like that). Use your RIT email for accessing the citi module.
+\subsection{Qualifying Exam}
+The qualifying exam involves the critical analysis of a research paper. It is offered twice a year - most students take it after the end of the spring semester, The period ends just after the end of the spring semester, while the other is due by the end of early January. 
+
+We are given, usually, a journal paper. In the ECE paper that sometimes you need a conference paper. That has happened a couple of times. 
+
+You get a 24-hour clock to decide among the three what you want to work on. That decision is yours. 
+There are hard deadlines. No wavering. 
+
+The first thing to analyze is \textit{novel contributions}. What is the new knowledge that is being communicated?
+
+Then, the next thing I evaluate is significance. That is, what is the prior work, motivation, and future impact? 
+
+Then, I evaluate justification and validation. That is, the methods and results. What is the analytical work? What are the experiments? 
+
+I also evaluate improvements? Is it incremental? Is it novel? Are there alternative approaches? What are the extensions that can be analyzed to this?
+
+Examination committees are fine for a little more than $45$ minutes. But treat it like stoppage time in soccer. You should have won at $45$. They should be associated with your research. 
+
+\subsection{Written Evaluation Report}
+The packet gives the examination examplar, for what is used to help answer the program. Report is a maximum of $15$ pages long. One-column. 
+
+Reproduce your own results!!!!! Figures should be analyzed, reproduced. Do they make sense? Are there unanswered questions?
+
+Similarly, reproduce mathematical proofs, understand all of the mathematics, not just superficiality. 
+
+Next class, ECE meet in GLE-2159. MIE meet in HLC-2575. CMECHE in INS 4th floor conference room. 
+
+\section{01-OCT-24}
+\subsection{Critical analysis of a research paper - preparation for the QE}
+As PhD students, you are in the mode of \textit{evaluating} one another, to make sure the research is sound, ethical, good. Within labs, we look for critical feedback, which makes life a lot easier.
+
+What is the one thing that the paper contributes? 
+
+How novel is it? Is it good engineering?
+
+What are some improvements? What are alternative approaches? What are the extensions of this work? This is the hardest to do, and it is generally hard to extend work already present within a laboratory. 
+
+\subsection{Anatomy of your qualifying exam report}
+From ``A guide to the qualifying exam". You want to state \begin{enumerate}
+    \item What is the problem?
+    \item What do we know?
+    \item What \textbf{don't} we know?
+\end{enumerate}
+We then propose extensions? Here's what I thought was missing. Relative to your intro it is far smaller. 
+Critical analysis is a question of what is \textit{how well}. Be incredibly specific, and justify with evidence, not speculation. This also allows you to address rigour and reproducibility, as well as novelty and field importance. Ultimately, what you are trying to do is learn how to reproduce some results. 
+
+You don't necessarily want to pick the perfect paper. You need stuff to talk about. 
+
+We are now evaluating Kareem Tawil's report. [on the board].
+
+\subsection{Background of Kareem Tawil Paper}
+Background!
+
+Broadest research topic: impact, spreading of liquid metal droplets. Use case: highly precise manufacturing, e.g. electronics.
+
+What is known about liquid spreading at the moment?
+\textbf{Drop-on-demand liquid metal jetting}
+\begin{itemize}
+    \item Volatility of storage
+    \item Implement procedures for function, makes material expensive
+    \item Study of process of DOD-LMJ is not new, progression has been slow. 
+    \item Important parameters: droplet temperature, substrate temperature, what material properties?
+    \item Numerical simulation finds:\[\text{substrate remelting} \approx f(\text{(droplet temp, substrate temp, droplet velocity, thermosphysical properties)})\]. 
+\end{itemize}
+
+Previous was done on Sn remelting, and previous authors argued this would also generalize to Cu. Kareem argues that this assertion is faulty. Sn is post-transition metal, Cu is transition metal, so chemically very different, and would have different melting characteristics. 
+\section{03-OCT-24}
+\subsection{Why does RIT care about legal responsibilities of ethics?}
+Liability, mainly. Lawyers exist to protect RIT, not your advisor. Ryne Raffaelle is responsible for compliance for RIT. RIT has a RCR plan for required trainings and responsible conduct and research plans. 
+
+Additional reading provided is helpful. Line-drawing is discussed. 
+
+Do we still have research misconduct? If so, why?
+
+\subsection{Impediments to Responsible Action}
+\begin{itemize}
+    \item Easy to take shortcuts
+    \item Interest in self-gain
+    \item People under pressure to deliver
+    \item Do not understand that others are doing 
+    \item Bribery
+    \item Conflict of interest
+    \item Self-deception
+\end{itemize}
+Some other impediments are microscopic vision and uncritical acceptance of authority. 
+
+Professor also mentions ``slippery slope''. That is, where is the line?
+
+\section{08-OCT-2024}
+\subsection{Line drawing technique}
+
+First conversation is on the line between citation and plagiarism. She compares it to day and night, which has bounds that may be arbitrary, but there is a difference. 
+
+What governs our behavior? What are necessarily the influences between morals and ethics that we grew up with, and are they different within each setting?
+
+There are three major categories:
+\begin{itemize}
+    \item Common morality, which are the set of moral ideals shared by most members of a culture or society.
+    \item Personal morality, which are the set of moral ideals established on an individual basis, usually acquired in early home or religious trainin, modified by later reflection
+    \item Professional morality, or the set of moral ideals and standards established by a group of professional as related to the practice of their profession.
+\end{itemize}
+Now some case scenarios. I didn't expect to handle the trolley problem in class.
+\section{10-OCT-2024}
+\subsection{Plagiarism}
+Plagiarism is the appropriation of another person's ideas, processes, results, and words without citing content.
+
+It is also misappropriation of an idea, text, procedure, image, data, or other content. It is also misappropriation of previously published or nt and then taking the material from any source including an unpublished document, online source, or verbal communication.
+
+Dr. Robinson explains well even where she does wrong here, by copying something in a slide. 
+
+At what point is the phrase written by you?
+
+The best way to not plagiarise, is to UNDERSTAND what you are writing, if not, leave it behind. Another thing, if you copy paste, put quotes right away or \textit{use colour} so that you don't forget. 
+
+Now we do a case study. 
+
+
+Plagiarism is an euphemism for stealing. 
+
+Case study: References does not just save. You need to use the information and synthesize it for the future. 
+
+Self-plagiarism is dependent on conference. It is difficult to analyse, and check with the view of the community. 
+
+Roles for Credit14 Contributor:
+
+\begin{itemize}
+    \item Conceptualization
+    \item Funding Acquisition
+    \item Project Administration
+    \item Data Curation
+    \item Investigation
+    \item Formal Analysis
+    \item Methodology
+\end{itemize}
+
+\end{document}

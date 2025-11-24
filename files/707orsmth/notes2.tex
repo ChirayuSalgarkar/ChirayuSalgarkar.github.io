@@ -1,0 +1,572 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb, wasysym, verbatim, color, graphics, geometry, systeme}
+\usepackage[]{hyperref}
+
+\geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}  
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Cdot}{\boldsymbol{\cdot}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{conv}{Convention}
+\newtheorem{rem}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+
+\title{Running Lecture Outline: 707}
+\author{[Chirayu Salgarkar]}
+\date{Fall 2024}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\vspace{.25in}
+\section{26-AUG-24}
+\subsection{Order, Linear, and PDE vs ODE}
+\section{28-AUG-24}
+
+\subsection{Miscellaneous}
+I'm doing this to not fall asleep in class. Prof is Phillip Hutton. There are several ways to take the quiz. Quiz, office hours, etc. you can also take it in class. All quiz get one page cheat sheet. 
+
+\subsection{More miscellany}
+Prof is doing some incredible projector gymnastics. He should record balance beam events.
+\subsection{Verifying solutions using initial conditions}
+To verify potential solutions, plug into the original diffeq. Use algebra (ha!) to make LHS = RHS. On the other hand, we can simply plug in various numbers for $x$ and check for equivalency. Obviously, check for domains. 
+\begin{example}
+   \[ y' = xy^{\frac{1}{2}}\]
+Potential Solution: \[y = \frac{1}{16}x^4\]
+Then, 
+    \[\frac{dy}{dx} = \frac{1}{4}x^3 \]
+Then, plug into the original diffeq. We have:
+    \[ \frac{1}{4}x^3 = x \cdot (\frac{1}{16}x^4)^{\frac{1}{2}}\]
+or that
+    \[\frac{1}{4}x^3 = \frac{1}{4}x^3 \]
+as desired. 
+\end{example}
+
+\begin{example}
+    \[ (y-x)\frac{dy}{dx} = y-x+8\]
+     Potential Solution 1: \[y = 2x + 4\sqrt{x+2}\]
+    Potential Solution 2: \[y = x + 4\sqrt{x+2}\]
+    Case 1:
+     \[\frac{dy}{dx} = 2 + 2(x+2)^{\frac{-1}{2}} \]
+     Then, plug into the original diffeq. We have:
+     \[ (2x + 4\sqrt{x+2} - x)(2 + 2(x+2)^{\frac{-1}{2}}) = 2x + 4\sqrt{x+2} -x+8\]
+     Simplifying,
+    \[ (x + 4\sqrt{x+2})(2 + 2(x+2)^{\frac{-1}{2}}) = x+8 + 4\sqrt{x+2}\]
+    Consider the case that $x=0$. Then,
+    \[ (4\sqrt{2})(2 + 2(2)^{\frac{-1}{2}}) = 8 + 4\sqrt{2}\]
+    \[8\sqrt{2} + 8 = 8 + 4\sqrt{2} \] 
+    or that 
+    \[8\sqrt{2} = 4\sqrt{2}\] 
+ which is clearly false. 
+
+ Solution 2 works. You plug it in like above, but end with a true statement. 
+ \end{example}
+ \subsection{IVPs}
+ Solving a diffeq yields a \textit{general} solution with unknowns. Using initial values we can then solve for said unknowns. For $n$ unknowns, we need $n$ initial values. 
+
+ Let's do an example!
+ \begin{example}
+    $y' = y$, where $y(0) = 3$.
+    We know our general solution is 
+    \[y = Ce^x\]
+    but what is $C$?
+    clearly, since $y(0) = 3$, and at $x = 0$, $y=c$, $3 = C$. Thus, the equation is really 
+    \[y = 3e^x\]
+ \end{example}
+ \begin{example}
+    $y' + 2xy^2 = 0$, where $y(0)=1$.
+    The general solution to this is $y = \frac{1}{x+C}$. Plugging in at $x=0$, we have $C=-1$. Final solution is $y = \frac{1}{x-1}$.
+ \end{example}
+ \begin{example}
+    $x'' + 16x = 0$, where $x(\frac{\pi}{2})= -2$, $x'(\frac{\pi}{2}) = 1$. The general solution is 
+    \[x = C_1\cos{4t}+C_2\sin{4t}\]
+
+    You plug in twice, you get $C_1 = -2$ and after the second step you get $C_2 = \frac{1}{4}$. Then plug in to general equation. Yay.
+\end{example}
+\section{30-AUG-24}
+\subsection{Integrating Factor}
+This is the most fun McIlwain review. When do we use this?
+\begin{thm}
+    If you can write a differential equation to be of the form $\frac{dy}{dx} + p(x)y = f(x)$, you are eligible to use Integrating Factor.
+\end{thm}
+
+The algorithm for solving goes something like this:
+\[
+\frac{dy}{dx} + p(x)y = f(x)
+\]
+Multiply both sides by:
+\[
+I_f = e^{\int{p(x) \, dx}}
+\]
+You get:
+\[
+e^{\int{p(x) \, dx}} \frac{dy}{dx} + e^{\int{p(x) \, dx}} p(x) y = e^{\int{p(x) \, dx}} f(x)
+\]
+Using reverse chain rule:
+\[
+\frac{d}{dx}[e^{\int{p(x) \, dx}}y]= e^{\int{p(x) \, dx}} f(x)
+\]
+Integrating both sides, we get:
+\[
+    e^{\int{p(x) \, dx}}y = \int{e^{\int{p(x) \, dx}} f(x)}
+\]
+
+This gets us:
+\[y(x) = \frac{\int{e^{\int{p(x) \, dx}} f(x)}}{e^{\int{p(x) \, dx}}}\]
+
+\begin{example}
+    \[\frac{dy}{dx} = 5y\]
+This seems separable, and it is. But if you were to use integrating factor, it goes like this:
+\[
+    \frac{dy}{dx} - 5y = 0
+\]
+Note that this makes $p(t) = -5$
+\[
+y = Ce^{5x}
+\]
+\end{example}
+
+\begin{example}
+    \[\frac{dy}{dx} + y = e^{3x}\]
+
+Note that this makes $p(x) = 1$, $f(x) = e^{3x}$
+\[
+e^{x}\frac{dy}{dx} = e^{3x}e^x = e^{4x}
+\]
+\[
+e^{x}y = \frac{1}{4}e^{4x} + C
+\]
+
+\[
+y = \frac{\frac{1}{4}e^{4x} + C}{e^{x}}
+\]
+or:
+\end{example}
+\section{04-SEP-24}
+We have a quiz lol. Three questions, about 20-25 minutes. 
+\subsection{Separation of Variables}
+\begin{defn}[separable]
+A differential equation is separable if you can put it into the form  $\frac{dy}{dx} = f(x)h(y)$, where $f$ $h$ are functions. 
+\end{defn}
+The steps to solving them are as follows:
+\[ 
+    \frac{dy}{dx} = f(x)h(y)
+\]
+
+\[ 
+    \frac{dy}{h(y)} = f(x)dx
+\]
+\[ 
+    \int{\frac{dy}{h(y)}} = \int{f(x)dx}
+\]
+then, solve. 
+Let's check for separability of some cases:
+\begin{example}
+   \[\frac{dy}{dx} - y = \cos{x}\]
+   \[\frac{dy}{dx} = \cos{x} + y\]
+   This does not satisfy the form specified in the definition, so it is \textit{not separable}.
+\end{example}
+\begin{example}
+    \[\frac{dy}{dx} = x^2y^4e^{5x-3y}\]
+    We can rewrite as:
+    \[\frac{dy}{dx} = (x^2e^{5x})(y^4e^{-3y})\]
+    This is separable, as it satisfies the above form. 
+ \end{example}
+Now, let's solve one: 
+\begin{example}
+    \[(1-x)dy = -ydx \]
+where $y(0) = 5$
+
+Rewriting, we get:
+\[\frac{1}{1-x}dx = \frac{-1}{y}dy \]
+Integrating, we get:
+\[ - \ln{1-x} = - \ln{y} + C\]
+When $y(0) = 5$, we have $0 = - \ln{5} + C$, so $C = \ln{5}$
+So, \[ - \ln{1-x} = - \ln{y} + \ln{5}\]
+and then:
+\[\ln{y} = \ln{1-x} + \ln{5}\] 
+Exponentiating, 
+\[e^{\ln{y}} = e^{\ln{1-x} + \ln{5}} \]
+
+\[y = 5(1-x) \]
+\end{example}
+
+\begin{example}
+    \[\frac{1}{y}\frac{dy}{dx} = 1-x\]
+    where $y(0) = 2$
+The joke is you don't actually need to use separation to do this. But you can. 
+\end{example}
+
+
+\section{06-SEP-24}
+\subsection{Exact Equations}
+Exact equations are a specific form of differential equation. 
+\begin{defn}
+For $f(x,y) = k$, where $k$ is a constant, then $df = \frac{df}{dx}dx + \frac{df}{dy}dy = 0$.
+\end{defn}
+
+Then, let us define $M(x,y) = \frac{df}{dx}$ and $N(x,y) = \frac{df}{dy}$. So, $M(x,y)dx + N(x,y)dy = 0$. 
+Differentiating, we get:
+\[\frac{dm}{dy} = \frac{d^2f}{dxdy} = \frac{dN}{dx}\]
+
+\begin{defn}
+If $M(x,y)dx + N(x,y)dy = 0$ and $\frac{dm}{dy} = \frac{d^2f}{dxdy} = \frac{dN}{dx}$, then $\frac{df}{dx} = M$ and $\frac{df}{dy} = N$.
+\end{defn}
+
+This gives us a general algorithm for solving differential equations of some classes: 
+\begin{enumerate}
+    \item Put the DE into form $M(x,y)dx + N(x,y)dy = 0$
+    \item Then, identify $M(x,y)$ and $N(x,y)$
+    \item Then, test for exactness: that is, $\frac{dM}{dy} = \frac{dN}{dx}$. If true, we have an exact equation. 
+    \item From $\frac{df}{dx} = M$, we have $df = M dx$, which, when integrating, gets $f(x,y) = g(x,y) + h(y)$.
+    \item Similarly, from $\frac{df}{dy} = N$, we have $\frac{df}{dy} = \frac{dg}{dy} + \frac{dh}{dy} = N$, which, when integrating, gets $f(x,y) = g(x,y) + h(y)$. Think of $h(y)$ as a constant term.
+    \item This gets us $h(y) = \int{N - \frac{dg}{dy}}dy$. Then we substitute $h(y)$ into $f(x,y)$ and set $f(x,y) = C$.
+\end{enumerate}
+
+I think an example may help more.
+\begin{example}
+    $-2xy dx = (x^2-1)dy$. Set up involves rewriting into the form, which gives us:
+    \[2xy dx + (x^2-1)dy = 0\] where $M = 2xy$, $N = x^2 -1$. Then, we check if the equation is exact, which requires us to take the partials of both sides, that is $\frac{dM}{dy}$ and $\frac{dN}{dx}$. Since they are both $2x$, we're good to continue. 
+    Now, $\frac{df}{dx} = 2xy$, and then $f(x,y) = \int{2xy}dx$. We get $f(x,y) = x^2y + h(y)$. We now do the same thing for $\frac{df}{dy} = N$. That is, $\frac{df}{dy} = N$. That is, \[x^2 + \frac{dh}{dy} = x^2 - 1\], and so $\frac{dh}{dy} = -1$. Then, $\int{dh} = -\int{dy}$, and so $h(y) = -y + C$. Setting $f(x,y) = C$, we have $x^2y - y = C$. 
+\end{example}
+Another example. 
+\begin{example}
+    $(x^2 + 2xy + y^2)dx + (2xy+x^2-1)dy = 0$
+    There's a cheeky sum of squares method for this. 
+    $M = (x^2 + 2xy + y^2)$ and $N = (2xy+x^2-1)$. Doing the test, we get $\frac{dM}{dy} = 2x + 2y = \frac{dN}{dx}$. This is true, by the wonders of the commutative property. Then, $\frac{df}{dx} = M = x^2 + 2xy + y^2$. Integrating, we get some silly little equation:
+    \[f(x,y) = \frac{1}{3}x^3 + x^2y + xy^2 + h(y) \]. Then, if $\frac{df}{dy} = N$, we can solve for $h(y)$, as then $\frac{d}{dy}{f(x,y)} = x^2y + 2xy + - 1$, and so $\frac{dh}{dy} = -1$, and then $h(y) = -y + C$. And then we set $f(x,y) = C$. 
+\end{example}
+Another one. Cue DJ Khaled. 
+\begin{example}
+    $(x^3 + \cos{y} + \frac{1}{x})dy = (\frac{y}{x^2}-3x^2y)dx$. Initially, $N$ is on the left, $M$ is on the right.
+    More accurately, 
+    \[
+        (\frac{y}{x^2}-3x^2y)dx - (x^3 + \cos{y} + \frac{1}{x})dy = 0
+    \]
+    $\frac{dM}{dy} = \frac{1}{x^2} - 3x^2$. This is the same as $\frac{dN}{dx}$. Practice these differentiations, kids. Therefore, this is an exact equation. 
+
+    $\frac{df}{dx} = M \implies f(x,y) = \frac{-y}{x} - x^3y + h(y)$. Similarly, $\frac{df}{dy} = N$ and $\frac{df}{dy} = \frac{-1}{x} - x^3 + \frac{dh}{dy} = - (x^3 + \cos{y} + \frac{1}{x})$. Then, solve for $h(y)$ and continue, and you're done. 
+
+\end{example}
+\section{09-SEP-24}
+\subsection{Separation of Variables, but more}
+\begin{example}
+    Find the general solution to the differential equation:
+    \[e^{-2y}dy = e^{3x}dx \]
+    \[-\frac{1}{2}e^{-2y} = \frac{1}{3}e^{3x} + C \]
+    Multiplying by $-2$, we have:
+    \[e^{-2y} = \frac{-2}{3}e^{3x} + C \]
+    Taking natural logs:
+    \[\ln{e^{-2y}} = \ln{\frac{-2}{3}e^{3x} + C} \]
+    \[ -2y = \ln{\frac{-2}{3}e^{3x} + C} \]
+\end{example}
+\subsection{Exact equations, but more}
+\begin{example}
+    Find the general solution of:
+    \[(\sin{y} - y\sin{x})dx = -(\cos{x} + x\cos{y})dx \]
+First, get it into the form:
+    \[(\sin{y} - y\sin{x})dx + (\cos{x} + x\cos{y})dy = 0 \]
+    Note that $M_y = \cos{y}-\sin{x}$ and $N_x = -\sin{x} + \cos{y}$. It is exact. 
+\[ \int{M dx} = x\sin{y} +\cos{x}y \]
+Therefore, $\psi(x,y) = x\sin{y} +\cos{x}y + h(y)$. Then, we take the partial again:
+\[{\psi(x,y)}_y = x\cos{y} + \cos{x} + h'(y) \]
+Note that $N = \cos{x} + x\cos{y}$ and so $h'(y) = 0$
+We get: $x\sin{y} +\cos{x}y = C$. 
+\end{example}
+
+\section{11-SEP-24}
+\subsection{Bernoulli Equations}
+So what is Bernoulli's equation?
+\begin{defn}
+Bernoulli equations are of the form:
+\[
+\frac{dy}{dx} + p(x)y = f(x)y^n
+\]
+\end{defn}
+Notice that this is nonlinear. So we have to make it linear, to make our life easier.
+
+Here's the steps:
+\begin{enumerate}
+    \item Put the differential equation in the form $\frac{dy}{dx} + p(x)y = f(x)y^n$, and then identify $n$.
+    \item Then, substitute $y = u^\frac{1}{1-n}$, which implies that $\frac{dy}{dx}=\frac{1}{1-n}u^{\frac{1}{1-n}-1}\frac{du}{dx}$.
+    \item This will be an ODE. We then solve for $u$ using either separation of variables, integrating factor, or exact equations. It's usually integrating factor. 
+    \item Then, once we solve for $u$, substitute back $u = y^{1-n}$, and then solve for $y(x)$. 
+\end{enumerate}
+\begin{example}
+    Let's solve:
+    \[ 
+    x\frac{dy}{dx} + y = x^2y^2
+    \]
+
+    The first step is easy. To put it in the form $\frac{dy}{dx} + p(x)y = f(x)y^n$, we divide by $x$, which gives us:
+    \[
+    \frac{dy}{dx} + \frac{1}{x}y = xy^2
+    \]
+    Note that this makes $n=2$. Then, we substitute for $u$:
+    \[ 
+    y = u^{-1} \implies \frac{dy}{dx} = -u^{-2}\frac{du}{dx}
+    \]
+    Continuing our evaluation, we get:
+    \[
+    -u^{-2}\frac{du}{dx} + \frac{1}{x}\frac{1}{u} = x(u^{-1})^2
+    \]
+    which gets us
+    \[\frac{du}{dx} - \frac{1}{x}u = -x \]
+    This is easy to solve using integrating factor. Note that $p(x) = \frac{-1}{x}$. We end up with $u(x) = -x^2 - Cx$. (Note that I would always write $+Cx$ here, but I'm following the professor's directive).
+    Plugging it back in, we have $u = y^{-1}$. We end up with $y = ({-x^2-Cx})^{-1}$.
+\end{example}
+Another one.
+\begin{example}
+    Let's solve:
+    \[ 
+    x^2\frac{dy}{dx} - 2xy = 3y^4
+    \]
+
+    We divide by $x^2$ now, which gives us:
+    \[
+    \frac{dy}{dx} - \frac{2}{x}y = \frac{3}{x^2}y^4
+    \]
+    So, $n=4$. Then, we substitute for $u$:
+    \[ 
+    y = u^{-\frac{1}{3}} \implies \frac{dy}{dx} = \frac{-1}{3}u^{-\frac{4}{3}}\frac{du}{dx}
+    \]
+    This gives us
+    \[
+    \frac{-1}{3}u^{-\frac{4}{3}}\frac{du}{dx} - \frac{2}{x}u^{-\frac{1}{3}} = \frac{3}{x^2}u^\frac{-4}{3}
+    \]
+    which gets us
+    \[\frac{du}{dx} + \frac{6}{x}u = -\frac{9}{x^2} \]
+    Integrating factor gets us $u(x) = C/x^6 - \frac{9}{5x}$. Since $u(x) = y^{-3}$, $y^{-3} = C/x^6 - \frac{9}{5x}$, which gets us:
+    \[ 
+    y = (C/x^6 - \frac{9}{5x})^3
+    \]
+\end{example}
+
+\begin{example}
+    Let's solve:
+    \[ 
+    x^2\frac{dy}{dx} - 2xy = 3y^4
+    \]
+
+    We divide by $x^2$ now, which gives us:
+    \[
+    \frac{dy}{dx} - \frac{2}{x}y = \frac{3}{x^2}y^4
+    \]
+    So, $n=4$. Then, we substitute for $u$:
+    \[ 
+    y = u^{-\frac{1}{3}} \implies \frac{dy}{dx} = \frac{-1}{3}u^{-\frac{4}{3}}\frac{du}{dx}
+    \]
+    This gives us
+    \[
+    \frac{-1}{3}u^{-\frac{4}{3}}\frac{du}{dx} - \frac{2}{x}u^{-\frac{1}{3}} = \frac{3}{x^2}u^\frac{-4}{3}
+    \]
+    which gets us
+    \[\frac{du}{dx} + \frac{6}{x}u = -\frac{9}{x^2} \]
+    Integrating factor gets us $u(x) = C/x^6 - \frac{9}{5x}$. Since $u(x) = y^{-3}$, $y^{-3} = C/x^6 - \frac{9}{5x}$, which gets us:
+    \[ 
+    y = (C/x^6 - \frac{9}{5x})^{\frac{-1}{3}}
+    \]
+\end{example}
+Another one.
+
+\begin{example}
+    Let's solve:
+    \[ 
+    x\frac{dy}{dx} + y - y^{-2} = 0
+    \]
+
+    Step 1:
+    \[
+    \frac{dy}{dx} + \frac{1}{x}y = \frac{1}{x}y^{-2}
+    \]
+    So, $n=-2$. Substitute for $u$:
+    \[ 
+    y = u^{\frac{1}{3}} \implies \frac{dy}{dx} = \frac{1}{3}u^{-\frac{2}{3}}\frac{du}{dx}
+    \]
+    Then, 
+    \[
+    \frac{1}{3}u^{-\frac{-2}{3}}\frac{du}{dx} + \frac{1}{x}u^{\frac{1}{3}} = \frac{1}{x}u^{\frac{-2}{3}}
+    \]
+    which gets us
+    \[\frac{du}{dx} + \frac{3}{x}u = \frac{3}{x} \]
+    Integrating factor gets us $u(x) = \frac{C}{x^3} + 1$. So $y^{3} = \frac{C}{x^3} + 1$, which gets us:
+    \[ 
+    y = (\frac{C}{x^3} + 1)^\frac{1}{3}
+    \]
+\end{example}
+
+\section{13-SEP-24}
+\subsection{Second order ODEs with constant coefficients}
+The form of this equation is:
+\[
+a \frac{dy^2}{dx^2} + b \frac{dy}{dx} + cy = 0
+\] 
+where $a, b, c$ are constants.
+
+Here are the general steps:
+\begin{enumerate}
+    \item Put the DE into the form $ay'' + by' + c = 0$, and then identify $a, b, c$
+    \item Then, find the roots to the characteristic equation $am^2 + bm + c = 0$, using the quadratic equation. 
+    \item Your solution depends on your solutions to this characteristic equation $m_1, m_2$.
+\end{enumerate}
+\begin{thm} \label{real distinct}
+If $m_1, m_2 \in \mathbb{R}$ and $m_1 \neq m_2$, then the solution becomes 
+\[ 
+y = C_1e^{m_1x}+C_2e^{m_2x}
+\]
+\end{thm}
+
+\begin{thm} \label{real repeated}
+If $m_1, m_2 \in \mathbb{R}$ and $m_1 = m_2$, then the solution becomes 
+    \[ 
+    y = C_1e^{m_1x}+C_2xe^{m_1x}
+    \]
+\end{thm}
+
+\begin{thm} \label{complex}
+    If $m_1, m_2 = \alpha \pm i\beta$, then the solution becomes 
+        \[ 
+        y = e^{\alpha x}(C_1\cos{\beta x} + C_2\sin{\beta x})
+        \]
+    \end{thm}
+
+Here's an example:
+\begin{example}
+    \[ 2y'' + 12y = -10y' = 0\] 
+    This is the same as 
+    \[ y'' + 5y' + 6 = 0\] 
+    Solving the quadratic we get $m_1 = 2$ and $m_2 = 3$. 
+    By Theorem \ref{real distinct} we have $C_1 e^{-2x} + C^2e^{-3x}$
+\end{example}  
+
+\begin{example}
+\[y'' - 10 y'+ 25 y = 0\]
+Some work gets us $m_1 = m_2 = 5$. Using Theorem \ref{real repeated}, we get $C_1e^{5x} + C_2xe^{5x}$
+\end{example}
+
+\begin{example}
+\[4y'' + 4y'+ 17y = 0\]
+where $y(0) = -1$ and $y'(0) = 2$
+Using the silly quadratic formula, we get $m_{1,2} = \frac{-1}{2} \pm j2$
+where $\alpha = \frac{-1}{2}$ and $\beta = 2$. Using Theorem \ref{complex}, our general solution is 
+\[ 
+y = e^\frac{-1}{2}(C_1\cos{2 x} + C_2\sin{2 x})
+\]
+Then, we solve for initial conditions. Using product rule, we get:
+\[ 
+\frac{dy}{dx} = \frac{-1}{2}e^{\frac{-1}{2}x}(C_1\cos{2x}+C_2\sin{2x})
+\]
+We can then apply initial conditions. Using $y(0) = -1$ on the general solution, we have $-1 = C_1$. Plugging the second initial condition and $-1 = C_1$ into the equation for $\frac{dy}{dx}$ we get that $C_2 = \frac{3}{4}$. 
+
+We end up with:
+\[
+    y = e^\frac{-1}{2}(-1\cos{2 x} + \frac{3}{4}\sin{2 x})
+\]
+\end{example}
+
+\begin{example}
+    \[ 
+    y'' - y' - 6y = 0
+    \] 
+    where $y(0) = 4$ $y'(0) = -3$
+Using math, $m_1 = 3$, $m_2 = -2$. Using \ref{real distinct}, we get the general solution is:
+\[ 
+    y = C_1e^{3x}+C_2e^{-2x}
+\]
+
+We do some similar malarkey to find $C_1$ and $C_2$. We end up with a systems of equations: 
+
+\begin{equation*}
+    \systeme{
+    C_1 + C_2 = 4,
+    3C_1 - 2C_2 = -3
+    }
+  \end{equation*}
+  We end up with $C_1 = 1$, $C_2 = 3$. I end up with:
+\[ 
+    y = e^{3x}-3e^{-2x}
+\]
+
+\end{example}
+
+\section{16-SEP-2024}
+\subsection{Examples, again}
+Here's a Bernoulli's equation example:
+\begin{example}
+    Give the general solution to $y' = e^xy^2 + y$.
+    The form of Bernoulli is 
+    \[ 
+    y' - y = e^xy^2
+    \]
+    So, $n=2$. We then substitute, $y = u^{-1}$, and so $\frac{dy}{dx} = -u^{-2} \frac{du}{dx}$. Then, 
+    \[
+        u^{-2} \frac{du}{dx} - u^{-1} = e^xu^{-2}
+    \]
+    This is solvable using integrating factor. We get $u = \frac{-1}{2}e^x + Ce^{-x}$. Since $y = u^{-1}$, $u = y^{-1}$. So, $y = (\frac{-1}{2}e^x + Ce^{-x})^-1$.
+\end{example}
+Let's do a second order ODE example.
+\begin{example}
+    \[
+    y'' = 36y
+    \]
+    We get that $m^2 - 36 = 0$, or that $m = \pm 6$. This gets us $C_1e^{-6x} + C_2e^{6x}$. 
+\end{example}
+Another Bernoulli's. 
+\begin{example}
+    \[3(1-x^2)y' = 2xy(y^3-1) \]
+    In standard Bernoulli Form, we have:
+    \[
+    y' + \frac{2x}{3(1-x^2)}y = \frac{2x}{3(1-x^2)}y^4
+    \]
+    $n = 4$, and so $ y = u^\frac{-1}{3} $. $\frac{dy}{dx} = -\frac{1}{3}u^\frac{-4}{3}\frac{du}{dx}$. Then, we rewrite and some small mental gymnastics.
+    We have:
+    \[ 
+    \frac{du}{dx} - \frac{2x}{1-x^2}u = \frac{-2x}{1-x^2}
+    \]
+
+    Using integrating factor again, we get:
+    \[ 
+    u = 1 + C(1-x^2)
+    \]
+    So, $y^{-3} = 1 + C(1-x^2)$
+\end{example}
+\section{18-SEP-24}
+\subsection{Non-homogenous second order ODE with constant coefficients}
+Recall the form of a homogenous equation:
+\begin{defn}
+    A homogeneous equation has the form $ay'' + by' + cy = 0$.
+\end{defn}
+
+On the other hand, a non-homogeneous equation has the form $ay'' + by' + cy = g(x)$. This has the solution as follows:
+\[  
+y = y_h - y_p
+\]
+where $y_h$ is the solution to the homogeneous equation and $y_p$ is the solution to the non-homogeneous equation (I think it's called the \textit{particular solution}). 
+
+Here's some basic steps: 
+\begin{enumerate}
+    \item Find solution to $y_h$.
+    \item Based on $g(x)$, take an educated guess using Table 3.4.1 (page 131).
+    \item Plug in the solution from Table 3.4.1. Solve for A, B, C, etc. 
+    \item $y = y_h + y_p$
+\end{enumerate}
+
+Here's some more stuff. 
+\begin{example}
+    $y'' + 3y' + 2y = 6$. Roots of this is $-1$ and $-2$. That means that: 
+    \[ y_h = C_1 e^{-x} + C_2e^{-2x} \]
+Let's try $y_p = k$. Substituting, we have: $y_p = a$, $y'_p = 0$ and $y''_p = 0$, and so $2A = 6 \implies A = 3$. So $y_p = 3$ We end with $y = C_1 e^{-x} + C_2e^{-2x} + 3$. 
+\end{example}
+\end{document}

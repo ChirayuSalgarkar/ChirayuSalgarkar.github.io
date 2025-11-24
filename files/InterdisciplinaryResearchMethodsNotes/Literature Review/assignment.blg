@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: assignment.aux
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apacite.bst
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: ref.bib
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+You've used 6 entries,
+            6951 wiz_defined-function locations,
+            1304 strings with 11785 characters,
+and the built_in function-call counts, 12669 in all, are:
+= -- 1547
+> -- 125
+< -- 597
++ -- 649
+- -- 12
+* -- 820
+:= -- 2287
+add.period$ -- 26
+call.type$ -- 6
+change.case$ -- 103
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 370
+empty$ -- 484
+format.name$ -- 228
+if$ -- 2371
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 0
+newline$ -- 160
+num.names$ -- 48
+pop$ -- 206
+preamble$ -- 1
+purify$ -- 24
+quote$ -- 0
+skip$ -- 820
+stack$ -- 0
+substring$ -- 702
+swap$ -- 207
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 544
+warning$ -- 0
+while$ -- 77
+width$ -- 0
+write$ -- 212

@@ -1,0 +1,47 @@
+\contentsline {section}{\numberline {1}26-AUG-24}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Order, Linear, and PDE vs ODE}{1}{}%
+\contentsline {section}{\numberline {2}28-AUG-24}{1}{}%
+\contentsline {subsection}{\numberline {2.1}Motvation}{1}{}%
+\contentsline {subsection}{\numberline {2.2}MDP}{2}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}What is a state?}{2}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Action}{2}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Cost}{2}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}Transition}{2}{}%
+\contentsline {subsection}{\numberline {2.3}MDP, continued}{2}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Horizon}{2}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Discount Factor}{2}{}%
+\contentsline {section}{\numberline {3}06-SEP-2024}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Solving Markov Decision processes}{2}{}%
+\contentsline {section}{\numberline {4}Policy-Guided diffusion}{3}{}%
+\contentsline {subsection}{\numberline {4.1}SAFE POLICY GUIDED DIFFUSION}{3}{}%
+\contentsline {section}{\numberline {5}09-SEP-24}{3}{}%
+\contentsline {section}{\numberline {6}11-SEP-24}{3}{}%
+\contentsline {section}{\numberline {7}23-SEP-24}{3}{}%
+\contentsline {section}{\numberline {8}Policy Gradient}{3}{}%
+\contentsline {subsection}{\numberline {8.1}Policy Objective functions}{4}{}%
+\contentsline {subsection}{\numberline {8.2}Finite Difference Policy Gradient}{4}{}%
+\contentsline {subsection}{\numberline {8.3}Monte-Carlo Policy Gradient}{5}{}%
+\contentsline {paragraph}{Derivation of the Score Function}{5}{}%
+\contentsline {paragraph}{Why This is Useful}{5}{}%
+\contentsline {paragraph}{Conclusion}{5}{}%
+\contentsline {paragraph}{Softmax Policy with Linear Features}{5}{}%
+\contentsline {paragraph}{Score Function}{6}{}%
+\contentsline {paragraph}{Explanation}{6}{}%
+\contentsline {paragraph}{Gaussian Policy}{6}{}%
+\contentsline {paragraph}{Log-Probability of a Gaussian Policy}{6}{}%
+\contentsline {paragraph}{Score Function for a Gaussian Policy}{6}{}%
+\contentsline {paragraph}{Summary}{7}{}%
+\contentsline {subsection}{\numberline {8.4}One-step MDPs}{7}{}%
+\contentsline {paragraph}{One-Step MDPs}{7}{}%
+\contentsline {paragraph}{Policy Optimization in One-Step MDPs}{7}{}%
+\contentsline {paragraph}{One-Step MDPs}{7}{}%
+\contentsline {paragraph}{Objective Function \( J(\theta ) \) in One-Step MDPs}{7}{}%
+\contentsline {paragraph}{Multi-Step MDPs}{8}{}%
+\contentsline {paragraph}{Policy Objective \( J(\theta ) \)}{8}{}%
+\contentsline {paragraph}{Monte Carlo Policy Gradient (REINFORCE)}{8}{}%
+\contentsline {paragraph}{Stochastic Gradient Ascent}{9}{}%
+\contentsline {paragraph}{Summary}{9}{}%
+\contentsline {subsection}{\numberline {8.5}Actor-Critic Policy Gradient}{9}{}%
+\contentsline {paragraph}{Reducing Variance with a Critic}{9}{}%
+\contentsline {paragraph}{Approximate Policy Gradient}{9}{}%
+\contentsline {paragraph}{Summary}{10}{}%

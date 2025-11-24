@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{Control Theory Fundamentals}{3}{0}{1}
+\beamer@sectionintoc {2}{Rendering systems invariant}{7}{0}{2}
+\beamer@sectionintoc {3}{Numerical Examples}{19}{0}{3}
+\beamer@sectionintoc {4}{Motivation}{22}{0}{4}
+\beamer@sectionintoc {5}{High-Order Discontinuous CBFs}{23}{0}{5}
+\beamer@sectionintoc {6}{Piecewise-defined Barrier Functions}{24}{0}{6}
+\beamer@sectionintoc {7}{Forward Invariance Corollary}{25}{0}{7}
+\beamer@sectionintoc {8}{Simulation Results}{26}{0}{8}
+\beamer@sectionintoc {9}{Conclusion}{28}{0}{9}

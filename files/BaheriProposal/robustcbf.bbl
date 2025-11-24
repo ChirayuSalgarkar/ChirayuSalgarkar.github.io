@@ -1,0 +1,175 @@
+\begin{thebibliography}{10}
+
+\bibitem{ames2019control}
+Aaron~D Ames, Samuel Coogan, Magnus Egerstedt, Gennaro Notomista, Koushil
+  Sreenath, and Paulo Tabuada.
+\newblock Control barrier functions: Theory and applications.
+\newblock In {\em 2019 18th European control conference (ECC)}, pages
+  3420--3431. IEEE, 2019.
+
+\bibitem{ames2016control}
+Aaron~D Ames, Xiangru Xu, Jessy~W Grizzle, and Paulo Tabuada.
+\newblock Control barrier function based quadratic programs for safety critical
+  systems.
+\newblock {\em IEEE Transactions on Automatic Control}, 62(8):3861--3876, 2016.
+
+\bibitem{artstein1983stabilization}
+Zvi Artstein.
+\newblock Stabilization with relaxed controls.
+\newblock {\em Nonlinear Analysis: Theory, Methods \& Applications},
+  7(11):1163--1173, 1983.
+
+\bibitem{brunke2022safe}
+Lukas Brunke, Melissa Greeff, Adam~W Hall, Zhaocong Yuan, Siqi Zhou, Jacopo
+  Panerati, and Angela~P Schoellig.
+\newblock Safe learning in robotics: From learning-based control to safe
+  reinforcement learning.
+\newblock {\em Annual Review of Control, Robotics, and Autonomous Systems},
+  5:411--444, 2022.
+
+\bibitem{cheng2024distributionally}
+Chun Cheng, Qinxiao Yu, Yossiri Adulyasak, and Louis-Martin Rousseau.
+\newblock Distributionally robust facility location with uncertain facility
+  capacity and customer demand.
+\newblock {\em Omega}, 122:102959, 2024.
+
+\bibitem{cybenko1989approximation}
+George Cybenko.
+\newblock Approximation by superpositions of a sigmoidal function.
+\newblock {\em Mathematics of control, signals and systems}, 2(4):303--314,
+  1989.
+
+\bibitem{fournier2015rate}
+Nicolas Fournier and Arnaud Guillin.
+\newblock On the rate of convergence in wasserstein distance of the empirical
+  measure.
+\newblock {\em Probability theory and related fields}, 162(3):707--738, 2015.
+
+\bibitem{gabrel2014recent}
+Virginie Gabrel, C{\'e}cile Murat, and Aur{\'e}lie Thiele.
+\newblock Recent advances in robust optimization: An overview.
+\newblock {\em European journal of operational research}, 235(3):471--483,
+  2014.
+
+\bibitem{garg2024advances}
+Kunal Garg, James Usevitch, Joseph Breeden, Mitchell Black, Devansh Agrawal,
+  Hardik Parwana, and Dimitra Panagou.
+\newblock Advances in the theory of control barrier functions: Addressing
+  practical challenges in safe control synthesis for autonomous and robotic
+  systems.
+\newblock {\em Annual Reviews in Control}, 57:100945, 2024.
+
+\bibitem{goedel2012hybrid}
+Rafal Goedel, Ricardo~G Sanfelice, and Andrew~R Teel.
+\newblock Hybrid dynamical systems: modeling stability, and robustness.
+\newblock {\em Princeton, NJ, USA}, 2012.
+
+\bibitem{ho2021online}
+Dimitar Ho, Hoang Le, John Doyle, and Yisong Yue.
+\newblock Online robust control of nonlinear systems with large uncertainty.
+\newblock In {\em International Conference on Artificial Intelligence and
+  Statistics}, pages 3475--3483. PMLR, 2021.
+
+\bibitem{hsu2015control}
+Shao-Chen Hsu, Xiangru Xu, and Aaron~D Ames.
+\newblock Control barrier function based quadratic programs with application to
+  bipedal robotic walking.
+\newblock In {\em 2015 American Control Conference (ACC)}, pages 4542--4548.
+  IEEE, 2015.
+
+\bibitem{huang2021multi}
+Ripeng Huang, Shaojian Qu, Xiaoguang Yang, and Zhimin Liu.
+\newblock Multi-stage distributionally robust optimization with risk aversion.
+\newblock {\em Journal of Industrial \& Management Optimization}, 17(1), 2021.
+
+\bibitem{kakade2008complexity}
+Sham~M Kakade, Karthik Sridharan, and Ambuj Tewari.
+\newblock On the complexity of linear prediction: Risk bounds, margin bounds,
+  and regularization.
+\newblock {\em Advances in neural information processing systems}, 21, 2008.
+
+\bibitem{long2023distributionally}
+Kehan Long, Yinzhuang Yi, Jorge Cort{\'e}s, and Nikolay Atanasov.
+\newblock Distributionally robust {L}yapunov function search under uncertainty.
+\newblock In {\em Learning for Dynamics and Control Conference}, pages
+  864--877. PMLR, 2023.
+
+\bibitem{lopez2020robust}
+Brett~T Lopez, Jean-Jacques~E Slotine, and Jonathan~P How.
+\newblock Robust adaptive control barrier functions: An adaptive and
+  data-driven approach to safety.
+\newblock {\em IEEE Control Systems Letters}, 5(3):1031--1036, 2020.
+
+\bibitem{qiu2021distributionally}
+Ruozhen Qiu, Yue Sun, and Minghe Sun.
+\newblock A distributionally robust optimization approach for multi-product
+  inventory decisions with budget constraint and demand and yield
+  uncertainties.
+\newblock {\em Computers \& Operations Research}, 126:105081, 2021.
+
+\bibitem{rachev1990duality}
+Svetlozar~Todorov Rachev et~al.
+\newblock Duality theorems for {K}antorovich-{R}ubinstein and {W}asserstein
+  functionals.
+\newblock 1990.
+
+\bibitem{rahimian2019distributionally}
+Hamed Rahimian and Sanjay Mehrotra.
+\newblock Distributionally robust optimization: A review.
+\newblock {\em arXiv preprint arXiv:1908.05659}, 2019.
+
+\bibitem{ravanbakhsh2019learning}
+Hadi Ravanbakhsh and Sriram Sankaranarayanan.
+\newblock Learning control {L}yapunov functions from counterexamples and
+  demonstrations.
+\newblock {\em Autonomous Robots}, 43:275--307, 2019.
+
+\bibitem{recht2019tour}
+Benjamin Recht.
+\newblock A tour of reinforcement learning: The view from continuous control.
+\newblock {\em Annual Review of Control, Robotics, and Autonomous Systems},
+  2(1):253--279, 2019.
+
+\bibitem{richards2018lyapunov}
+Spencer~M Richards, Felix Berkenkamp, and Andreas Krause.
+\newblock The {L}yapunov neural network: Adaptive stability certification for
+  safe learning of dynamical systems.
+\newblock In {\em Conference on Robot Learning}, pages 466--476. PMLR, 2018.
+
+\bibitem{sontag1989universal}
+Eduardo~D Sontag.
+\newblock A ‘universal’construction of artstein's theorem on nonlinear
+  stabilization.
+\newblock {\em Systems \& control letters}, 13(2):117--123, 1989.
+
+\bibitem{taylor2019episodic}
+Andrew~J Taylor, Victor~D Dorobantu, Hoang~M Le, Yisong Yue, and Aaron~D Ames.
+\newblock Episodic learning with control {L}yapunov functions for uncertain
+  robotic systems.
+\newblock In {\em 2019 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 6878--6884. IEEE, 2019.
+
+\bibitem{xiao2019control}
+Wei Xiao and Calin Belta.
+\newblock Control barrier functions for systems with high relative degree.
+\newblock In {\em 2019 IEEE 58th conference on decision and control (CDC)},
+  pages 474--479. IEEE, 2019.
+
+\bibitem{xu2015robustness}
+Xiangru Xu, Paulo Tabuada, Jessy~W Grizzle, and Aaron~D Ames.
+\newblock Robustness of control barrier functions for safety critical control.
+\newblock {\em IFAC-PapersOnLine}, 48(27):54--61, 2015.
+
+\bibitem{zhang2024gcbf+}
+Songyuan Zhang, Oswin So, Kunal Garg, and Chuchu Fan.
+\newblock Gcbf+: A neural graph control barrier function framework for
+  distributed safe multi-agent control.
+\newblock {\em arXiv preprint arXiv:2401.14554}, 2024.
+
+\bibitem{zhao2024regularized}
+Leyang Zhao, Guoyin Li, and Spiridon Penev.
+\newblock Regularized distributionally robust optimization with application to
+  the index tracking problem.
+\newblock {\em Annals of Operations Research}, pages 1--28, 2024.
+
+\end{thebibliography}

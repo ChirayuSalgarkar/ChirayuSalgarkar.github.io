@@ -1,0 +1,69 @@
+\documentclass[10pt, oneside]{article} 
+\usepackage{amsmath, amsthm, amssymb, calrsfs, wasysym, verbatim, bbm, color, graphics, geometry}
+
+
+\geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}  
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Cdot}{\boldsymbol{\cdot}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{conv}{Convention}
+\newtheorem{rem}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+
+
+\title{Calvin Nau: Peer evaluation}
+\author{[Chirayu Salgarkar]}
+\date{Fall 2024}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\vspace{.25in}
+
+\section{Title: A critical review of ml based column selection for column generation}
+\section{Introduction}
+
+Combinoatorial optimization and ML are bidrection in relations. CO are solved directly: think min something given constraint a, b, .... Provlem is, coefficient matrix can lead to computational infeasibility. Column generation decomposes this problem. pricing problem?
+
+Graph machine learning, traained on graph... message passing neural networks. Graph ML is trained over graph, eg message pasing nine
+Are there any advantages to graph ml? It is feasible for different dimension for training and test data input site. 
+
+They use CG for set-partitioning tasks, which allows you to strike a balance when adding many columns, which speeds up the oslution process. Cycling, vertices when converging to optimal solutions. 
+\section{Critical Analysis}
+The paper uses mixed integer linear program to select what column to analyze. What columns should be selected? generating multiple columns, and then train over bidirectional graph: (used for transportation related problems)
+
+\section{Context}
+Lists papers that are related to this presentation.
+A deep RL framework for column generation. 
+
+\section{Significance }
+Alternative pricing mechanism to select, avoid degernacy, allows it to be applied to other problems.
+
+\section{Methodology}
+Where is it published? Presenter gives broader location fo work.
+GNNs already validated. What is novel? Data Collection, implementation? MILP fails to converge?
+
+Proposal for adjustment: get rid of epsilon?
+Self-referntial assessment, only comparing to a MILP strategy. 
+
+Relatively restricted data set. Frame GNN as opposed to zero-column selection, which is already a bad strategy! 
+
+\section{Alternative approaches}
+Use beyond binary decsision variables
+\section{Proposed extensions}
+Transfer learning, combinatorial optimization. Adds a hypothesis to each proposed extension. Why? You are already generating such infromaion. 
+
+\section{Conclusions}
+Give strengths and weaknesses, and seems to improve on small subset. Issue is suboptimal training strategy, testing concerns. Misrepresents results. Provides further information of ML-CO. 
+
+\end{document}

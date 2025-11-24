@@ -1,0 +1,98 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Kamalapurkar%
+, Rosenfeld%
+\BCBL {}\ \BBA {} Dixon%
+}{%
+Kamalapurkar%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+KAMALAPURKAR2016247}
+\APACinsertmetastar {%
+KAMALAPURKAR2016247}%
+\begin{APACrefauthors}%
+Kamalapurkar, R.%
+, Rosenfeld, J\BPBI A.%
+\BCBL {}\ \BBA {} Dixon, W\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Efficient model-based reinforcement learning for
+  approximate online optimal control} {Efficient model-based reinforcement
+  learning for approximate online optimal control}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Automatica}{74}{}{247-258}.
+\newblock
+\begin{APACrefURL}
+  \url{https://www.sciencedirect.com/science/article/pii/S0005109816303272}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.automatica.2016.08.004}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Marvi%
+\ \BBA {} Kiumarsi%
+}{%
+Marvi%
+\ \BBA {} Kiumarsi%
+}{%
+{\protect \APACyear {2021}}%
+}]{%
+marvi2021safe}
+\APACinsertmetastar {%
+marvi2021safe}%
+\begin{APACrefauthors}%
+Marvi, Z.%
+\BCBT {}\ \BBA {} Kiumarsi, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Safe reinforcement learning: A control barrier function
+  optimization approach} {Safe reinforcement learning: A control barrier
+  function optimization approach}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of Robust and Nonlinear
+  Control}{31}{6}{1923--1940}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vamvoudakis%
+, Miranda%
+\BCBL {}\ \BBA {} Hespanha%
+}{%
+Vamvoudakis%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+7302057}
+\APACinsertmetastar {%
+7302057}%
+\begin{APACrefauthors}%
+Vamvoudakis, K\BPBI G.%
+, Miranda, M\BPBI F.%
+\BCBL {}\ \BBA {} Hespanha, J\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Asymptotically Stable Adaptive–Optimal Control
+  Algorithm With Saturating Actuators and Relaxed Persistence of Excitation}
+  {Asymptotically stable adaptive–optimal control algorithm with saturating
+  actuators and relaxed persistence of excitation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Transactions on Neural Networks and Learning
+  Systems}{27}{11}{2386-2398}.
+\newblock
+\begin{APACrefDOI} \doi{10.1109/TNNLS.2015.2487972} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

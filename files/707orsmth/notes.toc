@@ -1,0 +1,38 @@
+\contentsline {section}{\numberline {1}26-AUG-24}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Order, Linear, and PDE vs ODE}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}28-AUG-24}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Miscellaneous}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Verifying solutions using initial conditions}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}IVPs}{3}{subsection.2.3}%
+\contentsline {section}{\numberline {3}30-AUG-24}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Integrating Factor}{3}{subsection.3.1}%
+\contentsline {section}{\numberline {4}04-SEP-24}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Separation of Variables}{4}{subsection.4.1}%
+\contentsline {section}{\numberline {5}06-SEP-24}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Exact Equations}{5}{subsection.5.1}%
+\contentsline {section}{\numberline {6}09-SEP-24}{6}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Separation of Variables, but more}{6}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Exact equations, but more}{7}{subsection.6.2}%
+\contentsline {section}{\numberline {7}11-SEP-24}{7}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Bernoulli Equations}{7}{subsection.7.1}%
+\contentsline {section}{\numberline {8}13-SEP-24}{9}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Second order ODEs with constant coefficients}{9}{subsection.8.1}%
+\contentsline {section}{\numberline {9}16-SEP-2024}{10}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Examples, again}{10}{subsection.9.1}%
+\contentsline {section}{\numberline {10}18-SEP-24}{11}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Non-homogenous second order ODE with constant coefficients}{11}{subsection.10.1}%
+\contentsline {section}{\numberline {11}20-SEP-2024}{13}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Homogeneous Cauchy-Euler Equation}{13}{subsection.11.1}%
+\contentsline {section}{\numberline {12}23-SEP-24}{15}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Non-homogeneous Cauchy-Euler differential equation}{15}{subsection.12.1}%
+\contentsline {section}{\numberline {13}27-SEP-24}{16}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Variation of Parameters}{16}{subsection.13.1}%
+\contentsline {section}{\numberline {14}30-SEP-2024}{17}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Laplace Transform Fundamentals}{17}{subsection.14.1}%
+\contentsline {section}{\numberline {15}02-OCT-2024}{18}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Partial Fraction Expansion}{18}{subsection.15.1}%
+\contentsline {section}{\numberline {16}07-OCT-2024}{20}{section.16}%
+\contentsline {section}{\numberline {17}09-OCT-2024}{20}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Translation on the t-axis}{20}{subsection.17.1}%
+\contentsline {section}{\numberline {18}23-OCT-24}{21}{section.18}%
+\contentsline {subsection}{\numberline {18.1}Dirac Delta Function examples}{21}{subsection.18.1}%

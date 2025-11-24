@@ -1,0 +1,781 @@
+\documentclass[11pt, oneside]{article}   	
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}	                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+
+\date{}
+\usepackage{nopageno}
+\usepackage{ragged2e}
+\usepackage{mathpazo} % This line sets the Palatino font
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,fit,backgrounds,decorations.pathreplacing,calligraphy}
+%\usepackage{breqn}
+\usepackage{booktabs} % For professional looking tables and \toprule, \midrule, and \bottomrule
+\usepackage{multirow} % For using multirows
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{algorithm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{tcolorbox}
+\usepackage{algpseudocode}
+\usepackage{siunitx} % For aligning numbers by decimal point
+\usepackage{threeparttable} % For adding notes
+\usepackage{subcaption}
+\usepackage{array}
+\usepackage{soul}
+\usepackage{dirtytalk}
+\usepackage{mdframed}
+\usepackage{subfloat}
+\usepackage{fancybox}
+%\pagenumbering{arabic}
+\usepackage{fancyhdr}
+\usepackage{cite,url,verbatim,color,comment,caption}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{framed}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{pgfgantt}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\hypersetup{backref=true,       
+    pagebackref=true,               
+    hyperindex=true,                
+    colorlinks=true,                
+    breaklinks=true,                
+    urlcolor= black,                
+    linkcolor= black,                
+    bookmarks=true,                 
+    bookmarksopen=false,
+    filecolor=black,
+    citecolor=red,
+    linkbordercolor=red
+}
+
+\sisetup{
+  table-format=-1.2, % Specifies the number format in the table
+  table-space-text-pre = {-}, % Adds space for negative numbers
+  table-space-text-post = {*}, % Adds space for footnote symbols, if any
+  table-align-text-post = false, % Aligns the footnote symbols correctly
+}
+
+\AtBeginDocument{\hypersetup{pdfborder={2 1 1}}}
+
+\linespread{1.05}
+
+\title{
+\vspace{-1.5cm}
+\large{\bf }
+\vspace{-0.5cm}
+}
+
+\title{Distributionally Robust Lyapunov-Barrier Networks for Safe and Stable Control Under Uncertainty}
+\author{Ali Baheri}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper presents a novel approach to ensuring both stability and safety in nonlinear control systems subject to parametric uncertainties. We introduce distributionally robust Lyapunov-Barrier networks (DR-LBNs), which combine Lyapunov stability certificates and barrier functions within a neural network framework, while accounting for distributional uncertainty in system parameters. Our method provides probabilistic guarantees on both asymptotic stability and forward invariance of a safe set, even when the true distribution of uncertainties is unknown. We develop a comprehensive theoretical foundation for DR-LBNs, presenting and proving several key theorems. These include results on probabilistic stability and safety guarantees, robustness to distribution shifts, input-to-state stability, universal approximation capabilities, and sample complexity bounds. 
+\end{abstract}
+
+\section{Introduction}
+
+The control of nonlinear dynamical systems under uncertainty remains a fundamental challenge in robotics, aerospace, and other safety-critical domains. As autonomous systems become increasingly prevalent in real-world environments, the need for controllers that can ensure both stability and safety in the face of parametric uncertainties has never been more pressing. Traditional approaches to robust control often rely on worst-case analyses or assume known bounds on uncertainties, leading to overly conservative controllers that may significantly sacrifice performance for the sake of robustness \cite{ho2021online}.
+
+Recent years have seen a surge of interest in learning-based control methods, particularly those leveraging neural networks for their ability to approximate complex functions \cite{brunke2022safe}. These approaches have shown remarkable success in handling nonlinear dynamics and adapting to uncertain environments \cite{recht2019tour}. However, they often lack formal guarantees on stability and safety, a critical requirement for deployment in safety-critical applications. Moreover, the performance of these learned controllers can degrade significantly when faced with distribution shifts between training and deployment environments. Lyapunov theory and barrier functions have long been powerful tools in control theory for certifying stability and safety, respectively. However, their application to complex, high-dimensional systems with significant uncertainties remains challenging. The manual design of Lyapunov and barrier functions for such systems is often intractable, motivating the need for data-driven approaches to certificate synthesis. Distributionally robust optimization has emerged as a promising framework for decision-making under uncertainty, particularly when the true distribution of uncertainties is unknown. By optimizing over an ambiguity set of possible distributions, this approach provides robustness to distribution shifts while avoiding the excessive conservatism of worst-case analyses \cite{long2023distributionally}. Despite its potential, the application of distributionally robust optimization to nonlinear control synthesis, especially in conjunction with Lyapunov and barrier function approaches, remains largely unexplored.
+
+In this paper, we propose distributionally robust Lyapunov-Barrier networks (DR-LBNs), a novel framework that addresses these challenges by unifying concepts from neural networks, Lyapunov theory, barrier functions, and distributionally robust optimization. Our approach aims to synthesize controllers for nonlinear systems that \emph{simultaneously} ensure stability and safety under parametric uncertainties, with robustness to distribution shifts. By leveraging the expressive power of neural networks and the foundations of control theory, DR-LBNs offer a principled way to design controllers with probabilistic guarantees on performance, even when the true distribution of uncertainties is unknown. The DR-LBN framework represents a significant step towards bridging the gap between learning-based control and robust control theory. It offers the potential to combine the adaptability of neural network approaches with the formal guarantees associated with analytical control methods. This integration is crucial for the development of next-generation autonomous systems that can operate safely in uncertain, dynamic environments. 
+
+
+
+
+\noindent{\textbf{Our Contributions.}} In this paper, we present a series of key contributions that address challenges at the intersection of stability, safety, and robust control in learning-based systems. Our primary contributions are as follows:
+
+\begin{itemize}
+
+ \item \textit{Unified Neural Architecture for Stability and Safety:} We introduce a novel neural network architecture that simultaneously learns Lyapunov functions, barrier functions, and adaptive control gains. This unified approach enables the synthesis of controllers that jointly optimize for stability and safety, a significant advancement over traditional methods that often treat these objectives separately. 
+
+ \item \textit{Distributionally Robust Formulation of Control Synthesis:} We develop a distributionally robust framework for control synthesis that explicitly accounts for uncertainties in the underlying system parameters. Unlike traditional robust control methods that rely on worst-case analyses or assume known uncertainty distributions, our approach constructs an ambiguity set around the empirical distribution of uncertainties. This formulation leads to controllers that are robust to distribution shifts between training and deployment.
+
+ \item \textit{Theoretical Guarantees:} We provide a comprehensive theoretical analysis of the DR-LBN framework, including proofs of input-to-state stability, universal approximation capabilities, and sample complexity bounds.
+ 
+
+\end{itemize}
+
+\noindent{\textbf{Paper Organization.}} The remainder of this paper is organized as follows. Section 2 provides a comprehensive review of related work, situating our approach within the broader context of control Lyapunov functions, control barrier functions, and distributionally robust optimization. Section 3 presents the problem formulation and control objectives. Section 4 introduces the core methodology of Distributionally Robust Lyapunov-Barrier Networks (DR-LBNs), including the neural network architecture, distributionally robust stability and safety conditions, and the optimization framework. Section 5 offers theoretical analysis, presenting key results on probabilistic stability guarantees, robustness to distribution shifts, input-to-state stability, universal approximation capabilities, and sample complexity bounds. Finally, Section 6 concludes the paper and discusses future research directions.
+
+
+\section{Related Work}
+
+\noindent{\textbf{Control Lyapunov Functions (CLFs).}} Control Lyapunov Functions (CLFs) have long been a key tool in nonlinear control theory, offering a structured approach to stabilizing nonlinear systems \cite{artstein1983stabilization,sontag1989universal}. CLFs provide a method for designing controllers that ensure asymptotic stability by ensuring the derivative of a positive definite function decreases along system trajectories. Over the years, the concept has evolved significantly, including the integration of neural networks with CLFs. One approach leverages deep neural networks and sum-of-squares programming to learn CLFs, enabling the design of stabilizing controllers for systems with complex, high-dimensional dynamics \cite{richards2018lyapunov}. This method harnesses the power of neural networks to approximate CLFs for cases where analytical solutions are difficult or impossible to obtain. Additionally, data-driven approaches have gained prominence, with recent work proposing frameworks that learn CLFs directly from system trajectories, bypassing the need for explicit knowledge of system dynamics \cite{ravanbakhsh2019learning}. This development expands the applicability of CLFs to systems with partially known or uncertain models.
+
+Robustness to uncertainty has been a key focus of recent CLF research. Long et al. developed a distributionally robust framework for CLF search, providing probabilistic stability guarantees when the true system parameters are unknown \cite{long2023distributionally}. This approach bridges the gap between traditional robust control methods and modern machine learning techniques. Extensions of CLF theory to hybrid systems have also been explored. The work in \cite{goedel2012hybrid} developed conditions for asymptotic stability in hybrid loops using CLFs, broadening the applicability of these methods to systems with both continuous and discrete dynamics.
+Adaptive CLFs have been introduced in \cite{xiao2019control} to handle parametric uncertainties in nonlinear systems. By combining CLFs with adaptive control techniques, their approach allows for real-time adaptation to changing system parameters.
+The stochastic domain has also seen advancements in CLF theory. Taylor et al. proposed a reinforcement learning approach to synthesize CLFs, combining model-free learning with formal stability guarantees \cite{taylor2019episodic}. This method offers a promising direction for systems where accurate models are difficult to obtain.
+
+
+\noindent \textbf{Control Barrier Functions (CBFs).} CBFs is a powerful tool for enforcing safety constraints in nonlinear control systems. CBFs provide a means to verify and synthesize controllers that ensure forward invariance of a safe set. The modern formulation of CBFs, draws inspiration from CLFs and allows for the unification of safety and stability in a single framework. CBFs have found applications in various domains, including automotive systems \cite{ames2016control}, multi-robot coordination \cite{xu2015robustness}, and bipedal robots \cite{hsu2015control}. Recent advancements in CBF theory have addressed several practical challenges in safe control synthesis \cite{ames2019control}. The work in \cite{garg2024advances} presented novel CBFs that handle safety constraints with time and input constraints under disturbances, as well as high-relative degree constraints under disturbances and input constraints. Their work also addresses the effects of adversarial inputs and sampled-data implementation. Adaptive CBFs have been developed to handle parametric uncertainties in nonlinear systems. Lopez et al.  introduced a framework that guarantees safety through online parameter adaptation and data-driven model estimation \cite{lopez2020robust}. This approach allows for real-time adaptation to changing system parameters, enhancing robustness in uncertain environments. 
+%
+The integration of CBFs with learning-based approaches has been a focus of recent research. For instance, CBFs have been extended to handle multi-agent systems. Zhang et al. introduced a neural graph CBF framework for distributed safe multi-agent control, enabling decentralized stabilization of interconnected nonlinear systems while ensuring safety constraints \cite{zhang2024gcbf+}.
+
+\noindent \textbf{Distributionally Robust Optimization (DRO).} DRO has gained significant attention in recent years as a framework for decision-making under uncertainty, particularly when the true distribution of uncertainties is unknown \cite{rahimian2019distributionally,gabrel2014recent}. DRO aims to optimize performance while providing robustness against a set of possible distributions, typically defined as an ambiguity set around an empirical distribution. The fundamental idea behind DRO is to find solutions that perform well under the worst-case probability distribution within a specified ambiguity set. This ambiguity set is often constructed using statistical distance measures such as $\varphi$-divergences or the Wasserstein metric. By considering a range of possible distributions, DRO provides a safeguard against distributional ambiguity and potential model misspecification. DRO has found applications in various fields, including machine learning \cite{zhao2024regularized}, operations research, and finance \cite{huang2021multi}. In machine learning, DRO has been used to develop robust classification and regression models that maintain good performance across different data distributions. In operations research, DRO has been applied to supply chain management, logistics, and resource allocation problems to handle uncertainties in demand and supply \cite{qiu2021distributionally,cheng2024distributionally}.
+
+
+\section{Problem Formulation and Methodological Approach}
+
+We consider a nonlinear control-affine system with parametric uncertainties:
+
+\begin{equation}
+    \frac{dx}{dt} = f(x,\xi) + g(x,\xi)u
+\end{equation}
+
+where:
+\begin{itemize}
+    \item $x \in X \subseteq \mathbb{R}^n$ is the state vector
+    \item $u \in U \subseteq \mathbb{R}^m$ is the control input
+    \item $\xi \in \Xi \subseteq \mathbb{R}^k$ represents uncertain parameters
+    \item $f : X \times \Xi \to \mathbb{R}^n$ is the drift dynamics
+    \item $g : X \times \Xi \to \mathbb{R}^{n\times m}$ is the control input matrix
+\end{itemize}
+
+\textbf{Assumption 1:} The functions $f$ and $g$ are locally Lipschitz continuous, ensuring the existence and uniqueness of solutions.
+
+\textbf{Assumption 2:} The sets $X$, $U$, and $\Xi$ are compact, reflecting physical limitations of the system and bounded uncertainties.
+
+The safe set $S \subset X$ is defined as:
+
+\begin{equation}
+    S = \{x \in X : h(x) \geq 0\}
+\end{equation}
+%
+where $h : X \to \mathbb{R}$ is a continuously differentiable function representing safety constraints. The true distribution $P^*$ of $\xi$ is unknown. We have access to $N$ independent and identically distributed samples $\{\xi_1, ..., \xi_N\}$. Let $P_N$ denote the empirical distribution based on these samples:
+
+\begin{equation}
+    P_N = \frac{1}{N} \sum_{i=1}^N \delta_{\xi_i}
+\end{equation}
+%
+where $\delta_{\xi_i}$ is the Dirac measure at $\xi_i$. To account for the discrepancy between $P_N$ and $P^*$, we define an ambiguity set $\mathcal{P}$ as a Wasserstein ball around $P_N$:
+
+\begin{equation}
+    \mathcal{P} = \{P \in \mathcal{M}(\Xi) : W_p(P, P_N) \leq \rho\}
+\end{equation}
+%
+where:
+\begin{itemize}
+    \item $\mathcal{M}(\Xi)$ is the set of all probability measures on $\Xi$
+    \item $W_p$ is the $p$-Wasserstein distance
+    \item $\rho > 0$ is the radius of the Wasserstein ball
+\end{itemize}
+
+The $p$-Wasserstein distance between two probability measures $P_1$ and $P_2$ is defined as:
+
+\begin{equation}
+    W_p(P_1, P_2) = \left(\inf_{\gamma \in \Gamma(P_1, P_2)} \int_{\Xi \times \Xi} \|\xi_1 - \xi_2\|^p d\gamma(\xi_1, \xi_2)\right)^{1/p}
+\end{equation}
+%
+where $\Gamma(P_1, P_2)$ is the set of all joint distributions with marginals $P_1$ and $P_2$. Our objective is to design a state-feedback controller $u = \pi(x)$ that ensures both stability and safety with high probability under distributional uncertainty. Specifically, we aim to:
+
+\begin{enumerate}
+
+\item  Stabilize the system to the origin: $\lim_{t \to \infty} \|x(t)\| = 0$
+
+
+\item Ensure the state remains in the safe set: $x(t) \in S$ for all $t \geq 0$
+
+\end{enumerate}
+%
+Both objectives should be achieved with high probability with respect to the true (unknown) distribution $P^*$.
+
+\section{Distributionally Robust Lyapunov-Barrier Networks}
+
+To address this challenge, we propose the Distributionally Robust Lyapunov-Barrier Networks (DR-LBNs) approach. We introduce a neural network $\Phi_\theta : X \to \mathbb{R}^4$ parameterized by $\theta$, which simultaneously learns:
+
+\begin{equation}
+    \Phi_\theta(x) = [V(x), h(x), k_V(x), k_h(x)]
+\end{equation}
+%
+where:
+\begin{itemize}
+    \item $V(x)$ is a candidate Lyapunov function
+    \item $h(x)$ is a candidate barrier function
+    \item $k_V(x)$ and $k_h(x)$ are adaptive gain functions
+\end{itemize}
+%
+The architecture consists of shared layers followed by separate heads:
+
+\begin{align}
+    z &= \varphi(x; \theta_\text{shared}) \\
+    V(x) &= \|\psi_V(z; \theta_V)\|^2 + \varepsilon\|x\|^2 \\
+    h(x) &= \text{softplus}(\psi_h(z; \theta_h)) \\
+    k_V(x) &= \text{softplus}(\psi_{k_V}(z; \theta_{k_V})) \\
+    k_h(x) &= \text{softplus}(\psi_{k_h}(z; \theta_{k_h}))
+\end{align}
+%
+where $\varepsilon > 0$ is a small constant and $\text{softplus}(a) = \log(1 + e^a)$.
+
+\noindent{\textbf{Distributionally Robust Stability and Safety Conditions.}} We formulate the distributionally robust Lyapunov condition as:
+
+\begin{equation}
+    \inf_{P\in\mathcal{P}} P(L_V(x,\xi,\pi) < 0) \geq 1 - \varepsilon_V, \quad \forall x \in X\setminus\{0\}
+\end{equation}
+%
+where $L_V(x,\xi,\pi) = \nabla V(x)^\top(f(x,\xi) + g(x,\xi)\pi(x)) + \alpha_1(\|x\|)$, and $\alpha_1$ is a class $\mathcal{K}$ function. Similarly, the distributionally robust barrier condition is:
+
+\begin{equation}
+    \inf_{P\in\mathcal{P}} P(L_h(x,\xi,\pi) > 0) \geq 1 - \varepsilon_h, \quad \forall x \in S
+\end{equation}
+%
+where $L_h(x,\xi,\pi) = \nabla h(x)^\top(f(x,\xi) + g(x,\xi)\pi(x)) + \alpha_2(h(x))$, and $\alpha_2$ is a class $\mathcal{K}$ function.
+
+\noindent{\textbf{Control Law Synthesis.}} We propose a control law that leverages both the Lyapunov and barrier functions:
+
+\begin{equation}
+    \pi(x) = \pi_V(x) + \pi_h(x)
+\end{equation}
+%
+where:
+
+\begin{align}
+    \pi_V(x) &= -k_V(x)g(x,\hat{\xi})^\top\nabla V(x) \\
+    \pi_h(x) &= k_h(x)g(x,\hat{\xi})^\top\nabla h(x)
+\end{align}
+%
+Here, $\hat{\xi}$ is an estimate of $\xi$ (e.g., the mean of the empirical distribution). We formulate the DR-LBN training as an optimization problem:
+
+\begin{equation}
+    \min_{\theta} \mathcal{L}(\theta) = \lambda_V \mathcal{L}_V(\theta) + \lambda_h \mathcal{L}_h(\theta) + \lambda_u \mathcal{L}_u(\theta) + \lambda_c \mathcal{L}_c(\theta) + \lambda_r \mathcal{L}_r(\theta)
+\end{equation}
+%
+where:
+\begin{itemize}
+    \item $\mathcal{L}_V(\theta)$ and $\mathcal{L}_h(\theta)$ are losses for Lyapunov and barrier conditions
+    \item $\mathcal{L}_u(\theta)$ penalizes excessive control effort
+    \item $\mathcal{L}_c(\theta)$ penalizes constraint violations
+    \item $\mathcal{L}_r(\theta)$ is a regularization term
+\end{itemize}
+%
+Using the Wasserstein duality theorem \cite{rachev1990duality}, we reformulate the chance constraints:
+
+\begin{align}
+    \mathcal{L}_V(\theta) &= \mathbb{E}_{x}\left[\sup_{\lambda_V \geq 0, \eta_V} \Phi_V(x, \theta, \lambda_V, \eta_V)\right] \\
+    \mathcal{L}_h(\theta) &= \mathbb{E}_{x}\left[\sup_{\lambda_h \geq 0, \eta_h} \Phi_h(x, \theta, \lambda_h, \eta_h)\right]
+\end{align}
+%
+where $\Phi_V$ and $\Phi_h$ are dual functions defined as:
+
+\begin{align}
+    \Phi_V(x, \theta, \lambda_V, \eta_V) &= -\lambda_V\varepsilon_V - \eta_V - \frac{1}{N}\sum_{i=1}^N (\lambda_V(L_V(x, \xi_i, \pi_\theta) - \eta_V)^+ - \rho\lambda_V^{1/p}) \\
+    \Phi_h(x, \theta, \lambda_h, \eta_h) &= -\lambda_h\varepsilon_h - \eta_h - \frac{1}{N}\sum_{i=1}^N (\lambda_h(-L_h(x, \xi_i, \pi_\theta) - \eta_h)^+ - \rho\lambda_h^{1/p})
+\end{align}
+%
+This formulation allows to solve the distributionally robust optimization problem using standard gradient-based optimization techniques, providing a novel approach to designing controllers with probabilistic stability and safety guarantees under uncertainty.
+
+\section{Theoretical Analysis}
+
+Having established the framework for DR-LBNs, we now turn our attention to the theoretical foundations underpinning this framework. The following section presents a series of key theoretical results that provide guarantees on the performance, robustness, and generalization capabilities of DR-LBNs.
+
+\setcounter{theorem}{0}
+\begin{theorem}
+Consider the system (1) with uncertainty $\xi$ following an unknown true distribution $P^*$. Let $\Phi_{\theta^*}$ be the optimal DR-LBN obtained from solving the optimization problem, and let $\pi^*$ be the corresponding controller. Assume that:
+
+(i) The Wasserstein radius $\rho$ is chosen such that $P^* \in \mathcal{P}$ with high probability.
+(ii) The distributional robustness conditions are satisfied.
+
+Then, for any initial state $x_0 \in S$, the closed-loop system satisfies:
+
+\begin{equation}
+    P^*(\|x(t)\| \to 0 \text{ as } t \to \infty \text{ and } x(t) \in S \text{ for all } t \geq 0) \geq 1 - (\varepsilon_V + \varepsilon_h)
+\end{equation}
+
+where $\varepsilon_V$ and $\varepsilon_h$ are the risk tolerances for stability and safety, respectively.
+\end{theorem}
+
+\begin{proof}
+We proceed in several steps:
+
+\textbf{Step 1: Probabilistic Lyapunov Decrease Condition}
+
+From the distributionally robust Lyapunov condition (49), we have:
+
+\begin{equation}
+    \inf_{P\in\mathcal{P}} P(L_V(x,\xi,\pi^*) < 0) \geq 1 - \varepsilon_V, \quad \forall x \in X\setminus\{0\}
+\end{equation}
+%
+By assumption (i) and the definition of the infimum, this implies:
+
+\begin{equation}
+    P^*(L_V(x,\xi,\pi^*) < 0) \geq 1 - \varepsilon_V, \quad \forall x \in X\setminus\{0\}
+    \label{eq:lyap_prob}
+\end{equation}
+
+\textbf{Step 2: Probabilistic Barrier Increase Condition}
+%
+Similarly, from the distributionally robust barrier condition (50):
+
+\begin{equation}
+    \inf_{P\in\mathcal{P}} P(L_h(x,\xi,\pi^*) > 0) \geq 1 - \varepsilon_h, \quad \forall x \in S
+\end{equation}
+%
+This implies:
+
+\begin{equation}
+    P^*(L_h(x,\xi,\pi^*) > 0) \geq 1 - \varepsilon_h, \quad \forall x \in S
+    \label{eq:barrier_prob}
+\end{equation}
+
+\textbf{Step 3: Joint Probability}
+
+Let $E_V$ be the event that $L_V(x,\xi,\pi^*) < 0$ for all $x \in X\setminus\{0\}$, and $E_h$ be the event that $L_h(x,\xi,\pi^*) > 0$ for all $x \in S$. By the union bound:
+
+\begin{align}
+    P^*(E_V \cap E_h) &\geq 1 - P^*(E_V^c) - P^*(E_h^c) \\
+    &\geq 1 - \varepsilon_V - \varepsilon_h
+    \label{eq:joint_prob}
+\end{align}
+%
+where $E_V^c$ and $E_h^c$ denote the complements of $E_V$ and $E_h$, respectively.
+
+\textbf{Step 4: Stability Analysis}
+%
+Conditioned on the event $E_V$, we have:
+
+\begin{equation}
+    \frac{dV(x)}{dt} = \nabla V(x)^\top(f(x,\xi) + g(x,\xi)\pi^*(x)) < -\alpha_1(\|x\|), \quad \forall x \in X\setminus\{0\}
+    \label{eq:lyap_decrease}
+\end{equation}
+%
+where $\alpha_1$ is a class $\mathcal{K}$ function. Let $\gamma : \mathbb{R}_{\geq 0} \to \mathbb{R}_{\geq 0}$ be a class $\mathcal{K}_\infty$ function such that $\gamma(\|x\|) \leq V(x)$ for all $x \in X$. Such a function exists because $V(x)$ is positive definite. Then, from \eqref{eq:lyap_decrease},
+
+\begin{equation}
+    \frac{d}{dt}\gamma^{-1}(V(x)) \leq -\frac{\alpha_1(\gamma^{-1}(V(x)))}{\gamma'(\gamma^{-1}(V(x)))}
+\end{equation}
+%
+By the comparison principle, this implies that $\|x(t)\| \to 0$ as $t \to \infty$.
+
+\textbf{Step 5: Safety Analysis}
+%
+Conditioned on the event $E_h$, we have:
+
+\begin{equation}
+    \frac{dh(x)}{dt} = \nabla h(x)^\top(f(x,\xi) + g(x,\xi)\pi^*(x)) > -\alpha_2(h(x)), \quad \forall x \in S
+    \label{eq:barrier_increase}
+\end{equation}
+%
+where $\alpha_2$ is a class $\mathcal{K}$ function. By the comparison principle, this implies that if $h(x_0) \geq 0$, then $h(x(t)) \geq 0$ for all $t \geq 0$, ensuring that $x(t)$ remains in $S$ for all $t \geq 0$. From steps 4 and 5, we can conclude that when both $E_V$ and $E_h$ occur, the system state converges to the origin while remaining in the safe set $S$ for all time. From step 3, we know that $P^*(E_V \cap E_h) \geq 1 - (\varepsilon_V + \varepsilon_h)$. Therefore:
+
+\begin{equation}
+    P^*(\|x(t)\| \to 0 \text{ as } t \to \infty \text{ and } x(t) \in S \text{ for all } t \geq 0) \geq 1 - (\varepsilon_V + \varepsilon_h)
+\end{equation}
+%
+which completes the proof.
+\end{proof}
+
+\noindent {\textbf{Implication.}} Theorem 1 establishes probabilistic guarantees on both stability and safety for systems controlled by DR-LBNs. This result is particularly significant in the context of uncertain nonlinear systems, where deterministic guarantees are often unattainable. The probabilistic nature of these guarantees allows for the treatment of uncertainty. The joint consideration of stability and safety within a single framework represents an advancement over existing methods that often treat these objectives separately. This approach enables the synthesis of controllers that can navigate the complex trade-offs between stability and safety in uncertain environments. However, it is important to note that the probabilistic nature of these guarantees may limit the applicability of DR-LBNs in settings where hard, deterministic constraints are required.
+
+\setcounter{theorem}{1}
+\begin{theorem}[Robustness to Distribution Shift]
+Let $P^*$ be the true distribution of the uncertainty $\xi$, and let $\tilde{P}$ be a shifted distribution such that $W_p(\tilde{P}, P^*) \leq \Delta$, where $W_p$ is the $p$-Wasserstein distance. Let $\pi^*$ be the DR-LBN controller trained using the empirical distribution $P_N$. Assume that:
+
+(i) The Wasserstein radius $\rho$ in the ambiguity set $\mathcal{P}$ is chosen such that $P^* \in \mathcal{P}$ with probability at least $1-\delta$.
+(ii) The distributional robustness conditions are satisfied for $P^*$ with risk tolerances $\varepsilon_V$ and $\varepsilon_h$ for stability and safety, respectively. Then, under the controller $\pi^*$, for any initial state $x_0 \in S$, we have:
+
+\begin{equation}
+    \tilde{P}(\|x(t)\| \to 0 \text{ as } t \to \infty \text{ and } x(t) \in S \text{ for all } t \geq 0) \geq 1 - (\varepsilon_V + \varepsilon_h + 2C\Delta^q + \delta)
+\end{equation}
+%
+where $C > 0$ is a constant that depends on the Lipschitz constants of the system dynamics and the DR-LBN, and $q = p/(p+1)$.
+\end{theorem}
+
+\begin{proof}
+We approach this in several steps:
+
+\textbf{Step 1: Wasserstein Distance Properties}
+
+We first recall a key property of the Wasserstein distance:
+
+\begin{lemma}[Wasserstein Distance Property]
+For any Lipschitz continuous function $f$ with Lipschitz constant $L$, and for any two probability measures $P$ and $Q$, we have:
+\begin{equation}
+    |\mathbb{E}_P[f] - \mathbb{E}_Q[f]| \leq LW_p(P,Q)
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+This is a well-known result in optimal transport theory. A proof can be found in \cite{fournier2015rate}.
+\end{proof}
+
+\textbf{Step 2: Lipschitz Continuity of Lyapunov and Barrier Conditions}
+
+Let $L_V(x,\xi,\pi^*)$ and $L_h(x,\xi,\pi^*)$ be the Lyapunov and barrier conditions, respectively. We can show that these functions are Lipschitz continuous in $\xi$:
+
+\begin{lemma}[Lipschitz Continuity of Conditions]
+There exist constants $L_V, L_h > 0$ such that for all $x \in X$, $\xi_1, \xi_2 \in \Xi$:
+\begin{align}
+    |L_V(x,\xi_1,\pi^*) - L_V(x,\xi_2,\pi^*)| &\leq L_V\|\xi_1 - \xi_2\| \\
+    |L_h(x,\xi_1,\pi^*) - L_h(x,\xi_2,\pi^*)| &\leq L_h\|\xi_1 - \xi_2\|
+\end{align}
+\end{lemma}
+
+\begin{proof}
+This follows from the Lipschitz continuity of $f$, $g$, $V$, and $h$, and the composition of Lipschitz functions.
+\end{proof}
+
+\textbf{Step 3: Bounding the Probability Difference}
+
+Let $E_V = \{L_V(x,\xi,\pi^*) < 0\}$ and $E_h = \{L_h(x,\xi,\pi^*) > 0\}$. We want to bound $|\tilde{P}(E_V) - P^*(E_V)|$ and $|\tilde{P}(E_h) - P^*(E_h)|$.
+
+\begin{lemma}[Probability Difference Bound]
+For any event $E$ defined by a Lipschitz condition with constant $L$, we have:
+\begin{equation}
+    |\tilde{P}(E) - P^*(E)| \leq 2C(LW_p(\tilde{P},P^*))^q
+\end{equation}
+where $C > 0$ is a constant and $q = p/(p+1)$.
+\end{lemma}
+
+\begin{proof}
+This follows from the dual form of the Wasserstein distance and the Kantorovich-Rubinstein duality. A detailed proof can be found in \cite{fournier2015rate}.
+\end{proof}
+%
+Applying this lemma to our Lyapunov and barrier conditions:
+
+\begin{align}
+    |\tilde{P}(E_V) - P^*(E_V)| &\leq 2C(L_VW_p(\tilde{P},P^*))^q \leq 2C(L_V\Delta)^q \\
+    |\tilde{P}(E_h) - P^*(E_h)| &\leq 2C(L_hW_p(\tilde{P},P^*))^q \leq 2C(L_h\Delta)^q
+\end{align}
+
+\textbf{Step 4: Combining the Bounds}
+
+From the assumptions of the theorem and Theorem 1, we have:
+
+\begin{equation}
+    P^*(E_V \cap E_h) \geq 1 - (\varepsilon_V + \varepsilon_h + \delta)
+\end{equation}
+
+Now, we can bound the probability under $\tilde{P}$:
+
+\begin{align}
+    \tilde{P}(E_V \cap E_h) &= P^*(E_V \cap E_h) + [\tilde{P}(E_V \cap E_h) - P^*(E_V \cap E_h)] \\
+    &\geq 1 - (\varepsilon_V + \varepsilon_h + \delta) - |\tilde{P}(E_V) - P^*(E_V)| - |\tilde{P}(E_h) - P^*(E_h)| \\
+    &\geq 1 - (\varepsilon_V + \varepsilon_h + \delta) - 2C(L_V\Delta)^q - 2C(L_h\Delta)^q \\
+    &\geq 1 - (\varepsilon_V + \varepsilon_h + 2C\Delta^q + \delta)
+\end{align}
+%
+where in the last step we use $L = \max(L_V, L_h)$. The event $E_V \cap E_h$ implies that both the Lyapunov condition and the barrier condition are satisfied. Following the same reasoning as in Theorem 1, this implies that $\|x(t)\| \to 0$ as $t \to \infty$ and $x(t) \in S$ for all $t \geq 0$. Therefore,
+
+\begin{equation}
+    \tilde{P}(\|x(t)\| \to 0 \text{ as } t \to \infty \text{ and } x(t) \in S \text{ for all } t \geq 0) \geq 1 - (\varepsilon_V + \varepsilon_h + 2C\Delta^q + \delta)
+\end{equation}
+%
+which completes the proof.
+\end{proof}
+
+\noindent {\textbf{Implication.}} Theorem 2, which quantifies the degradation of performance guarantees under distribution shifts, has implications for the deployment of learning-based controllers in real-world scenarios. This result provides a theoretical justification for the empirically observed robustness of distributionally robust methods to changes in operating conditions. The sublinear dependence of the performance degradation on the Wasserstein distance between distributions suggests that DR-LBNs can maintain reasonable performance even under significant shifts. This property is particularly valuable in applications where the true distribution of uncertainties may drift over time or differ between training and deployment environments. However, the theorem also highlights a fundamental trade-off: increasing the radius of the ambiguity set enhances robustness to distribution shifts but may lead to more conservative control policies. 
+
+
+\setcounter{theorem}{2}
+\begin{theorem}[Input-to-State Stability]
+Consider the system with additive disturbances:
+\begin{equation}
+    \frac{dx}{dt} = f(x,\xi) + g(x,\xi)\pi^*(x) + w(t)
+\end{equation}
+where $\|w(t)\| \leq W$ for all $t \geq 0$. Under the DR-LBN controller $\pi^*$, the system is input-to-state stable with probability at least $1 - (\varepsilon_V + \varepsilon_h)$.
+\end{theorem}
+
+\begin{proof}
+We follow a series of steps:
+
+\textbf{Step 1: Probabilistic Lyapunov Condition}
+
+From the distributionally robust Lyapunov condition of our DR-LBN, we have:
+
+\begin{equation}
+    \inf_{P\in\mathcal{P}} P(L_V(x,\xi,\pi^*) < 0) \geq 1 - \varepsilon_V, \quad \forall x \in X\setminus\{0\}
+\end{equation}
+
+where $L_V(x,\xi,\pi^*) = \nabla V(x)^\top(f(x,\xi) + g(x,\xi)\pi^*(x)) + \alpha_1(\|x\|)$.
+
+By the definition of infimum and our assumption on the true distribution $P^*$, this implies:
+
+\begin{equation}
+    P^*(L_V(x,\xi,\pi^*) < 0) \geq 1 - \varepsilon_V, \quad \forall x \in X\setminus\{0\}
+    \label{eq:prob_lyap}
+\end{equation}
+
+\textbf{Step 2: Lyapunov Function Derivative with Disturbance}
+
+Now, consider the time derivative of $V(x)$ along the trajectories of the disturbed system:
+
+\begin{align}
+    \dot{V}(x) &= \nabla V(x)^\top \left(f(x,\xi) + g(x,\xi)\pi^*(x) + w(t)\right) \\
+    &= L_V(x,\xi,\pi^*) - \alpha_1(\|x\|) + \nabla V(x)^\top w(t)
+\end{align}
+
+\textbf{Step 3: Bounding the Disturbance Term}
+
+Using the Cauchy-Schwarz inequality and the bound on $w(t)$:
+
+\begin{equation}
+    \nabla V(x)^\top w(t) \leq \|\nabla V(x)\| \cdot \|w(t)\| \leq L_V W
+\end{equation}
+%
+where $L_V$ is the Lipschitz constant of $V(x)$, which exists due to our neural network construction.
+
+\textbf{Step 4: Probabilistic ISS Condition}
+
+Combining the results from steps 2 and 3, with probability at least $1 - \varepsilon_V$:
+
+\begin{align}
+    \dot{V}(x) &\leq L_V(x,\xi,\pi^*) - \alpha_1(\|x\|) + L_V W \\
+    &< -\alpha_1(\|x\|) + L_V W
+\end{align}
+
+Now, let $\alpha_3(\|x\|) = \frac{1}{2}\alpha_1(\|x\|)$. Then:
+
+\begin{equation}
+    \dot{V}(x) < -\alpha_3(\|x\|) \quad \text{whenever} \quad \alpha_1(\|x\|) > 2L_V W
+\end{equation}
+
+Let $\gamma(s) = \alpha_1^{-1}(2L_V s)$. Then:
+
+\begin{equation}
+    \dot{V}(x) < -\alpha_3(\|x\|) \quad \text{whenever} \quad \|x\| > \gamma(W)
+    \label{eq:iss_condition}
+\end{equation}
+
+\textbf{Step 5: Safety Consideration}
+
+From the distributionally robust barrier condition, we have:
+
+\begin{equation}
+    P^*(x(t) \in S \text{ for all } t \geq 0) \geq 1 - \varepsilon_h
+    \label{eq:prob_safety}
+\end{equation}
+
+\textbf{Step 6: Combining Stability and Safety}
+
+Using the union bound on the events in \eqref{eq:prob_lyap} and \eqref{eq:prob_safety}, we can conclude that with probability at least $1 - (\varepsilon_V + \varepsilon_h)$, both the ISS condition \eqref{eq:iss_condition} and the safety condition hold. The condition in \eqref{eq:iss_condition} is the defining property of input-to-state stability. It shows that the state $x$ is ultimately bounded by a class $\mathcal{K}$ function of the disturbance bound $W$. Moreover, this bound holds while the system remains in the safe set $S$. Therefore, we can conclude that under the DR-LBN controller $\pi^*$, the system is input-to-state stable with probability at least $1 - (\varepsilon_V + \varepsilon_h)$.
+\end{proof}
+
+\noindent {\textbf{Implication.}} The input-to-state stability result extends the applicability of DR-LBNs to systems subject to bounded external disturbances. While this result is promising, it assumes a known bound on the disturbance magnitude. In practice, characterizing this bound may be challenging, especially for complex, high-dimensional systems. 
+
+
+
+\begin{theorem}[Universal Approximation for DR-LBNs]
+For any continuous Lyapunov function $V^*(x)$ and barrier function $h^*(x)$, and for any $\epsilon > 0$, there exists a DR-LBN with a finite number of neurons that can approximate $V^*(x)$ and $h^*(x)$ within an $\epsilon$-error in the supremum norm over any compact subset of the state space.
+\end{theorem}
+
+\begin{proof}
+We proceed in several steps:
+
+\textbf{Step 1: Universal Approximation Theorem for Feedforward Networks}
+
+We begin by recalling the classical universal approximation theorem for feedforward neural networks with a single hidden layer:
+
+\begin{lemma}[\cite{cybenko1989approximation}]
+Let $\sigma: \mathbb{R} \to \mathbb{R}$ be a continuous sigmoid-type activation function. Then finite sums of the form
+\begin{equation}
+    G(x) = \sum_{i=1}^N \alpha_i \sigma(w_i^\top x + b_i)
+\end{equation}
+are dense in $C(I^n)$ in the topology of uniform convergence, where $I^n$ is the n-dimensional unit cube.
+\end{lemma}
+%
+This lemma establishes that a single hidden layer neural network with sigmoid activation can approximate any continuous function on a compact domain to arbitrary accuracy.
+
+\textbf{Step 2: Extension to Lyapunov and Barrier Functions}
+
+Let $X \subset \mathbb{R}^n$ be a compact subset of the state space. Without loss of generality, we can assume $X$ is contained in a hypercube $[-M, M]^n$ for some $M > 0$. Consider the functions $\tilde{V}(x) = V^*(x) - V^*(0)$ and $\tilde{h}(x) = h^*(x)$. Note that $\tilde{V}(0) = 0$, preserving the Lyapunov function property at the origin. By the Stone-Weierstrass theorem, there exist polynomials $p_V(x)$ and $p_h(x)$ such that:
+
+\begin{align}
+    \sup_{x \in X} |\tilde{V}(x) - p_V(x)| &< \frac{\epsilon}{3} \\
+    \sup_{x \in X} |\tilde{h}(x) - p_h(x)| &< \frac{\epsilon}{3}
+\end{align}
+
+\textbf{Step 3: Approximation by Neural Networks}
+
+By Lemma 1, there exist single hidden layer neural networks $N_V(x)$ and $N_h(x)$ with sigmoid activation functions such that:
+
+\begin{align}
+    \sup_{x \in X} |p_V(x) - N_V(x)| &< \frac{\epsilon}{3} \\
+    \sup_{x \in X} |p_h(x) - N_h(x)| &< \frac{\epsilon}{3}
+\end{align}
+
+\textbf{Step 4: Construction of DR-LBN}
+
+We now construct our DR-LBN as follows:
+
+\begin{align}
+    V_{NN}(x) &= N_V(x) + V^*(0) + \delta \|x\|^2 \\
+    h_{NN}(x) &= \text{softplus}(N_h(x))
+\end{align}
+%
+where $\delta > 0$ is a small constant chosen such that $\delta \sup_{x \in X} \|x\|^2 < \frac{\epsilon}{3}$.
+
+\textbf{Step 5: Error Bounds}
+
+For the Lyapunov function approximation:
+
+\begin{align}
+    |V^*(x) - V_{NN}(x)| &= |\tilde{V}(x) + V^*(0) - N_V(x) - V^*(0) - \delta \|x\|^2| \\
+    &\leq |\tilde{V}(x) - p_V(x)| + |p_V(x) - N_V(x)| + \delta \|x\|^2 \\
+    &< \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} = \epsilon
+\end{align}
+
+For the barrier function approximation:
+
+\begin{align}
+    |h^*(x) - h_{NN}(x)| &= |\tilde{h}(x) - \text{softplus}(N_h(x))| \\
+    &\leq |\tilde{h}(x) - p_h(x)| + |p_h(x) - N_h(x)| + |N_h(x) - \text{softplus}(N_h(x))| \\
+    &< \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} = \epsilon
+\end{align}
+%
+The last inequality holds because $|\text{softplus}(z) - z| < 1$ for all $z$, and we can always scale $N_h(x)$ to make this difference arbitrarily small without changing its approximation properties.
+
+\textbf{Step 6: Preservation of Lyapunov and Barrier Properties}
+
+1. For the Lyapunov function:
+\begin{itemize}
+    \item $V_{NN}(0) = V^*(0)$
+    \item $V_{NN}(x) > 0$ for $x \neq 0$ due to the $\delta \|x\|^2$ term
+
+\end{itemize}
+2. For the barrier function:
+
+\begin{itemize}
+    \item $h_{NN}(x) \geq 0$ for all $x$ due to the softplus function
+\end{itemize}
+%
+We have constructed a DR-LBN with a finite number of neurons that approximates both $V^*(x)$ and $h^*(x)$ within $\epsilon$-error in the supremum norm over the compact set $X$, while preserving the essential properties of Lyapunov and barrier functions.
+\end{proof}
+
+\noindent {\textbf{Implication.}} Theorem 4, which establishes the universal approximation capabilities of DR-LBNs, provides theoretical justification for their use in approximating complex Lyapunov and barrier functions. This result suggests that, with sufficient capacity, DR-LBNs can represent a wide class of stability certificates and safety constraints. However, the theorem is existential in nature and does not provide guarantees on the learnability of these functions or the sample complexity required to achieve a given approximation error. Moreover, the potential need for large network architectures to achieve good approximations may pose computational challenges in high-dimensional state spaces.
+
+
+\setcounter{theorem}{4}
+\begin{theorem}[Sample Complexity]
+For any $\delta > 0$, if the number of samples $N$ satisfies
+\begin{equation}
+    N \geq \mathcal{O}\left(\frac{d}{\varepsilon^2}\log\frac{1}{\delta}\right),
+\end{equation}
+where $d$ is the VC-dimension of the hypothesis class, then with probability at least $1-\delta$, the true distribution $P^*$ lies within the Wasserstein ball of radius $\rho$ around the empirical distribution $P_N$.
+\end{theorem}
+
+\begin{proof}
+We proceed in several steps:
+
+\textbf{Step 1: Wasserstein Distance and Empirical Processes}
+
+Let $W_p(P^*, P_N)$ denote the $p$-Wasserstein distance between the true distribution $P^*$ and the empirical distribution $P_N$. We start by relating this to an empirical process:
+
+\begin{equation}
+    W_p^p(P^*, P_N) = \sup_{f \in \mathcal{F}} \left|\int f dP^* - \int f dP_N\right|
+\end{equation}
+
+where $\mathcal{F}$ is the set of 1-Lipschitz functions.
+
+\textbf{Step 2: Symmetrization}
+
+Introduce an independent copy $P_N'$ of the empirical measure. By Jensen's inequality:
+
+\begin{equation}
+    \mathbb{E}[W_p^p(P^*, P_N)] \leq 2\mathbb{E}\left[\sup_{f \in \mathcal{F}} \left|\int f dP_N - \int f dP_N'\right|\right]
+\end{equation}
+
+\textbf{Step 3: Rademacher Complexity}
+
+Let $\{\sigma_i\}_{i=1}^N$ be i.i.d. Rademacher random variables. By the symmetrization principle:
+
+\begin{equation}
+    \mathbb{E}\left[\sup_{f \in \mathcal{F}} \left|\int f dP_N - \int f dP_N'\right|\right] \leq 2\mathbb{E}\left[\sup_{f \in \mathcal{F}} \frac{1}{N}\sum_{i=1}^N \sigma_i f(X_i)\right]
+\end{equation}
+
+The right-hand side is known as the Rademacher complexity $\mathcal{R}_N(\mathcal{F})$.
+
+\textbf{Step 4: Dudley's Entropy Integral}
+
+We can bound the Rademacher complexity using Dudley's entropy integral \cite{kakade2008complexity}:
+
+\begin{equation}
+    \mathcal{R}_N(\mathcal{F}) \leq \frac{12}{\sqrt{N}} \int_0^\infty \sqrt{\log \mathcal{N}(\mathcal{F}, \varepsilon)} d\varepsilon
+\end{equation}
+
+where $\mathcal{N}(\mathcal{F}, \varepsilon)$ is the $\varepsilon$-covering number of $\mathcal{F}$.
+
+\textbf{Step 5: VC-dimension and Covering Numbers}
+
+For a function class $\mathcal{F}$ with VC-dimension $d$, we have the following bound on the covering number:
+
+\begin{equation}
+    \log \mathcal{N}(\mathcal{F}, \varepsilon) \leq c d \log\left(\frac{1}{\varepsilon}\right)
+\end{equation}
+
+for some constant $c$.
+
+\textbf{Step 6: Bounding the Integral}
+
+Substituting this into Dudley's integral:
+
+\begin{align}
+    \mathcal{R}_N(\mathcal{F}) &\leq \frac{12}{\sqrt{N}} \int_0^\infty \sqrt{c d \log\left(\frac{1}{\varepsilon}\right)} d\varepsilon \\
+    &\leq C\sqrt{\frac{d}{N}}
+\end{align}
+
+for some constant $C$.
+
+\textbf{Step 7: Concentration Inequality}
+
+By McDiarmid's inequality, for any $t > 0$:
+
+\begin{equation}
+    P(W_p^p(P^*, P_N) - \mathbb{E}[W_p^p(P^*, P_N)] \geq t) \leq \exp\left(-\frac{2Nt^2}{L^2}\right)
+\end{equation}
+
+where $L$ is the Lipschitz constant of the loss function.
+
+\textbf{Step 8: Putting It All Together}
+
+Combining the bounds from steps 6 and 7, we have:
+
+\begin{equation}
+    P(W_p^p(P^*, P_N) \geq C\sqrt{\frac{d}{N}} + t) \leq \exp\left(-\frac{2Nt^2}{L^2}\right)
+\end{equation}
+
+Setting the right-hand side to $\delta$ and solving for $N$:
+
+\begin{equation}
+    N \geq \mathcal{O}\left(\frac{d}{\varepsilon^2}\log\frac{1}{\delta}\right)
+\end{equation}
+%
+where $\varepsilon = C\sqrt{\frac{d}{N}} + t$ is the desired Wasserstein ball radius. Therefore, if the number of samples $N$ satisfies the given inequality, then with probability at least $1-\delta$, the true distribution $P^*$ lies within the Wasserstein ball of radius $\rho = \varepsilon$ around the empirical distribution $P_N$.
+\end{proof}
+
+\noindent {\textbf{Implication.}} The sample complexity bound provided in Theorem 5 offers insights into the data requirements for learning DR-LBNs with probabilistic guarantees. This result is important for understanding the practical feasibility of the approach, especially in data-scarce environments. The logarithmic dependence on the confidence parameter is favorable, allowing for high-probability guarantees without excessive data requirements. However, the quadratic dependence on the inverse of the desired accuracy suggests that achieving very high precision may require a substantial number of samples. It is worth noting that this bound is based on worst-case analysis and may be pessimistic for many practical scenarios. 
+
+
+\section{Conclusion and Future Work}
+
+This paper has proposed distributionally robust Lyapunov-Barrier networks (DR-LBNs), a framework for synthesizing controllers that ensure both stability and safety for nonlinear systems under parametric uncertainty. By using recent advances in distributionally robust optimization and neural network architectures, our approach provides probabilistic guarantees on system performance even when the true distribution of uncertainties is unknown. The core contributions of this work lie in the development of a unified neural network architecture that simultaneously learns Lyapunov functions, barrier functions, and adaptive control gains. This integration enables the synthesis of controllers that balance stability and safety objectives in a principled manner. 
+%We have formulated distributionally robust versions of Lyapunov and barrier conditions, allowing for treatment of parametric uncertainties without requiring precise knowledge of their distributions. 
+
+\noindent{\textbf{Future Directions.}} While this paper has focused on establishing the theoretical foundations of DR-LBNs, several important directions for future research emerge. First, the development of comprehensive numerical examples and case studies is important to validate the practical efficacy of DR-LBNs. Such examples should span a range of nonlinear systems, from low-dimensional benchmarks like the inverted pendulum to high-dimensional, safety-critical applications such as autonomous vehicles or multi-agent robotics. Beyond numerical validation, future work should explore the online adaptation of DR-LBNs to time-varying uncertainties, potentially incorporating techniques from adaptive control and online learning. The extension of the framework to handle partial state observations and measurement noise is another critical area for investigation. Additionally, the integration of DR-LBNs with model predictive control frameworks could yield powerful tools for long-horizon planning under uncertainty. From a theoretical perspective, characterizing the finite-sample behavior of DR-LBNs and developing tighter generalization bounds remain open challenges. 
+
+
+\bibliographystyle{plain}
+\bibliography{main}
+
+\end{document}
