@@ -1,6 +1,6 @@
 ---
 title: "SmartPEN"
-excerpt: "EMG powered Art Simulator and image analysis for AWARE-AI Hackathon. Winner oF Most outstanding Presentation and Most Outstanding Project. "
+excerpt: "EMG powered Art Simulator and image analysis for AWARE-AI Hackathon. Winner of Most outstanding Presentation and Most Outstanding Project. "
 collection: portfolio
 ---
 
