@@ -1,2 +1,49 @@
+# ----- Jekyll -----
 _site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+Gemfile.lock
 
+# ----- Python (virtualenvs & caches) -----
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ----- LaTeX build artifacts -----
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
+
+# ----- Manim render cache -----
+media/
+files/manim/media/
+files/manim/slides/
+
+# ----- Node -----
+node_modules/
+
+# ----- OS / editor -----
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
