@@ -4,29 +4,20 @@
 <div id="visitor-counter" style="margin-top:0.5em; font-size:0.85em; opacity:0.75;"></div>
 <script>
 (function () {
-  // ⬇️ Replace this with your deployed Worker URL (ends in .workers.dev)
   var WORKER_URL = "https://visitor-counter.chirayu-salgarkar.workers.dev";
-
   var el = document.getElementById("visitor-counter");
   if (!el) return;
-
   function show(n) {
-    el.textContent =
-      "You are visitor #" + Number(n).toLocaleString() + " since June 16, 2026.";
+    el.textContent = "You are visitor #" + Number(n).toLocaleString() + " since June 16, 2026.";
   }
-
-  // Each browser gets a stable number; refreshing won't inflate the count.
   var stored = localStorage.getItem("visitorNumber");
   if (stored) {
     show(stored);
   } else {
-    fetch(WORKER_URL)
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        localStorage.setItem("visitorNumber", d.count);
-        show(d.count);
-      })
-      .catch(function () { el.style.display = "none"; });
+    fetch(WORKER_URL).then(function (r) { return r.json(); }).then(function (d) {
+      localStorage.setItem("visitorNumber", d.count);
+      show(d.count);
+    }).catch(function () { el.style.display = "none"; });
   }
 })();
 </script>
