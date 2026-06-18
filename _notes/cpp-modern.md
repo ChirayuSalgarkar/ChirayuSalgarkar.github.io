@@ -41,12 +41,3 @@ auto foo()
 {% include godbolt.html link="https://godbolt.org/e" %}
 
 Here, everything is being placed in the stack. so the order of the stack is num_doors (int), car1: Car (object), and car2: Car (object). This is interesting. Compare this to Java, where num_doors (int) and two references to car1 and car2 are on the stack, and the Car objects will be on the heap. Why does this matter for parallel programming? For one, heaps are not great at fast memory allocation and deallocation. Stacks are way faster than the heap. But this also means that C++ engineers can easily shoot themselves in the foot. 
-
-
-## Math renders too
-
-Inline math like $a^2 + b^2 = c^2$ works, and so does display math:
-
-$$
-\int_0^1 x^2 \, dx = \frac{1}{3}
-$$
