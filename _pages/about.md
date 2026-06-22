@@ -14,4 +14,6 @@ Broadly, I study how techniques in mathematics can control highly nonlinear syst
 
 As of Summer 2026, I am a Graduate ML developer intern at a startup in Cambridge, Massachusetts, working on multi-agent reinforcement learning for digital twins. 
 
+Other than that, I enjoy dancing tango (badly). In a past life, I was obsessed with beans. I still like beans. 
+
 
